@@ -7589,7 +7589,15 @@ img.rsImg {
 .uppercase {
   text-transform: uppercase;
 }
+body {
+  margin-top: 60px;
+}
 .main-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
   height: 60px;
   border: solid 1px #ddd;
   background: white;
@@ -7612,4 +7620,20 @@ img.rsImg {
 }
 .main-header ul li a {
   display: inline-block;
+}
+.slide-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.slide-wrapper #homepage-gallery {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

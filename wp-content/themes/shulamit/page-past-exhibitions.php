@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<?php include 'inc/homepage_slider.php'; ?>
+
+  <h2>PAST EXHIBITION</h2>
+
 
 <?php get_footer(); ?>

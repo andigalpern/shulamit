@@ -10,7 +10,7 @@ function baw_theme_setup() {
 // only search thru posts, not page or media. 
 function SearchFilter($query) {
 if ($query->is_search) {
-$query->set('post_type', 'post');
+  $query->set('post_type', array('post', 'artist'));
 }
 return $query;
 }
@@ -93,6 +93,21 @@ function create_post_type() {
     )
   );
 */  
+
+
+/*
+   register_post_type( 'homeslider',
+    array(
+      'labels' => array(
+        'name' => __( 'Home Slider' ),
+        'singular_name' => __( 'Home Slide' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' )
+    );
+*/
+    
   flush_rewrite_rules( false );
 }
 

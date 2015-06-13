@@ -151,6 +151,7 @@ function goOwl(){
   }
 }
 */
+/*
 function resizeHomeSlide() {
   console.log("resizeHomeSlide")
   if ($('#homepage-gallery').length) {
@@ -159,6 +160,7 @@ function resizeHomeSlide() {
     $('#homepage-gallery').height(theHeight);
   } 
 }
+*/
 function resizeMainFolioAjax() {
   if ( $('#single-folio').length ) {
     console.log("resizeMainFolioAjax")
@@ -184,9 +186,10 @@ function resizeMainFolioSolo() {
 
 function goRoyalHomepage() {
   if ($('#homepage-gallery').length) {
-    resizeHomeSlide();
+    //resizeHomeSlide();
   	var $royalSlider = $('#homepage-gallery');
     $royalSlider.royalSlider({
+      transitionType: 'fade',
     	addActiveClass: true,
       imageScaleMode: 'fill',
       //autoScaleSlider: true,
@@ -196,9 +199,9 @@ function goRoyalHomepage() {
       slidesSpacing: 0,
       navigateByClick: false,
       numImagesToPreload: 2,
-      //arrowsNav: false,
-      arrowsNavAutoHide: true,
-      arrowsNavHideOnTouch: true,
+      arrowsNav: false,
+      //arrowsNavAutoHide: true,
+      //arrowsNavHideOnTouch: true,
       keyboardNavEnabled: true,
       fadeinLoadedSlide: true,
       globalCaption: false,
@@ -386,10 +389,17 @@ $(document).on('click', '.ajax-folio-closer',function(e){
  });
  
 $(document).on('hover', '.artist-item',function(e){
-  console.log("hover")
+ 
+    var imgTitle = $(this).data('title');
     var imgSrc = $(this).data('swap');
     var target = $('#swap-image');
+    var targetTitle = $('#swap-title');
+    
+     console.log(imgTitle , imgSrc);
+     
+     
      target.attr('src', imgSrc);
+     targetTitle.html(imgTitle);
  });
  
  

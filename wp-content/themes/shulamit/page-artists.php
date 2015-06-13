@@ -8,7 +8,8 @@ page-artists.php
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
     <li
       class="artist-item"
-      data-swap="<?php echo $feat_image; ?>">
+      data-swap="<?php echo $feat_image; ?>"
+      data-title="<?php echo $post->post_title; ?>">
       
       
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -34,8 +35,8 @@ page-artists.php
     $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
     echo '<img src="'.$feat_image.'" class="img-responsive" id="swap-image"/>';
     ?>
+    <figcaption id="swap-title"><?php echo $post->post_title; ?></figcaption>
     <?php endwhile; wp_reset_query(); ?>
-
     </figure>
   </article>
   

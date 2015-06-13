@@ -13,13 +13,13 @@ get_header(); ?>
 <section class="container">
 <?php if ( have_posts() ) : ?>
 
-<?php the_post(); ?>
+    <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<div class="row" id="article-grid">
-  		
-		  <?php include 'inc/tag_loop.php' ; ?>
-		  
-	  </div><!-- END ROW -->
+        <h2><a href="<?php the_permalink(); ?>"><?php echo $post->post_title; ?></a></h2>
+    
+    
+<?php endwhile; endif; ?>
+
 
 <?php else: ?>   
 

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
-<?php include 'inc/homepage_slider.php'; ?>
+
+  <h2>UPCOMIGN</h2>
+
 
 <?php get_footer(); ?>

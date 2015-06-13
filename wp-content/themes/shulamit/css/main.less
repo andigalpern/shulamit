@@ -28,8 +28,15 @@
   text-transform: uppercase;
 }
 
-
+body {
+  margin-top: 60px;
+}
 .main-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
   .logo {
     height: 60px;
     width: 300px;
@@ -51,5 +58,22 @@
         display: inline-block;
       }
     }
+  }
+}
+
+.slide-wrapper {
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  #homepage-gallery {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
