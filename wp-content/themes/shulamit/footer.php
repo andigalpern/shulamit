@@ -1,9 +1,6 @@
+</div><!-- END PJAX -->
 <footer class="main-footer container">
-  <ul class="social-links">
-    <li><a href="ddhttps://www.facebook.com/sarah.appleby" target="_blank"><span>&#xe027;</span> FACEBOOK</a></li>
-    <li><a href="ddhttps://instagram.com/oksarahappleby/" target="_blank"><span>&#xe086;</span> TWITTER</a></li>
-    <li><a href="ddhttps://twitter.com/oksarahappleby" target="_blank"><span>&#xe100;</span> INSTAGRAM</a></li>
-  </ul>
+
 </footer>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>

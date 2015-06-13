@@ -29,14 +29,20 @@
 <![endif]-->
   
 <header class="main-header">
+  
 <div class="container-fluid top-row">
+  
 <h1 class="logo"><a href="/">Shulamit Nazarian</a></h1>
-<menu class="social-links pull-left">
-<a href="xxxhttps://www.facebook.com/sarah.appleby" target="_blank">&#xe027;</a>
-<a href="xxhttps://twitter.com/oksarahappleby" target="_blank">&#xe086;</a>
-<a href="xxhttps://instagram.com/oksarahappleby/" target="_blank">&#xe100;</a>
-</menu>
+
+<nav class="main-nav">
 <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
+</nav>
+
+<menu class="social-links pull-left">
+  <a href="xxxhttps://www.facebook.com/sarah.appleby" target="_blank">&#xe027;</a>
+  <a href="xxhttps://twitter.com/oksarahappleby" target="_blank">&#xe086;</a>
+  <a href="xxhttps://instagram.com/oksarahappleby/" target="_blank">&#xe100;</a>
+</menu>
 
 </div>
 </header>

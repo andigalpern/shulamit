@@ -384,7 +384,15 @@ $(document).on('click', '.ajax-folio-closer',function(e){
     $('#ajax-folio .inner').empty().removeClass('loaded');
   });
  });
-
+ 
+$(document).on('hover', '.artist-item',function(e){
+  console.log("hover")
+    var imgSrc = $(this).data('swap');
+    var target = $('#swap-image');
+     target.attr('src', imgSrc);
+ });
+ 
+ 
 $(window).on('resize', function(){
    resizeHomeSlide();
    resizeMainFolioSolo()

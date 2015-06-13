@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+sigle.php
 <section class="container">
 	<div class="row">
 		<div class="col-md-9 blog-col">
