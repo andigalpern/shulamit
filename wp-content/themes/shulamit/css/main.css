@@ -7621,6 +7621,9 @@ body {
 .main-header ul li a {
   display: inline-block;
 }
+.social-links {
+  font-family: 'Mono Social Icons Font';
+}
 .slide-wrapper {
   position: absolute;
   top: 0;
