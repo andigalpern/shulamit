@@ -1,7 +1,6 @@
 <?php
 #custom site functions
 
-
 function baw_theme_setup() {
   add_image_size( 'folio_thumb', 600, 450, true ); // (cropped)
   add_image_size( 'extra_large', 1800, 1200 ); //soft proportional
@@ -134,8 +133,9 @@ endif;
 add_filter('pre_get_posts','SearchFilter');
 add_action( 'init', 'create_post_type' );
 add_filter('the_content', 'filter_ptags_on_images');
-//add featured image support to custom post types
-add_theme_support( 'post-thumbnails', array( 'post','artist') );
+
+//add featured image support to custom post types, posts and pages
+add_theme_support( 'post-thumbnails', array( 'post','artist', 'page') );
 add_action( 'after_setup_theme', 'baw_theme_setup' );
 /*
 unregister_post_type('portfolios');

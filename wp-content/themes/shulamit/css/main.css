@@ -7547,6 +7547,18 @@ a:visted {
   color: inherit;
 }
 /* ########## @end reset ##########  */
+.heavy {
+  font-family: 'Druk-Heavy';
+  -webkit-font-smoothing: antialiased;
+}
+.bold {
+  font-family: 'DrukText-Bold';
+  -webkit-font-smoothing: antialiased;
+}
+.medium {
+  font-family: 'DrukText-Medium';
+  -webkit-font-smoothing: antialiased;
+}
 a {
   color: black;
 }
@@ -7595,9 +7607,14 @@ body {
   margin-top: 120px;
   color: black;
   height: 100%;
+  font-family: 'Conv_Adobe_Caslon_Regular';
 }
 body.home {
   margin-top: 0;
+}
+p {
+  font-size: 16px;
+  line-height: 24px;
 }
 .search-form {
   display: none;
@@ -7609,12 +7626,12 @@ body.home {
   left: 0;
   z-index: 999;
   font-family: 'DrukText-Medium';
-  font-size: 13px;
-  height: 60px;
+  font-size: 16px;
+  height: 80px;
   background: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  /*   .debug; */
+  border: solid 1px #ddd;
 }
 .main-header ul {
   display: inline-block;
@@ -7633,10 +7650,12 @@ body.home {
 .menu-main-menu-container {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 0px;
+  height: 80px;
+  line-height: 80px;
 }
 .logo {
-  height: 60px;
+  height: 80px;
   width: 220px;
   text-indent: -1000px;
   overflow: hidden;
@@ -7646,6 +7665,7 @@ body.home {
   -webkit-transition: opacity ease .3s;
           transition: opacity ease .3s;
   margin-left: 8px;
+  border: solid 1px #ddd;
 }
 .logo:hover {
   opacity: .3;
@@ -7689,25 +7709,30 @@ body.home {
   width: auto;
   height: auto;
 }
-.slide-credit {
+#slide-credit {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 40px;
+  right: 40px;
   z-index: 49000;
   color: white;
   font-family: 'Druk-Heavy';
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   -webkit-font-smoothing: antialiased;
   text-align: right;
+  -webkit-transition: color ease .6s;
+          transition: color ease .6s;
 }
-.slide-credit h2,
-.slide-credit h3 {
+#slide-credit h2,
+#slide-credit h3 {
   font-size: 80px;
   line-height: 60px;
 }
-.slide-credit time {
+#slide-credit time {
   text-transform: uppercase;
   font-size: 40px;
+}
+#slide-credit.black {
+  color: black;
 }
 /* ARTIST PAGE */
 .artist-list {

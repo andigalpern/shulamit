@@ -8,16 +8,16 @@
       ?>
       
       <?php foreach( $images as $image ): ?>
-      
-        <a href="<?php echo $image['sizes']['large']; ?>" class="rsImg"/></a>
-        
+        <div class="slide" data-color="<?php echo $image['alt']; ?>">
+          <a href="<?php echo $image['sizes']['large']; ?>" class="rsImg"/></a>
+        </div>
       <?php endforeach; ?>
       
     <?php endwhile; endif;  ?>
   
   </section>
   
-  <aside class="slide-credit">
+  <aside id="slide-credit">
     <h2>Melanie Daniel:</h2>
     <h3>Piecemaker</h3>
     <time datetime="">May 21, 2015 - June 27, 2015</time>

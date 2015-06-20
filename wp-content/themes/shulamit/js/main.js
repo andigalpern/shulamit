@@ -202,6 +202,7 @@ function goRoyalHomepage() {
       globalCaptionInside: false,
       transitionSpeed: 300,
       sliderDrag: false,
+      addActiveClass: true,
       autoPlay: {
         // autoplay options go gere
         pauseOnHover: false,
@@ -212,6 +213,10 @@ function goRoyalHomepage() {
     var slider = $royalSlider.data('royalSlider');
     slider.ev.on('rsAfterSlideChange', function(event) {
       console.log("rsAfterSlideChange")
+      var color = $('.rsActiveSlide .slide').data('color');
+      console.log(color)
+      $('#slide-credit').attr('class', '');
+      $('#slide-credit').addClass(color)
     });
     slider.slides[0].holder.on('rsAfterContentSet', function() {
       console.log("rsAfterContentSet")

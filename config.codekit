@@ -19190,6 +19190,61 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-150x150.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6975,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-150x150.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-150x150.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-200x300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13849,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-200x300.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-200x300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-600x450.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48533,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-600x450.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-600x450.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-683x1024.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 100989,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-683x1024.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery-683x1024.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.22512e+06,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/06\/Front-Facade-Gallery.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/uploads\/2015\/06\/PouyaAfsharUntitled-Mosquito-2013-pen-and-ink-on-paper-14x16.5-150x150.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
