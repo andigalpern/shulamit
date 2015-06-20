@@ -1,7 +1,12 @@
 <?php get_header(); ?>
 
 <article class="container artist-wrapper">
-
+  
+  <section class="artist-gallery-wrapper row">
+    <figure class="artist-gallery royalSlider rsDefault" id="artist-gallery">
+    </figure>
+  </section>
+    <?php $count = 1; ?>
     <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     
         <section class="row"> 
@@ -11,21 +16,24 @@
           </header>
         </section>
         
-        <section class="artist-thumbs row">
-          <?php
+        
+             <?php
           //#GET THE IMAGES FIELD OBJECT
-          $count = 1;
+          
           $images = get_field('images');
           $image = $images[0];
           ?>
+        <section class="artist-thumbs row" data-array='[<?php $image_text = array(); ?><?php foreach( $images as $image ): ?><?php $image_text[] = '"'. $image['sizes']['extra_large'] . '"'; ?><?php endforeach; ?><?php echo implode( $image_text, ","); ?>]'>
+     
+        
+    	
+    	
           <?php foreach( $images as $image ): ?>
-          <figure class="col-md-1 artist-thumb">
-              <a href="<?php echo $image['sizes']['large']; ?>" data-slide="<? echo  $count++ ?>">
+          <figure class="col-md-1 artist-thumb" data-slide="#image-<? echo  $count++ ?>" >
                 <img
                 src="<?php echo $image['sizes']['thumbnail']; ?>"
                 data-large="<?php echo $image['sizes']['thumb_large']; ?>"
                 class="img-responsive"/>
-              </a>
           </figure>
           <?php endforeach; ?>
           <div class="clear text-right">

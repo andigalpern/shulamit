@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
 
-  <h2>UPCOMIGN</h2>
+<section class="container">
+  <h2>PAST EXHIBITION</h2>
+</section>
 
 
 <?php get_footer(); ?>

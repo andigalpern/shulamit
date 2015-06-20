@@ -36,41 +36,32 @@
 
 .rsDefault .rsArrow {
 	height: 100%;
-	width: 44px;
+	width: 80px;
 	position: absolute;
 	display: block;
 	cursor: pointer;
 	z-index: 21;
-	width: 49%;
 }
 .rsDefault.rsVer .rsArrow {
 	width: 100%;
-	height: 44px;
+	height: 80px;
 }
 .rsDefault.rsVer .rsArrowLeft { top: 0; left: 0;   }
 .rsDefault.rsVer .rsArrowRight { bottom: 0;  left: 0;   }
 
-.rsDefault.rsHor .rsArrowLeft { left: 0; top: 0; cursor: url(img/prev.png) 15 30,auto; }
-.rsDefault.rsHor .rsArrowRight { right: 0; top:0; cursor: url(img/next.png) 15 30,auto; }
+.rsDefault.rsHor .rsArrowLeft { left: 0; top: 0;  }
+.rsDefault.rsHor .rsArrowRight { right: 0; top:0; }
 
 .rsDefault .rsArrowIcn {		
-	width: 44px;
-	
-	height: 62px;
+	width: 80px;
+	height: 80px;
 	top: 50%;
-	left: 50%;
-	margin-top:-31px;	
-	margin-left: -22px;
+	left: 0;
+	margin-top:-40px;	
+	margin-left: 0px;
 	position: absolute;	
 	cursor: pointer;	
-	background: url('/css/img/arrows.png') 0 0;
-	
-	display: none !important;
-	
-}
-.rsDefault .rsArrowIcn:hover {
-	/* background-color: rgba(0,0,0,0.9); */
-	
+	border: solid 1px red;	
 }
 
 .rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: 0 0; }

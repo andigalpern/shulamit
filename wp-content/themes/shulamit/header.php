@@ -9,7 +9,7 @@
 * We filter the output of wp_title() a bit -- see
 * boilerplate_filter_wp_title() in functions.php.
 */
-wp_title( '::', true, 'right' );
+wp_title( '', true, 'right' );
 ?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,6 +58,7 @@ wp_title( '::', true, 'right' );
 </header>
 
 <nav class="main-nav">
+  <div class="inner">
   <header class="main-nav-header">
     <div class="hamburger">
       <div class="inner">
@@ -87,6 +88,8 @@ wp_title( '::', true, 'right' );
       <a href="">info@shulamitgallery.com</a></p>
     </address>
   </footer>
+  
+  </div><!-- end inner -->
 </nav>
 
 <div id="pjax-content">
