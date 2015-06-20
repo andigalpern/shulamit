@@ -16,4 +16,10 @@
     <?php endwhile; endif;  ?>
   
   </section>
+  
+  <aside class="slide-credit">
+    <h2>Melanie Daniel:</h2>
+    <h3>Piecemaker</h3>
+    <time datetime="">May 21, 2015 - June 27, 2015</time>
+  </aside>
 </section>

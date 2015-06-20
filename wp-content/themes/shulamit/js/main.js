@@ -42,12 +42,7 @@ $(window).on('scroll', function() {
 function goInstafeed() {
   if( $('#instagram-feed').length){
   var feed = new Instafeed({
-/*
-       get: 'tagged',
-      tagName: 'makeup',
-      clientId: '0de749b50dee4bc58c50fd716567ee04',
-*/
-  
+
       get: 'user',
       userId: 11696583,
       accessToken: '11696583.850066e.fb4d778871ec4c67bc657374fb6ce721',
@@ -186,7 +181,6 @@ function resizeMainFolioSolo() {
 
 function goRoyalHomepage() {
   if ($('#homepage-gallery').length) {
-    //resizeHomeSlide();
   	var $royalSlider = $('#homepage-gallery');
     $royalSlider.royalSlider({
       transitionType: 'fade',
@@ -394,19 +388,22 @@ $(document).on('hover', '.artist-item',function(e){
     var imgSrc = $(this).data('swap');
     var target = $('#swap-image');
     var targetTitle = $('#swap-title');
+    var swapLink = $('a',this).attr('href');
+    var targetLink = $('#swap-image-link');
     
      console.log(imgTitle , imgSrc);
      
      
      target.attr('src', imgSrc);
      targetTitle.html(imgTitle);
+     targetLink.attr('href', swapLink)
  });
  
  
 $(window).on('resize', function(){
-   resizeHomeSlide();
-   resizeMainFolioSolo()
-   resizeMainFolioAjax();
+   //resizeHomeSlide();
+   //resizeMainFolioSolo()
+   //resizeMainFolioAjax();
 });
 
 // PJAX COMPLETE

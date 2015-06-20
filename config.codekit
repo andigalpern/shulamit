@@ -17853,6 +17853,15 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/wp-content\/themes\/shulamit\/css\/fonts.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/fonts.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-content\/themes\/shulamit\/css\/fonts.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -17964,7 +17973,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3011,
+		"initialSize": 3655,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/logo.png",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/logo.png",
 		"outputPathIsOutsideProject": 0,
@@ -18083,6 +18092,15 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
+		},
+	"\/wp-content\/themes\/shulamit\/css\/reset.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/reset.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/shulamit\/css\/reset.less": {
 		"allowInsecureImports": 0,

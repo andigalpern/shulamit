@@ -21,44 +21,20 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'p22_underground_prodemi';
-  src: url('fonts/p22undergroundpro-demi-webfont.eot');
-  src: url('fonts/p22undergroundpro-demi-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/p22undergroundpro-demi-webfont.woff2') format('woff2'), url('fonts/p22undergroundpro-demi-webfont.woff') format('woff'), url('fonts/p22undergroundpro-demi-webfont.ttf') format('truetype'), url('fonts/p22undergroundpro-demi-webfont.svg#p22_underground_prodemi') format('svg');
+  font-family: 'Druk-Heavy';
+  src: url('fonts/Druk-Heavy.eot?#iefix') format('embedded-opentype'), url('fonts/Druk-Heavy.otf') format('opentype'), url('fonts/Druk-Heavy.woff') format('woff'), url('fonts/Druk-Heavy.ttf') format('truetype'), url('fonts/Druk-Heavy.svg#Druk-Heavy') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'p22_underground_probold';
-  src: url('fonts/p22undergroundpro-heavy-webfont.eot');
-  src: url('fonts/p22undergroundpro-heavy-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/p22undergroundpro-heavy-webfont.woff2') format('woff2'), url('fonts/p22undergroundpro-heavy-webfont.woff') format('woff'), url('fonts/p22undergroundpro-heavy-webfont.ttf') format('truetype'), url('fonts/p22undergroundpro-heavy-webfont.svg#p22_underground_probold') format('svg');
+  font-family: 'DrukText-Bold';
+  src: url('fonts/DrukText-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/DrukText-Bold.otf') format('opentype'), url('fonts/DrukText-Bold.woff') format('woff'), url('fonts/DrukText-Bold.ttf') format('fonts/truetype'), url('fonts/DrukText-Bold.svg#DrukText-Bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'p22_undergroundlight';
-  src: url('fonts/p22_-_p22underground-light-webfont.eot');
-  src: url('fonts/p22_-_p22underground-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/p22_-_p22underground-light-webfont.woff2') format('woff2'), url('fonts/p22_-_p22underground-light-webfont.woff') format('woff'), url('fonts/p22_-_p22underground-light-webfont.ttf') format('truetype'), url('fonts/p22_-_p22underground-light-webfont.svg#p22_undergroundlight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'p22_underground_prothin';
-  src: url('fonts/p22undergroundpro-thin-webfont.eot');
-  src: url('fonts/p22undergroundpro-thin-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/p22undergroundpro-thin-webfont.woff2') format('woff2'), url('fonts/p22undergroundpro-thin-webfont.woff') format('woff'), url('fonts/p22undergroundpro-thin-webfont.ttf') format('truetype'), url('fonts/p22undergroundpro-thin-webfont.svg#p22_underground_prothin') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'p22_underground_probook';
-  src: url('fonts/p22undergroundpro-book-webfont.eot');
-  src: url('fonts/p22undergroundpro-book-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/p22undergroundpro-book-webfont.woff2') format('woff2'), url('fonts/p22undergroundpro-book-webfont.woff') format('woff'), url('fonts/p22undergroundpro-book-webfont.ttf') format('truetype'), url('fonts/p22undergroundpro-book-webfont.svg#p22_underground_probook') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'p22_underground_proregular';
-  src: url('fonts/p22undergroundpro-medium-webfont.eot');
-  src: url('fonts/p22undergroundpro-medium-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/p22undergroundpro-medium-webfont.woff2') format('woff2'), url('fonts/p22undergroundpro-medium-webfont.woff') format('woff'), url('fonts/p22undergroundpro-medium-webfont.ttf') format('truetype'), url('fonts/p22undergroundpro-medium-webfont.svg#p22_underground_proregular') format('svg');
+  font-family: 'DrukText-Medium';
+  src: url('fonts/DrukText-Medium.eot?#iefix') format('embedded-opentype'), url('fonts/DrukText-Medium.otf') format('opentype'), url('fonts/DrukText-Medium.woff') format('woff'), url('fonts/DrukText-Medium.ttf') format('truetype'), url('fonts/DrukText-Medium.svg#DrukText-Medium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6660,246 +6636,6 @@ button.close {
     display: none !important;
   }
 }
-/* ########## @group Reset ########## */
-html {
-  overflow-y: scroll;
-  height: 100%;
-}
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-a {
-  color: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  outline: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
-a:active,
-a:visited,
-a img {
-  outline: none;
-  text-decoration: none;
-  border: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-select,
-input,
-textarea,
-button {
-  font: 99% sans-serif;
-}
-a:hover,
-a:active {
-  outline: none;
-}
-ol {
-  list-style-type: decimal;
-}
-small {
-  font-size: 85%;
-}
-td,
-td img {
-  vertical-align: top;
-}
-textarea {
-  overflow: auto;
-}
-input[type=checkbox] {
-  vertical-align: bottom;
-}
-label,
-input[type=button],
-input[type=submit],
-button {
-  cursor: pointer;
-}
-pre,
-blockquote {
-  border: none;
-  page-break-inside: avoid;
-}
-tr,
-img {
-  page-break-inside: avoid;
-}
-ul,
-li {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-}
-address {
-  font-style: normal;
-}
-body {
-  font: 13px/1.231 sans-serif;
-  height: 100%;
-}
-.clear {
-  clear: both;
-}
-.chromeframe {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background: #fff;
-  padding: 100px;
-  color: #000;
-  z-index: 29000;
-  font-size: 1.5em;
-  line-height: normal;
-}
-.chromeframe p {
-  color: #000;
-  line-height: normal;
-  margin: 0 0 20px;
-}
-.chromeframe p strong {
-  font-size: 2em;
-  font-weight: 400;
-}
-.chromeframe p a {
-  color: #3B5998;
-}
-.chromeframe p a:hover {
-  text-decoration: underline;
-}
-.chromeframe small {
-  font-size: .5em;
-}
-.hidden {
-  display: none;
-}
-b,
-strong {
-  font-weight: 400;
-}
-:focus {
-  outline: none;
-}
-a:focus,
-a:active,
-a:hover,
-a:visted {
-  text-decoration: none;
-  outline: none;
-  border: none;
-  color: inherit;
-}
-/* ########## @end reset ##########  */
 /* v1.0.5 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */
 .royalSlider {
@@ -7569,6 +7305,272 @@ img.rsImg {
   font-size: 12px;
   border-radius: 2px;
 }
+/* ########## @group Reset ########## */
+html {
+  overflow-y: scroll;
+  height: 100%;
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+a {
+  color: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  outline: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all ease .3s;
+          transition: all ease .3s;
+}
+a:active,
+a:visited,
+a img {
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+select,
+input,
+textarea,
+button {
+  font: 99% sans-serif;
+}
+a:hover,
+a:active {
+  outline: none;
+}
+ol {
+  list-style-type: decimal;
+}
+small {
+  font-size: 85%;
+}
+td,
+td img {
+  vertical-align: top;
+}
+textarea {
+  overflow: auto;
+}
+input[type=checkbox] {
+  vertical-align: bottom;
+}
+label,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+}
+pre,
+blockquote {
+  border: none;
+  page-break-inside: avoid;
+}
+tr,
+img {
+  page-break-inside: avoid;
+}
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+address {
+  font-style: normal;
+}
+body {
+  font: 13px/1.231 sans-serif;
+  height: 100%;
+}
+.clear {
+  clear: both;
+}
+.chromeframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #fff;
+  padding: 100px;
+  color: #000;
+  z-index: 29000;
+  font-size: 1.5em;
+  line-height: normal;
+}
+.chromeframe p {
+  color: #000;
+  line-height: normal;
+  margin: 0 0 20px;
+}
+.chromeframe p strong {
+  font-size: 2em;
+  font-weight: 400;
+}
+.chromeframe p a {
+  color: #3B5998;
+}
+.chromeframe p a:hover {
+  text-decoration: underline;
+}
+.chromeframe small {
+  font-size: .5em;
+}
+.hidden {
+  display: none;
+}
+b,
+strong {
+  font-weight: 400;
+}
+:focus {
+  outline: none;
+}
+a:focus,
+a:active,
+a:hover,
+a:visted {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: inherit;
+}
+/* ########## @end reset ##########  */
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+.browserupgrade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  z-index: 450000;
+  padding: 30px;
+  color: black;
+  text-align: center;
+}
+.browserupgrade a {
+  text-decoration: underline;
+}
 /* BOOTSTRAP OVERIDES */
 /* GLOBALS */
 .trans-med {
@@ -7590,7 +7592,15 @@ img.rsImg {
   text-transform: uppercase;
 }
 body {
-  margin-top: 60px;
+  margin-top: 120px;
+  color: black;
+  height: 100%;
+}
+body.home {
+  margin-top: 0;
+}
+.search-form {
+  display: none;
 }
 .main-header {
   position: fixed;
@@ -7598,19 +7608,13 @@ body {
   right: 0;
   left: 0;
   z-index: 999;
+  font-family: 'DrukText-Medium';
+  font-size: 13px;
   height: 60px;
-  border: solid 1px #ddd;
-  background: white;
-}
-.main-header .logo {
-  height: 60px;
-  width: 300px;
-  float: left;
-  line-height: 60px;
-  border: solid 1px #ddd;
-}
-.main-header .logo a {
-  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  /*   .debug; */
 }
 .main-header ul {
   display: inline-block;
@@ -7620,9 +7624,54 @@ body {
 }
 .main-header ul li a {
   display: inline-block;
+  margin: 0 0 0 20px;
+}
+.main-header ul li a:hover {
+  color: #ddd;
+  text-decoration: none;
+}
+.menu-main-menu-container {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.logo {
+  height: 60px;
+  width: 220px;
+  text-indent: -1000px;
+  overflow: hidden;
+  background: url(img/logo.svg) no-repeat center center;
+  background-size: 100%;
+  position: relative;
+  -webkit-transition: opacity ease .3s;
+          transition: opacity ease .3s;
+  margin-left: 8px;
+}
+.logo:hover {
+  opacity: .3;
+}
+.logo a {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.browserupgrade .logo {
+  margin: 0 auto 20px auto;
+  height: 60px;
+  width: 392px;
+}
+.browserupgrade .logo a {
+  background: url(img/logo.jpg) no-repeat center center;
 }
 .social-links {
   font-family: 'Mono Social Icons Font';
+  display: none;
+}
+.social-links a {
+  font-size: 30px;
 }
 .slide-wrapper {
   position: absolute;
@@ -7632,11 +7681,48 @@ body {
   left: 0;
 }
 .slide-wrapper #homepage-gallery {
-  width: auto;
-  height: auto;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  width: auto;
+  height: auto;
+}
+.slide-credit {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 49000;
+  color: white;
+  font-family: 'Druk-Heavy';
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -webkit-font-smoothing: antialiased;
+  text-align: right;
+}
+.slide-credit h2,
+.slide-credit h3 {
+  font-size: 80px;
+  line-height: 60px;
+}
+.slide-credit time {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+/* ARTIST PAGE */
+.artist-list {
+  font-family: 'DrukText-Medium';
+  font-size: 22px;
+}
+.artist-list li a:hover {
+  color: silver;
+}
+#swap-image {
+  display: block;
+  margin-bottom: 12px;
+}
+#swap-title {
+  font-family: 'Druk-Heavy';
+  font-size: 48px;
+  -webkit-font-smoothing: antialiased;
 }
