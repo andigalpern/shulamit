@@ -1,6 +1,6 @@
 //fadeIn Artist Index firts imnage
-$('.swap-image-wrap').waitForImages(function() {
-  $('#swap-image').addClass('loaded');
+$('.swap-image-wrap, .lazyload').waitForImages(function() {
+  $('#swap-image, .lazyload').addClass('loaded');
 });
 
 
@@ -34,6 +34,17 @@ else {
    console.log("is no mobile");
 }
 
+
+$('#menu-main-menu a').on('click', function(e){
+  e.preventDefault();
+  var url = $(this).attr('href');
+  $('.main-nav').toggleClass('shown');
+   $('.main').fadeOut(200, function(){
+     window.location=url;
+   })  
+});
+
+
 //add scrolle nav
 $(window).on('scroll', function() {
   var scroll;
@@ -43,6 +54,46 @@ $(window).on('scroll', function() {
   } else {
     $('body').removeClass('scrolled');
   }
+});
+
+
+$('.view-all').on('click', function(){
+  if( $(this).hasClass('large')) {
+    $(this).text('[+] View All');
+    $(this).toggleClass('large');
+  }
+  else {
+    
+    $(this).text('[-] Thumbnails');
+    $(this).toggleClass('large');
+  }
+  
+  $('.artist-thumbs').toggleClass('large');
+  $('.artist-thumbs img').each(function(){
+    var swap = $(this).data('large');
+    $(this).attr('src', swap);
+  });
+});
+
+
+//TOGGLE HAMBUEGRE NAV
+$(document).on('click', '.hamburger', function(){
+  $('.main-nav').toggleClass('shown');
+});
+
+// TOGGLE SEARHC
+$(document).on('click', '.search-toggle', function(){
+  console.log("clicked")
+  $('.search-overlay-wrapper').toggleClass('shown');
+  $('input[type="search"]').focus();
+});
+
+
+//Incementally fade in thumb divs
+$(window).load(function() {
+   $('.artist-thumb').each(function(i) {
+      $(this).delay((i + 1) * 100).fadeIn(250);
+   });
 });
 
 
@@ -135,6 +186,7 @@ function fadeBkgImg(){
   }
 }
 
+/*
 function clearEmptySpans() {
   $('span').each(function() {
     var $this = $(this);
@@ -142,6 +194,7 @@ function clearEmptySpans() {
       $this.remove();
   });
 }
+*/
 
 /*
 function goOwl(){
@@ -227,7 +280,11 @@ function goRoyalHomepage() {
       $('#slide-credit').addClass(color)
     });
     slider.slides[0].holder.on('rsAfterContentSet', function() {
-      console.log("rsAfterContentSet")
+      console.log("rsAfterContentSet");
+      var color = $('.rsActiveSlide .slide').data('color');
+      console.log(color)
+      $('#slide-credit').attr('class', '');
+      $('#slide-credit').addClass(color)
     });
  }//end if
 } //end function
@@ -428,7 +485,7 @@ function pjaxComplete() {
   goMasonryArticles();
   //goOwl();
   //goRoyalFolio();
-  clearEmptySpans();
+  //clearEmptySpans();
   fadeBkgImg();
   resizeMainFolioSolo();
   goInstafeed();

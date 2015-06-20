@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="container-fluid">
-  <article class="col-sm-3">
+  <article class="col-sm-2">
   <ul class="artist-list">
   <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page=16' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
@@ -20,7 +20,7 @@
   </ul>
   </article>
   
-  <article class="col-sm-3">
+  <article class="col-sm-2">
   <ul class="artist-list">
   <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page=16' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
@@ -39,7 +39,7 @@
   </ul>
   </article>
   
-  <article class="col-sm-6">
+  <article class="col-sm-5 col-sm-offset-1">
     <figure class="swap-image-wrap">
     
     <?php $loop = new WP_Query( 

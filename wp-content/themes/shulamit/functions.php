@@ -2,7 +2,7 @@
 #custom site functions
 
 function baw_theme_setup() {
-  add_image_size( 'folio_thumb', 600, 450, true ); // (cropped)
+  add_image_size( 'thumb_large', 300, 300, true ); // (cropped)
   add_image_size( 'extra_large', 1800, 1200 ); //soft proportional
 }
 
@@ -63,6 +63,7 @@ function create_post_type() {
       'taxonomies' => array('category'),  
       'public' => true,
       'has_archive' => true,
+      'show_in_nav_menus' => true,
       'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' )
     )
   );

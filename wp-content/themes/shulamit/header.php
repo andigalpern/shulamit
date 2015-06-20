@@ -35,29 +35,63 @@ wp_title( '::', true, 'right' );
   
 <header class="main-header">
   <section class="container-fluid top-row">
-  
-    <h1 class="logo"><a href="/">Shulamit Nazarian</a></h1>
     
-    <nav class="main-nav">
-    <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
-    </nav>
+    <div class="hamburger">
+      <div class="inner">
+        <span class="pattie"></span>
+        <span class="pattie"></span>
+        <span class="pattie"></span>
+      </div>
+    </div>
     
-    <menu class="social-links pull-left">
-    <a href="xxxhttps://www.facebook.com/sarah.appleby" target="_blank">&#xe027;</a>
-    <a href="xxhttps://twitter.com/oksarahappleby" target="_blank">&#xe086;</a>
-    <a href="xxhttps://instagram.com/oksarahappleby/" target="_blank">&#xe100;</a>
-    </menu>
+    <h1 class="logo">
+    <a href="/">
+      <span>ShulamitNazarian</span>
+      <span class="logo-slug">Los Angeles</span>
+      </a>
+    </h1>
     
-    
-    <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-      <input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-      <input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-    </form>
+
+
   
   </section>
 </header>
 
+<nav class="main-nav">
+  <header class="main-nav-header">
+    <div class="hamburger">
+      <div class="inner">
+      <span class="pattie"></span>
+      <span class="pattie"></span>
+      <span class="pattie"></span>
+      </div>
+    </div>
+  </header>
+  
+  <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
+  
+  
+  <div class="search-toggle nav"></div>
+
+  
+  
+  <footer class="main-nav-footer">
+    <menu class="social-links">
+      <a href="xxxhttps://www.facebook.com/sarah.appleby" target="_blank">&#xe027;</a>
+      <a href="xxhttps://instagram.com/oksarahappleby/" target="_blank">&#xe100;</a>
+    </menu>
+    <address>
+      <p>17 North Venice Blvd<br>
+      Venice California, 90291<br>
+      310.281.0961<br>
+      <a href="">info@shulamitgallery.com</a></p>
+    </address>
+  </footer>
+</nav>
+
 <div id="pjax-content">
+  
+  <main class="main" id="main">
 
 
 

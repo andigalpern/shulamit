@@ -1,3 +1,4 @@
+</main>
 </div><!-- END PJAX -->
 <footer class="main-footer container">
 
@@ -23,9 +24,16 @@
   <div class="ajax-inner"></div>
 </div>
 
-<script>
-  //bens trackers
-</script>
+
+<section class="search-overlay-wrapper">
+   <div class="search-toggle close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+  <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+  <input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+  <input type="submit" class="search-submit" value="go" />
+  </form>
+</section>
+
+
 <?php wp_footer(); ?>
 </body>
 </html>
