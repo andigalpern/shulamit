@@ -17,7 +17,9 @@
   font-family: 'DrukText-Medium';
   -webkit-font-smoothing: antialiased;
 }
-
+h2 {
+  font-size: 40px;
+}
 
 a {
   color: black;
@@ -91,7 +93,6 @@ p {
   background: rgba(255, 255, 255, .5);
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  .debug;
   ul{
     display: inline-block;
     li{
@@ -109,7 +110,7 @@ p {
 }
 .menu-main-menu-container {
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 0px;
   height: 80px;
   line-height: 80px;
@@ -124,7 +125,6 @@ p {
   position: relative;
   transition: opacity ease .3s;
   margin-left: 8px;
-  .debug;
   &:hover { opacity: .3; }
    a{
      display: block;
@@ -196,9 +196,13 @@ p {
 
 .artist-list {
   font-family: 'DrukText-Medium';
-  font-size: 22px;
+  
   li {
+    h2 {
+      font-size: 22px;
+    }
     a {
+      line-height: normal;
       &:hover {
         color: silver;
       }
@@ -208,6 +212,11 @@ p {
 #swap-image {
   display: block;
   margin-bottom: 12px;
+    transition: opacity ease .3s;
+    opacity: 0;
+}
+#swap-image.loaded {
+  opacity: 1;
 }
 #swap-title {
   font-family: 'Druk-Heavy';
@@ -216,5 +225,11 @@ p {
 }
 
 
+
+/* ABOUT PAGE */
+.about-description {
+  max-width: 380px;
+  margin-top: 25vh;
+}
 
 

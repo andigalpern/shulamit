@@ -7559,6 +7559,9 @@ a:visted {
   font-family: 'DrukText-Medium';
   -webkit-font-smoothing: antialiased;
 }
+h2 {
+  font-size: 40px;
+}
 a {
   color: black;
 }
@@ -7631,7 +7634,6 @@ p {
   background: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  border: solid 1px #ddd;
 }
 .main-header ul {
   display: inline-block;
@@ -7649,7 +7651,7 @@ p {
 }
 .menu-main-menu-container {
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 0px;
   height: 80px;
   line-height: 80px;
@@ -7665,7 +7667,6 @@ p {
   -webkit-transition: opacity ease .3s;
           transition: opacity ease .3s;
   margin-left: 8px;
-  border: solid 1px #ddd;
 }
 .logo:hover {
   opacity: .3;
@@ -7737,7 +7738,12 @@ p {
 /* ARTIST PAGE */
 .artist-list {
   font-family: 'DrukText-Medium';
+}
+.artist-list li h2 {
   font-size: 22px;
+}
+.artist-list li a {
+  line-height: normal;
 }
 .artist-list li a:hover {
   color: silver;
@@ -7745,9 +7751,20 @@ p {
 #swap-image {
   display: block;
   margin-bottom: 12px;
+  -webkit-transition: opacity ease .3s;
+          transition: opacity ease .3s;
+  opacity: 0;
+}
+#swap-image.loaded {
+  opacity: 1;
 }
 #swap-title {
   font-family: 'Druk-Heavy';
   font-size: 48px;
   -webkit-font-smoothing: antialiased;
+}
+/* ABOUT PAGE */
+.about-description {
+  max-width: 380px;
+  margin-top: 25vh;
 }

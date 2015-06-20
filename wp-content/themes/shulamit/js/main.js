@@ -1,3 +1,11 @@
+//fadeIn Artist Index firts imnage
+$('.swap-image-wrap').waitForImages(function() {
+  $('#swap-image').addClass('loaded');
+});
+
+
+
+
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
