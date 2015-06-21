@@ -389,14 +389,123 @@ p {
 }
 
 /* ARTIST PAGE */
+.artist-hero-wrap {
+  margin-bottom: 80px;
+  position: relative
+}
+.artist-hero {
+  img {
+    opacity: 0;
+    transition : opacity ease .3s;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.artist-menu {
+  text-align: right;
+  position: absolute;
+  right: 30px;
+  line-height: 30px;
+  top: 35%;
+  h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+  }
+  li{
+    font-size: 30px;
+    letter-spacing: -0.04em;
+    
+  }
+}
+.artist-hero.loaded {
+  img {
+    opacity: 1;
+  }
+}
+.artist-thumbs {
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-bottom: 50px;
+}
+.artist-thumbs .col-md-1{
+  float: left; 
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+  transition: opacity ease .4s;
+  &:hover {
+    opacity: .6;
+  }
+}
 
+.artist-thumbs.large {
+  .col-md-1 {
+    width: 25%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    img {
+      width: 100%;
+    }
+  }
+} 
+.view-all {
+  cursor: pointer;
+  font-size: 16px;
+  color: #ccc;
+  display: block;
+  transition: all ease 0.3s;
+  padding-top: 10px;
+  &:hover {
+    color: black;
+  }
+}
+.artist-gallery-wrapper {
+  display: none;
+  overflow: hidden;
+  #artist-gallery {
+    height: 500px;
+    width: 100%;
+  }
+}
+
+/* GALLERY ARROWS */
+#artist-gallery.rsDefault .rsArrowIcn {		
+    width: 80px;
+    height: 63px;
+    top: 50%;
+    left: 0;
+    margin-top:-31px;	
+    margin-left: 0px;
+    position: absolute;	
+    cursor: pointer;	
+    background: url(img/arrows.png) no-repeat;
+  }
+#artist-gallery.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: 0 0; }
+#artist-gallery.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: right -62px; }
+
+  
+  
+.artist-gallery-wrapper.loaded {
+  display: block;
+}
+.artist-wrapper {
+  max-width: 1000px;
+  padding-bottom: 120px;
+  h3 {
+    font-size: 24px;
+    letter-spacing: -0.04em;
+    margin-bottom: 12px;
+  }
+}
 .artist-list {
   font-family: 'DrukText-Medium';
   
   li {
     h2 {
-      font-size: 22px;
-      letter-spacing: -0.02em;
+      font-size: 24px;
+      letter-spacing: -0.04em;
+
     }
     a {
       line-height: normal;
@@ -406,6 +515,9 @@ p {
     }
   }
 }
+
+
+
 #swap-image {
   display: block;
   margin-bottom: 12px;
@@ -429,39 +541,6 @@ p {
   margin-top: 25vh;
 }
 
-.artist-thumbs.large {
-  .artist-thumb {
-     padding: 0 10px 10px 10px;
-  }
-  .col-md-1 {
-    width: 25%;
-    margin-bottom: 30px;
-    img {
-      width: 100%;
-    }
-  }
-} 
-.view-all {
-  cursor: pointer;
-  font-size: 16px;
-  color: #ccc;
-  display: block;
-  transition: all ease 0.3s;
-  &:hover {
-    color: black;
-  }
-}
-.artist-gallery-wrapper {
-  display: none;
-  overflow: hidden;
-  #artist-gallery {
-    height: 500px;
-    width: 100%;
-  }
-}
-.artist-gallery-wrapper.loaded {
-  display: block;
-}
 
 
 

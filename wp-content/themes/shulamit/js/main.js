@@ -2,10 +2,8 @@
 // based on the new class we add here 'artist-thumb-slide-trigger'
 $(document).one('click', '.artist-thumb',function(e){
   e.preventDefault();
-  if( $('.artist-thumbs').hasClass('large') ){
-  
-    $('.artist-thumbs').removeClass('large');
-  }
+   $('.artist-thumbs').addClass('gallery-open');
+
   $('.artist-thumbs').toggleClass('large');
   $('.artist-thumb').each(function(){
     $(this).addClass('artist-thumb-slide-trigger').removeClass('artist-thumb');
@@ -43,6 +41,7 @@ $(document).one('click', '.artist-thumb',function(e){
         slidesSpacing: 0,
         numImagesToPreload: 2,
         arrowsNavHideOnTouch: true,
+        arrowsNavAutoHide: false,
         keyboardNavEnabled: true,
         fadeinLoadedSlide: true,
         globalCaption: false,
@@ -65,7 +64,10 @@ $(document).one('click', '.artist-thumb',function(e){
 });
 
 $(document).on('click', '.artist-thumb-slide-trigger',function(e){
-e.preventDefault();  
+e.preventDefault(); 
+  if( $('.artist-thumb-slide-trigger').parent().hasClass('large') ){
+    $('.artist-thumb-slide-trigger').parent().removeClass('large');
+  }
 var slideIndex = $(this).data('slide');
 console.log(slideIndex);
 window.location.hash=slideIndex; 
