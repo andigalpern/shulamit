@@ -5,7 +5,7 @@
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <section class="artist-hero-wrap">
-  <figure class="artist-hero lazyload">
+  <figure class="artist-hero lazyload artist-wrapper">
   <?php
   $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
   echo '<img src="'.$feat_image.'" class="img-responsive"/>';
@@ -37,11 +37,11 @@
         </header>
       </section>
       
-        <?php
-        //#GET THE IMAGES FIELD OBJECT
-        $images = get_field('images');
-        $image = $images[0];
-        ?>
+      <?php
+      //#GET THE IMAGES FIELD OBJECT
+      $images = get_field('images');
+      $image = $images[0];
+      ?>
       <section class="artist-thumbs row" data-array='[<?php $image_text = array(); ?><?php foreach( $images as $image ): ?><?php $image_text[] = '"'. $image['sizes']['extra_large'] . '"'; ?><?php endforeach; ?><?php echo implode( $image_text, ","); ?>]'>
         <?php foreach( $images as $image ): ?>
         <figure class="col-md-1 artist-thumb" data-slide="#image-<? echo  $count++ ?>" >
