@@ -7633,7 +7633,7 @@ a:hover {
   text-transform: uppercase;
 }
 body {
-  margin-top: 120px;
+  /*   margin-top: 120px; */
   color: black;
   height: 100%;
   font-family: 'Conv_Adobe_Caslon_Regular';
@@ -7646,7 +7646,7 @@ p {
   line-height: 24px;
 }
 .main-header {
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
@@ -7657,6 +7657,7 @@ p {
   background: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.01em;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .main-nav {
   background: rgba(0, 0, 0, 0.95);
@@ -7691,9 +7692,27 @@ p {
 }
 .main-nav .main-nav-header .hamburger .inner {
   left: 0;
+  -webkit-transition: all ease .4s;
+          transition: all ease .4s;
 }
 .main-nav .main-nav-header .hamburger .pattie {
   background: white;
+  -webkit-transition: all ease .4s;
+          transition: all ease .4s;
+}
+.main-nav .main-nav-header .hamburger:hover {
+  opacity: .5;
+}
+.main-nav .main-nav-header .hamburger:hover .inner:hover {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.main-nav .main-nav-header .hamburger:hover .inner .pattie:first-of-type {
+  width: 20px;
+}
+.main-nav .main-nav-header .hamburger:hover .inner .pattie:last-of-type {
+  width: 20px;
 }
 .main-nav .main-nav-footer {
   position: absolute;
@@ -7739,6 +7758,7 @@ p {
 }
 .main-nav.shown .main-nav-header .hamburger {
   cursor: pointer;
+  left: 20px;
 }
 .main-nav.shown .main-nav-header .hamburger:hover {
   opacity: .5;
@@ -7779,7 +7799,7 @@ p {
   width: 80px;
   display: block;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -7945,6 +7965,10 @@ p {
   margin-bottom: 80px;
   position: relative;
 }
+.artist-hero {
+  max-width: 60%;
+  margin: 0 auto;
+}
 .artist-hero img {
   opacity: 0;
   -webkit-transition: opacity ease .3s;
@@ -7962,6 +7986,13 @@ p {
 .artist-menu h1 {
   text-transform: uppercase;
   font-size: 60px;
+  direction: rtl;
+  width: 50px;
+  float: right;
+  line-height: 46px;
+}
+.artist-menu ul {
+  clear: both;
 }
 .artist-menu li {
   font-size: 30px;

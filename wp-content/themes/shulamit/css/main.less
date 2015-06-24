@@ -102,7 +102,7 @@ a {
 }
 
 body {
-  margin-top: 120px;
+/*   margin-top: 120px; */
   color: black;
   height: 100%;
   font-family: 'Conv_Adobe_Caslon_Regular';
@@ -116,7 +116,7 @@ p {
 }
 
 .main-header {
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
@@ -127,6 +127,7 @@ p {
   background: rgba(255, 255, 255, .5);
   letter-spacing: 0.01em;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 .main-nav {
   background: rgba(0,0,0, 0.95);
@@ -152,10 +153,28 @@ p {
       transition: all ease .4s;
       .inner {
         left: 0;
+        transition: all ease .4s;
       }
       .pattie {
         background: white;
+        transition: all ease .4s;
       }
+      &:hover {
+        opacity: .5;
+        .inner {
+          &:hover {
+            transform: rotate(180deg);
+          }
+            .pattie:first-of-type {
+              width: 20px;
+            }
+            .pattie:last-of-type {
+              width: 20px;
+            }
+          }
+      }
+
+
     }
   }
   .main-nav-footer {
@@ -202,6 +221,7 @@ p {
 }
 .main-nav.shown  .main-nav-header .hamburger {
   cursor: pointer;
+  left: 20px;
   &:hover {
     opacity: .5;
     .inner {
@@ -240,7 +260,7 @@ p {
   width: 80px;
   display: block;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   .inner {
@@ -394,6 +414,8 @@ p {
   position: relative
 }
 .artist-hero {
+    max-width: 60%;
+    margin: 0 auto;
   img {
     opacity: 0;
     transition : opacity ease .3s;
@@ -410,6 +432,13 @@ p {
   h1 {
     text-transform: uppercase;
     font-size: 60px;
+    direction: rtl;
+    width: 50px;
+    float: right;
+    line-height: 46px;
+  }
+  ul {
+    clear: both;
   }
   li{
     font-size: 30px;
@@ -417,6 +446,7 @@ p {
     
   }
 }
+
 .artist-hero.loaded {
   img {
     opacity: 1;
