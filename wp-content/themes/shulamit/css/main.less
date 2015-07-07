@@ -9,6 +9,7 @@ a, a:visited, a:active, a:focus {
   border: none;
   outline: none;
 }
+
 .fancylink {
   display: inline-block
 }
@@ -114,6 +115,7 @@ body {
 }
 body.home {
   margin-top: 0;
+  overflow-x: hidden;
 }
 p {
   font-size: 16px;
@@ -125,11 +127,10 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 999;
+  z-index: 60000;
   font-family: 'DrukText-Medium';
   font-size: 16px;
   height: 80px;
-  background: rgba(255, 255, 255, .5);
   letter-spacing: 0.01em;
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -220,7 +221,9 @@ p {
     }
   }
 }
-
+.home .hamburger .pattie {
+  background: white; 
+}
 .main-nav.shown {
   transform: translateX(0px);
 }
@@ -277,9 +280,9 @@ p {
     transition: all ease-in-out .3s;
   }
   .pattie {
-    height: 5px;
+    height: 4px;
     background: black;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     display: block;
     transition: all ease .5s;
   }
@@ -295,20 +298,10 @@ p {
 }
 */
 .home .logo {
-/*
-  text-indent: -1000px;
-  overflow: hidden;
-  background: url(img/logo_home.svg) no-repeat 0 21px;
-  background-size: 100%;
-  position: relative;
-  transition: opacity ease .3s;
-  position: absolute;
-  top: 0;
-  left: 100px;
-  height: 120px;
-  width: 231px;
-*/
-  .logo-slug { display:  block; }
+  span {
+    color: white;
+  }
+  span.logo-slug { color: black;  display: block;}
 }
 .logo {
   font-family: 'Druk-Heavy';
@@ -324,7 +317,7 @@ p {
   top: 26px;
   transition: opacity ease .3s;
   &:hover {
-    opacity: .3;
+    opacity: .9;
   }
   a {
     display: block;
@@ -374,7 +367,7 @@ p {
     width: auto;
     height: auto;
     position: absolute;
-    top:120px;
+    top: 0px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -469,6 +462,7 @@ p {
   padding-right: 5px;
   cursor: pointer;
   transition: opacity ease .4s;
+  width: 8.3%;
   &:hover {
     opacity: .6;
   }
@@ -502,23 +496,26 @@ p {
   #artist-gallery {
     height: 500px;
     width: 100%;
+    margin-bottom: 40px;
   }
 }
 
 /* GALLERY ARROWS */
 #artist-gallery.rsDefault .rsArrowIcn {		
     width: 80px;
-    height: 63px;
+    height: 34px;
     top: 50%;
     left: 0;
-    margin-top:-31px;	
+    margin-top:-17px;	
     margin-left: 0px;
     position: absolute;	
     cursor: pointer;	
     background: url(img/arrows.png) no-repeat;
+/*     border: solid 1px red; */
+    background-size: 30%;
   }
 #artist-gallery.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: 0 0; }
-#artist-gallery.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: right -62px; }
+#artist-gallery.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: right -32px; }
 
   
   

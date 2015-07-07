@@ -133,7 +133,7 @@ endif;
 
 add_filter('pre_get_posts','SearchFilter');
 add_action( 'init', 'create_post_type' );
-add_filter('the_content', 'filter_ptags_on_images');
+//add_filter('the_content', 'filter_ptags_on_images');
 
 //add featured image support to custom post types, posts and pages
 add_theme_support( 'post-thumbnails', array( 'post','artist', 'page') );
