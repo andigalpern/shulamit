@@ -135,8 +135,12 @@ p {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+#menu-main-menu {
+  padding-top: 40px;
+}
+
 .main-nav {
-  background: rgba(0,0,0, 0.95);
+  background: rgba(0,0,0, 0.8);
   position: fixed;
   left: 0;
   top: 0;
@@ -144,8 +148,8 @@ p {
   min-width: 320px;
   color: silver;
   z-index: 50000;
-  font-family: 'DrukText-Medium';
-  padding: 0 20px;
+  font-family: 'DrukText-Bold';
+  padding: 0 35px;
   transform: translateX(-360px);
   transition: all ease .3s;
   overflow-y: scroll;
@@ -185,21 +189,25 @@ p {
   }
   .main-nav-footer {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 30px;
+    left: 35px;
+    color: white;
+
     @media(max-height: 500px) {
       position: relative;
       padding-top: 20px;
+      padding-bottom: 20px;
       left: auto;
       bottom: auto;
     }
     p {
-      line-height: 17px;
+      line-height: 19px;
     }
   }
   .menu-main-menu-container {
     a{
       display: block;
+
       .medium;
       &:hover {
         color: white;
@@ -214,10 +222,11 @@ p {
       }
     }
     ul li a {
-      font-size: 24px;
+      font-size: 23px;
+      line-height: 33px;
       color: white;
       text-transform: uppercase;
-
+      font-family: 'DrukText-Bold';
     }
   }
 }
@@ -253,15 +262,6 @@ p {
       width: 15px;
     }
   }
-}
-.menu-main-menu-container {
-/*
-  position: absolute;
-  right: 40px;
-  top: 0px;
-  height: 80px;
-  line-height: 80px;
-*/
 }
 .hamburger {
   height: 80px;
@@ -334,7 +334,9 @@ p {
   height: 70px;
   /*line-height: 31px;*/
   line-height: 22px;
+  line-height: 27px;
   font-size: 30px;
+  font-size: 35px;
   top: 26px;
   transition: opacity ease .3s;
   &:hover {
@@ -366,6 +368,12 @@ p {
   font-family: 'Mono Social Icons Font';
   margin-left: -8px;
   -webkit-font-smoothing: antialiased;
+  margin-bottom: 12px;
+  .artsty-icon {
+    border: solid 1px white;
+    padding: 5px 10px;
+    font-size: 8px;
+  }
   a {
     font-size: 30px;
     color: white;
@@ -419,7 +427,7 @@ p {
   time {
     text-transform: uppercase;
     font-size: 40px;
-     @media(max-width: 60px) {
+     @media(max-width: 600px) {
       font-size: 24px;
     }
   }

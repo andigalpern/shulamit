@@ -80,6 +80,7 @@ wp_title( '', true, 'right' );
     <menu class="social-links">
       <a href="xxxhttps://www.facebook.com/sarah.appleby" target="_blank">&#xe027;</a>
       <a href="xxhttps://instagram.com/oksarahappleby/" target="_blank">&#xe100;</a>
+      <a href="https://www.artsy.net/shulamit-gallery" target="_blank" class="artsty-icon">ARTSY</a>
     </menu>
     <address>
       <p>17 North Venice Blvd<br>
