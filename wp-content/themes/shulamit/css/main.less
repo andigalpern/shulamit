@@ -319,6 +319,17 @@ p {
    }
 }
 */
+.page-id-11 ,
+.page-id-25 {
+  .logo {
+    color: white;
+  }
+  .hamburger .pattie {
+    background: white;
+  } 
+}
+
+
 .home .logo {
   span {
     color: white;
@@ -343,8 +354,10 @@ p {
   top: 26px;
   transition: all ease .2s;
   max-width: 300px;
-  &:hover {
-    opacity: .9;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    border: none;
+    outline: none;
   }
   a {
     display: block;
@@ -595,7 +608,9 @@ p {
 }
 
 
+.swap-image-wrap {
 
+}
 #swap-image {
   display: block;
   margin-bottom: 12px;
@@ -608,7 +623,9 @@ p {
 #swap-title {
   font-family: 'Druk-Heavy';
   font-size: 48px;
-   -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  transition: opacity ease .2s;
+  opacity: 0;
 }
 
 

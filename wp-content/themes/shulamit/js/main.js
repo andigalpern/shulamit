@@ -72,7 +72,6 @@ e.preventDefault();
 var slideIndex = $(this).data('slide');
 console.log(slideIndex);
 window.location.hash=slideIndex; 
- //window.location='#artist-gallery';
 });
 
 //fadeIn Artist Index firts imnage
@@ -391,10 +390,13 @@ $(document).on('mouseover', '.artist-item',function(e){
      target.attr('src', imgSrc).css("opacity", "1");
      targetTitle.html(imgTitle);
      targetLink.attr('href', swapLink)
+     $('#swap-title').css("opacity", "1");
+
  });
 $(document).on('mouseout', '.artist-item',function(e){
    var target = $('#swap-image');
    target.css("opacity", "0");
+   $('#swap-title').css("opacity", "0");
  }); 
   
  

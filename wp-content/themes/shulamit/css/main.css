@@ -7858,6 +7858,14 @@ p {
    }
 }
 */
+.page-id-11 .logo,
+.page-id-25 .logo {
+  color: white;
+}
+.page-id-11 .hamburger .pattie,
+.page-id-25 .hamburger .pattie {
+  background: white;
+}
 .home .logo span {
   color: white;
 }
@@ -7885,8 +7893,12 @@ p {
           transition: all ease .2s;
   max-width: 300px;
 }
-.logo:hover {
-  opacity: .9;
+.logo:hover,
+.logo:focus,
+.logo:active {
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 .logo a {
   display: block;
@@ -8147,6 +8159,9 @@ p {
   font-family: 'Druk-Heavy';
   font-size: 48px;
   -webkit-font-smoothing: antialiased;
+  -webkit-transition: opacity ease .2s;
+          transition: opacity ease .2s;
+  opacity: 0;
 }
 /* ABOUT PAGE */
 .about-description {
