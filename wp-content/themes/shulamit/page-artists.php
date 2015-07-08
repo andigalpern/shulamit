@@ -2,8 +2,9 @@
 
 <section class="container-fluid">
   <article class="col-sm-2">
+  <h3 class="artist-list-heading">Artists<br>Representing</h3>
   <ul class="artist-list">
-  <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page=16' ) ); ?>
+  <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page=16' , 'cat=3' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
     <li
       class="artist-item"
@@ -21,8 +22,9 @@
   </article>
   
   <article class="col-sm-2">
+  <h3 class="artist-list-heading">Selling Works By</h3>
   <ul class="artist-list">
-  <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page=16' ) ); ?>
+  <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page=16' , 'cat=4' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
     <li
       class="artist-item"

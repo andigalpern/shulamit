@@ -127,6 +127,7 @@ $('.view-all').on('click', function(){
 //TOGGLE HAMBUEGRE NAV
 $(document).on('click', '.hamburger', function(){
   $('.main-nav').toggleClass('shown');
+  $(this).toggleClass('shown');
   if ($('.search-overlay-wrapper').hasClass('shown') ) {
     $('.search-overlay-wrapper').toggleClass('shown');
   }

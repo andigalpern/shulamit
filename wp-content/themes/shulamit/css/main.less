@@ -141,7 +141,7 @@ p {
   left: 0;
   top: 0;
   bottom: 0;
-  min-width: 300px;
+  min-width: 320px;
   color: silver;
   z-index: 50000;
   font-family: 'DrukText-Medium';
@@ -280,13 +280,32 @@ p {
     transition: all ease-in-out .3s;
   }
   .pattie {
-    height: 4px;
+    height: 2px;
     background: black;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     display: block;
     transition: all ease .5s;
   }
 }
+.hamburger.shown {
+       .inner {
+            transform: rotate(90deg);
+          }
+          .pattie:first-of-type {
+            width: 20px;
+          }
+          .pattie:last-of-type {
+            width: 20px;
+          }
+   &:hover {
+    .inner {
+        transform: rotate(-90deg);
+      }
+   }       
+}
+
+
+
 /*
 .main-nav .hamburger {
   position: relative;
@@ -301,7 +320,7 @@ p {
   span {
     color: white;
   }
-  span.logo-slug { color: black;  display: block;}
+  span.logo-slug { color: #777;  display: block;}
 }
 .logo {
   font-family: 'Druk-Heavy';
@@ -309,11 +328,13 @@ p {
   color: black;
   text-transform: capitalize;
   position: absolute;
-  left: 100px;
-  font-size: 39px;
+  left: 80px;
+  /*font-size: 39px;*/
   width: 100%;
   height: 70px;
-  line-height: 31px;
+  /*line-height: 31px;*/
+  line-height: 22px;
+  font-size: 30px;
   top: 26px;
   transition: opacity ease .3s;
   &:hover {
@@ -373,6 +394,7 @@ p {
     left: 0;
     width: auto;
     height: auto;
+    background: black;
   }
 }
 #slide-credit {
@@ -389,7 +411,7 @@ p {
   h2,  h3 {
     font-size: 80px;
     line-height: 60px;
-    @media(max-width: 320px) {
+    @media(max-width: 600px) {
       font-size:50px;
       line-height:40px; 
     }
@@ -397,8 +419,8 @@ p {
   time {
     text-transform: uppercase;
     font-size: 40px;
-     @media(max-width: 320px) {
-     font-size: 24px;
+     @media(max-width: 60px) {
+      font-size: 24px;
     }
   }
 }
@@ -531,7 +553,15 @@ p {
     margin-bottom: 12px;
   }
 }
+.artist-list-heading {
+  font-family: 'DrukText-Bold';
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 .artist-list {
+
   font-family: 'DrukText-Medium';
   
   li {
@@ -590,6 +620,13 @@ p {
   transition: all ease-in-out .3s;
   transform: translateX(40px);
   border-left: solid 1px #161616;
+  z-index: 999999;
+  @media(max-width: 600px) {
+    top: 0;
+    max-width: 100%;
+    left: 0;
+    padding: 15px;
+  }
 }
 
 .search-form {
@@ -616,6 +653,10 @@ p {
   }
   input[type="submit"]:hover {
     color: silver;
+  }
+  @media(max-width: 600px) {
+    margin-top: 0;
+    max-width: 100%;
   }
 }
 .search-overlay-wrapper.shown {

@@ -64,7 +64,7 @@ function create_post_type() {
       'public' => true,
       'has_archive' => true,
       'show_in_nav_menus' => true,
-      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' )
+      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ,'category')
     )
   );
 /*
@@ -138,6 +138,8 @@ add_action( 'init', 'create_post_type' );
 //add featured image support to custom post types, posts and pages
 add_theme_support( 'post-thumbnails', array( 'post','artist', 'page') );
 add_action( 'after_setup_theme', 'baw_theme_setup' );
+
+//register_taxonomy_for_object_type( 'category', 'artist' );
 /*
 unregister_post_type('portfolios');
 */

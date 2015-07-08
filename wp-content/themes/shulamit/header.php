@@ -60,12 +60,12 @@ wp_title( '', true, 'right' );
 <nav class="main-nav">
   <div class="inner">
   <header class="main-nav-header">
-    <div class="hamburger">
+  <!--   <div class="hamburger">
       <div class="inner">
       <span class="pattie"></span>
       <span class="pattie"></span>
       <span class="pattie"></span>
-      </div>
+      </div> -->
     </div>
   </header>
   
