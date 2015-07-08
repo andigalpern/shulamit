@@ -61,6 +61,7 @@ $(document).one('click', '.artist-thumb',function(e){
       });
     //}); 
     window.location.hash=slideIndex; 
+    //window.location='#artist-gallery';
 });
 
 $(document).on('click', '.artist-thumb-slide-trigger',function(e){
@@ -71,6 +72,7 @@ e.preventDefault();
 var slideIndex = $(this).data('slide');
 console.log(slideIndex);
 window.location.hash=slideIndex; 
+ //window.location='#artist-gallery';
 });
 
 //fadeIn Artist Index firts imnage
@@ -128,6 +130,7 @@ $('.view-all').on('click', function(){
 $(document).on('click', '.hamburger', function(){
   $('.main-nav').toggleClass('shown');
   $(this).toggleClass('shown');
+  $('.logo').toggleClass('shown');
   if ($('.search-overlay-wrapper').hasClass('shown') ) {
     $('.search-overlay-wrapper').toggleClass('shown');
   }
@@ -385,11 +388,15 @@ $(document).on('mouseover', '.artist-item',function(e){
     
      console.log(imgTitle , imgSrc);
      
-     target.attr('src', imgSrc);
+     target.attr('src', imgSrc).css("opacity", "1");
      targetTitle.html(imgTitle);
      targetLink.attr('href', swapLink)
  });
- 
+$(document).on('mouseout', '.artist-item',function(e){
+   var target = $('#swap-image');
+   target.css("opacity", "0");
+ }); 
+  
  
 $(window).on('resize', function(){
    //resizeHomeSlide();

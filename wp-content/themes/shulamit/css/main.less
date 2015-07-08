@@ -154,7 +154,7 @@ p {
   transition: all ease .3s;
   overflow-y: scroll;
   @media(max-width: 320px) {
-    width: 100%;
+/*     width: 100%; */
   }
   .main-nav-header {
     position: relative;
@@ -288,15 +288,18 @@ p {
   }
 }
 .hamburger.shown {
-       .inner {
-            transform: rotate(90deg);
-          }
-          .pattie:first-of-type {
-            width: 20px;
-          }
-          .pattie:last-of-type {
-            width: 20px;
-          }
+    .inner {
+      transform: rotate(90deg);
+    }
+    .pattie {
+      background: white;
+    }
+    .pattie:first-of-type {
+      width: 20px;
+    }
+    .pattie:last-of-type {
+      width: 20px;
+    }
    &:hover {
     .inner {
         transform: rotate(-90deg);
@@ -338,7 +341,8 @@ p {
   font-size: 30px;
   font-size: 35px;
   top: 26px;
-  transition: opacity ease .3s;
+  transition: all ease .2s;
+  max-width: 300px;
   &:hover {
     opacity: .9;
   }
@@ -354,6 +358,9 @@ p {
   @media(max-width: 320px) {
     left: 75px;
   }
+}
+.logo.shown {
+  color: white;
 }
 .browserupgrade .logo  {
   margin: 0 auto 20px auto;
@@ -592,11 +599,11 @@ p {
 #swap-image {
   display: block;
   margin-bottom: 12px;
-    transition: opacity ease .3s;
-    opacity: 0;
+  transition: opacity ease .2s;
+  opacity: 0;
 }
 #swap-image.loaded {
-  opacity: 1;
+  opacity: 0;
 }
 #swap-title {
   font-family: 'Druk-Heavy';
@@ -610,16 +617,24 @@ p {
 .about-description {
   max-width: 380px;
   margin-top: 25vh;
-}
+  @media(max-width: 600px) {
+    margin-top: 20px;
 
+  } 
+}
+.about {
+  .pull-left {
+    margin-top: 20px;
+  }
+}
 
 
 
 /* SEARCH */
 .search-overlay-wrapper {
   position: fixed;
-  top: 0; left: 300px; right: 0 ; bottom: 0;
-  background: rgba(0,0,0,.8);
+  top: 0; left: 320px; right: 0 ; bottom: 0;
+  background: rgba(0,0,0, 0.8);
   color: white;
   font-size: 50px;
   z-index: 55000;
@@ -671,7 +686,7 @@ p {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
-  background: rgba(0,0,0,.95);
+  background: rgba(0,0,0, 0.8);
   .search-form{
     transform: translateX(0px);
   }

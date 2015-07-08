@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="container">
+<section class="container about">
     <article class="row">
     <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <section class="col-sm-6 pull-right">

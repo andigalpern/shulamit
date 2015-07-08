@@ -67,6 +67,20 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ,'category')
     )
   );
+  register_post_type( 'current_exhibition',
+    array(
+      'labels' => array(
+        'name' => __( 'Current Exhibitions' ),
+        'singular_name' => __( 'Current Exhibition' )
+      ),
+      'with_front' => false,
+      'taxonomies' => array('category'),  
+      'public' => true,
+      'has_archive' => true,
+      'show_in_nav_menus' => true,
+      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ,'category')
+    )
+  );  
 /*
   register_post_type( 'artists',
     array(

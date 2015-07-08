@@ -1,72 +1,30 @@
 <?php get_header(); ?>
 
-<section class="container">
-  <article class="row post">
-    
-    <figure class="col-sm-6">
-      <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-    </figure>
-    
-    <section class="col-sm-6">
-      <header>
-        <span class="bold slug">Current</span>
-        <h2 class="heavy">Melanie Daniel:</h2>
-        <h3 class="heavy">Piecemaker</h3>
-        <time>May 22, 2015 - June 27, 2015</time>
-      </header>
-      
-      <section class="content">
-        <p>
-        Fingerstache keytar cray tousled, crucifix freegan organic meggings migas sartorial synth Shoreditch cliche cred. Bespoke swag readymade chia scenester umami gluten-free. Sustainable Carles readymade Wes Anderson, kale chips Thundercats retro Truffaut craft beer Neutra. Truffaut YOLO disrupt skateboard chia. You probably haven't heard of them Williamsburg mlkshk Banksy, blog pug disrupt. Jean shorts banjo Pinterest, try-hard fanny pack typewriter Helvetica. Vice wolf locavore, YOLO fap keffiyeh distillery actually cold-pressed gluten-free sartorial vegan single-origin coffee.
-        </p>
-      </section>
-    </section>
+<section class="slide-wrapper">
+  <section id="homepage-gallery" class="royalSlider rsDefault">
+  <?php $loop = new WP_Query( array( 'post_type' => 'current_exhibition' ,  'posts_per_page=1'  ) ); ?>
+  <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
 
-  </article>
-   <article class="row post">
-    
-    <figure class="col-sm-6">
-      <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-    </figure>
-    
-    <section class="col-sm-6">
-      <header>
-        <span class="bold slug">Current</span>
-        <h2 class="heavy">Melanie Daniel:</h2>
-        <h3 class="heavy">Piecemaker</h3>
-        <time>May 22, 2015 - June 27, 2015</time>
-      </header>
+      <?php
+      $images = get_field('images');
+      $image = $images[0];
+      ?>
       
-      <section class="content">
-        <p>
-        Fingerstache keytar cray tousled, crucifix freegan organic meggings migas sartorial synth Shoreditch cliche cred. Bespoke swag readymade chia scenester umami gluten-free. Sustainable Carles readymade Wes Anderson, kale chips Thundercats retro Truffaut craft beer Neutra. Truffaut YOLO disrupt skateboard chia. You probably haven't heard of them Williamsburg mlkshk Banksy, blog pug disrupt. Jean shorts banjo Pinterest, try-hard fanny pack typewriter Helvetica. Vice wolf locavore, YOLO fap keffiyeh distillery actually cold-pressed gluten-free sartorial vegan single-origin coffee.
-        </p>
-      </section>
-    </section>
-
-  </article>
-  <article class="row post">
-    
-    <figure class="col-sm-6">
-      <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-    </figure>
-    
-    <section class="col-sm-6">
-      <header>
-        <span class="bold slug">Current</span>
-        <h2 class="heavy">Melanie Daniel:</h2>
-        <h3 class="heavy">Piecemaker</h3>
-        <time>May 22, 2015 - June 27, 2015</time>
-      </header>
+      <?php foreach( $images as $image ): ?>
+        <div class="slide" data-color="<?php echo $image['alt']; ?>">
+          <a href="<?php echo $image['sizes']['large']; ?>" class="rsImg"></a>
+        </div>
+      <?php endforeach; ?>
       
-      <section class="content">
-        <p>
-        Fingerstache keytar cray tousled, crucifix freegan organic meggings migas sartorial synth Shoreditch cliche cred. Bespoke swag readymade chia scenester umami gluten-free. Sustainable Carles readymade Wes Anderson, kale chips Thundercats retro Truffaut craft beer Neutra. Truffaut YOLO disrupt skateboard chia. You probably haven't heard of them Williamsburg mlkshk Banksy, blog pug disrupt. Jean shorts banjo Pinterest, try-hard fanny pack typewriter Helvetica. Vice wolf locavore, YOLO fap keffiyeh distillery actually cold-pressed gluten-free sartorial vegan single-origin coffee.
-        </p>
-      </section>
-    </section>
-
-  </article>   
+    <?php endwhile;  ?>
+  
+  </section>
+  
+  <aside id="slide-credit">
+    <h2>Melanie Daniel:</h2>
+    <h3>Piecemaker</h3>
+    <time datetime="">May 21, 2015 - June 27, 2015</time>
+  </aside>
 </section>
 
 <?php get_footer(); ?>
