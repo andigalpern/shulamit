@@ -2,7 +2,10 @@
 // based on the new class we add here 'artist-thumb-slide-trigger'
 $(document).one('click', '.artist-thumb',function(e){
   e.preventDefault();
-   $('.artist-thumbs').addClass('gallery-open');
+  
+  $('.artist-thumb').removeClass('active');
+  $(this).addClass('active');
+  $('.artist-thumbs').addClass('gallery-open');
 
   $('.artist-thumbs').toggleClass('large');
   $('.artist-thumb').each(function(){
@@ -65,7 +68,12 @@ $(document).one('click', '.artist-thumb',function(e){
 });
 
 $(document).on('click', '.artist-thumb-slide-trigger',function(e){
-e.preventDefault(); 
+e.preventDefault();
+
+  
+  $('.artist-thumb,.artist-thumb-slide-trigger').removeClass('active');
+  $(this).addClass('active');
+   
   if( $('.artist-thumb-slide-trigger').parent().hasClass('large') ){
     $('.artist-thumb-slide-trigger').parent().removeClass('large');
   }

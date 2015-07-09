@@ -8081,11 +8081,18 @@ p {
   padding-right: 5px;
   cursor: pointer;
   -webkit-transition: opacity ease .4s;
-          transition: opacity ease .4s;
-  width: 8.3%;
+  transition: opacity ease .4s;
+  width: 10%;
+  padding-bottom: 10px;
+  opacity: .5;
 }
 .artist-thumbs .col-md-1:hover {
-  opacity: .6;
+  opacity: 1;
+}
+.artist-thumb-slide-trigger.active,
+.artist-thumbs .col-md-1.active,
+.artist-thumbs .col-md-1:first-child {
+  opacity: 1;
 }
 .artist-thumbs.large .col-md-1 {
   width: 25%;
