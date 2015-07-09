@@ -137,6 +137,7 @@ figure {
   margin: 1em 40px;
 }
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -187,6 +188,7 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -196,6 +198,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -1103,10 +1106,12 @@ th {
   content: "\e260";
 }
 * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -2623,6 +2628,7 @@ label {
   font-weight: bold;
 }
 input[type="search"] {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 input[type="radio"],
@@ -6827,6 +6833,7 @@ button.close {
 .rsVideoContainer.rsIOSVideo iframe,
 .rsVideoContainer.rsIOSVideo video,
 .rsVideoContainer.rsIOSVideo embed {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-right: 44px;
 }
@@ -7816,7 +7823,7 @@ p {
   width: 30px;
   height: 24px;
   position: absolute;
-  top: 28px;
+  top: 32px;
   left: 24px;
   -webkit-transition: all ease-in-out 0.3s;
           transition: all ease-in-out 0.3s;
@@ -7879,7 +7886,7 @@ p {
   color: black;
   text-transform: capitalize;
   position: absolute;
-  left: 80px;
+  left: 70px;
   /*font-size: 39px;*/
   width: 100%;
   height: 70px;
@@ -8297,5 +8304,8 @@ p {
 .post img {
   display: block;
   margin-bottom: 12px;
+}
+.no-results {
+  letter-spacing: -0.03em;
 }
 /*# sourceMappingURL=main.css.map */

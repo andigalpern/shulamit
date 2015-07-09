@@ -21,7 +21,7 @@ get_header(); ?>
 
 <?php else: ?>   
 
-		<h2 class="text-center no-results bold ">No Results, try and another word.</h2>
+		<h2 class="text-center no-results bold ">No Results, try another word.</h2>
 
 <?php endif; ?>
 </section>

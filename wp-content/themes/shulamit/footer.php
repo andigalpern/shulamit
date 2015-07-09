@@ -6,7 +6,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-<script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/jquery.min.js"></script>s
+<script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/jquery.min.js"></script>
 <script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/bootstrap.min.js"></script>
 <script src="<?php bloginfo( 'template_url' ); ?>/js/royalslider/jquery.royalslider.min.js"></script>
 <script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/imagesloaded.pkgd.min.js"></script>
