@@ -8064,8 +8064,9 @@ p {
   clear: both;
 }
 .artist-menu li {
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: -0.04em;
+  line-height: 26px;
 }
 .artist-hero.loaded img {
   opacity: 1;
