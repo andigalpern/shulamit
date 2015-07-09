@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="container-fluid">
+<section class="container-fluid artist-container">
   <article class="col-sm-2">
   <h3 class="artist-list-heading">Artists<br>Representing</h3>
   <ul class="artist-list">
@@ -41,7 +41,8 @@
   </ul>
   </article>
   
-  <article class="col-sm-5 col-sm-offset-1">
+<!--   <article class="col-sm-5 col-sm-offset-1"> -->
+    <article class="col-sm-7">
     <figure class="swap-image-wrap">
     
     <?php $loop = new WP_Query( 

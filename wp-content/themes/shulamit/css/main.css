@@ -8059,6 +8059,7 @@ p {
   width: 50px;
   float: right;
   line-height: 46px;
+  margin-bottom: 4px;
 }
 .artist-menu ul {
   clear: both;
@@ -8066,7 +8067,10 @@ p {
 .artist-menu li {
   font-size: 24px;
   letter-spacing: -0.04em;
-  line-height: 26px;
+  line-height: 25px;
+}
+.artist-container {
+  margin: 0 29px;
 }
 .artist-hero.loaded img {
   opacity: 1;
@@ -8165,6 +8169,7 @@ p {
   margin-bottom: 10px;
 }
 .artist-list {
+  margin-bottom: 40px;
   font-family: 'DrukText-Medium';
 }
 .artist-list li h2 {
@@ -8212,7 +8217,7 @@ p {
 .search-overlay-wrapper {
   position: fixed;
   top: 0;
-  left: 320px;
+  left: 256px;
   right: 0 ;
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
@@ -8226,7 +8231,6 @@ p {
   -webkit-transform: translateX(40px);
       -ms-transform: translateX(40px);
           transform: translateX(40px);
-  border-left: solid 1px #161616;
   z-index: 999999;
 }
 @media (max-width: 600px) {
@@ -8346,5 +8350,18 @@ p {
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
+}
+@media (max-width: 700px) {
+  #current-expo-gallery {
+    min-height: auto;
+    height: 40vh;
+    background-attachment: scroll;
+  }
+}
+.current-expo-data {
+  margin-bottom: 100px;
+}
+.container-smaller {
+  max-width: 980px;
 }
 /*# sourceMappingURL=main.css.map */

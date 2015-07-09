@@ -29,14 +29,16 @@
   
   
   </section>
-  <section class="container">
+  <section class="container container-smaller current-expo-data">
     <article class="">
       <h2 class="bold"><? the_title(); ?></h2>
       <h3 class="bold"><? the_field('sub_title'); ?></h3>
 
       <?php the_content(); ?>
      
-      
+      <section class="current-expo-gallery-extra">
+          <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/07/shulamit-show-001.jpg" class="img-responsive"/>
+      </section>
     </article>
   </section>
 <?php endwhile;  ?>
