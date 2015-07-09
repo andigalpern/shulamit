@@ -18269,7 +18269,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/bootstrap.less",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/bootstrap.css",
@@ -18298,7 +18298,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/fonts.less",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/fonts.css",
@@ -18417,6 +18417,17 @@
 		"initialSize": 3655,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/logo.png",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/shulamit\/css\/img\/navbvkg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 385744,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/navbvkg.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/navbvkg.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -18560,7 +18571,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/reset.less",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/reset.css",
@@ -18903,7 +18914,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/js\/royalslider\/royalslider.less",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/js\/royalslider\/royalslider.css",
@@ -18952,7 +18963,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/js\/royalslider\/skins\/default\/rs-default.less",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/js\/royalslider\/skins\/default\/rs-default.css",
@@ -19375,6 +19386,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/page-past.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/themes\/shulamit\/page-press.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/page-press.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -24693,7 +24713,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Benjamin Shrimpton",
+"lastSavedByUser": "Ben Shrimpton",
 "manualImportLinks": {
 	},
 "projectAttributes": {

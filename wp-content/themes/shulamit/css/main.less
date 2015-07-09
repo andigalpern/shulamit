@@ -120,6 +120,7 @@ body.home {
 p {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 12px;
 }
 
 .main-header {
@@ -136,7 +137,7 @@ p {
   margin-bottom: 40px;
 }
 #menu-main-menu {
-  padding-top: 40px;
+  padding-top: 25px;
 }
 
 .main-nav {
@@ -145,14 +146,18 @@ p {
   left: 0;
   top: 0;
   bottom: 0;
-  min-width: 320px;
+  width: 256px;
   color: silver;
   z-index: 50000;
   font-family: 'DrukText-Bold';
-  padding: 0 35px;
+  padding: 0 30px;
   transform: translateX(-360px);
   transition: all ease .3s;
-  overflow-y: scroll;
+//   background: url(img/navbvkg.png) no-repeat 0 0;
+  @media(max-height: 500px) {
+    overflow-y: scroll;
+     -webkit-overflow-scrolling: touch;
+  }
   @media(max-width: 320px) {
 /*     width: 100%; */
   }
@@ -192,7 +197,12 @@ p {
     bottom: 30px;
     left: 35px;
     color: white;
-
+    a {
+      color: white;
+      &:hover {
+        color: #777;
+      }
+    }
     @media(max-height: 500px) {
       position: relative;
       padding-top: 20px;
@@ -218,15 +228,20 @@ p {
       cursor: pointer;
       display: block;
       ul li a {
-        color: #989898;
+        color: #a7a7a7;
       }
     }
     ul li a {
-      font-size: 23px;
-      line-height: 33px;
+      font-size: 21px;
+      line-height: 28px;
       color: white;
       text-transform: uppercase;
-      font-family: 'DrukText-Bold';
+      // font-family: 'DrukText-Bold';
+      font-family: 'DrukText-Medium';
+      letter-spacing: -0.03em;
+      &:hover {
+        color: #a7a7a7;
+      }
     }
   }
 }
@@ -265,14 +280,14 @@ p {
 }
 .hamburger {
   height: 80px;
-  width: 80px;
+  width: 60px;
   display: block;
   cursor: pointer;
   position: fixed;
   top: 0;
   left: 0;
   .inner {
-    width: 30px;
+    width: 24px;
     height: 24px;
     position: absolute;
     top: 32px;
@@ -282,7 +297,7 @@ p {
   .pattie {
     height: 2px;
     background: black;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     display: block;
     transition: all ease .5s;
   }
@@ -334,7 +349,7 @@ p {
   span {
     color: white;
   }
-  span.logo-slug { color: #777;  display: block;}
+  span.logo-slug { color: #a7a7a7;  display: block;}
 }
 .logo {
   font-family: 'Druk-Heavy';
@@ -342,15 +357,18 @@ p {
   color: black;
   text-transform: capitalize;
   position: absolute;
-  left: 70px;
+  left: 60px;
   /*font-size: 39px;*/
   width: 100%;
   height: 70px;
-  /*line-height: 31px;*/
-  line-height: 22px;
-  line-height: 27px;
+  /*line-height: 31px;
+  line-height: 27px;*/
+   line-height: 23px;
+/*
   font-size: 30px;
   font-size: 35px;
+*/
+  font-size: 29px;
   top: 26px;
   transition: all ease .2s;
   max-width: 300px;
@@ -390,9 +408,14 @@ p {
   -webkit-font-smoothing: antialiased;
   margin-bottom: 12px;
   .artsty-icon {
-    border: solid 1px white;
-    padding: 5px 10px;
-    font-size: 8px;
+    width: 47px;
+    height: 16px;
+    background: url(img/Artsy.svg) no-repeat 0 0;
+    background-size: 100%;
+    text-indent: -10000px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 10px;
   }
   a {
     font-size: 30px;
@@ -757,6 +780,26 @@ p {
   }
 }
 
+
+// #### SEARCH PAGE
 .no-results {
   letter-spacing: -0.03em;
+}
+
+
+// EXPO
+
+#current-expo-gallery {
+  background: black;
+  width: 100%;
+  min-height: 300px;
+  height: 80vh;
+  top: 0;
+  position: relative;
+  margin-top: -120px;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
 }

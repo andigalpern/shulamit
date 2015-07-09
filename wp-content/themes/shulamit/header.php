@@ -60,13 +60,6 @@ wp_title( '', true, 'right' );
 <nav class="main-nav">
   <div class="inner">
   <header class="main-nav-header">
-  <!--   <div class="hamburger">
-      <div class="inner">
-      <span class="pattie"></span>
-      <span class="pattie"></span>
-      <span class="pattie"></span>
-      </div> -->
-    </div>
   </header>
   
   <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
@@ -75,7 +68,6 @@ wp_title( '', true, 'right' );
   <div class="search-toggle nav"></div>
 
   
-  
   <footer class="main-nav-footer">
     <menu class="social-links">
       <a href="xxxhttps://www.facebook.com/sarah.appleby" target="_blank">&#xe027;</a>
@@ -83,10 +75,10 @@ wp_title( '', true, 'right' );
       <a href="https://www.artsy.net/shulamit-gallery" target="_blank" class="artsty-icon">ARTSY</a>
     </menu>
     <address>
-      <p>17 North Venice Blvd<br>
+      <p><a href="https://www.google.com/maps/place/17+N+Venice+Blvd,+Venice,+CA+90291/@33.9845967,-118.4710927,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2babbcf9d3253:0xee9f87c131a4f212" target="_blank">17 North Venice Blvd<br>
       Venice California, 90291<br>
-      310.281.0961<br>
-      <a href="">info@shulamitgallery.com</a></p>
+      310.281.0961</a><br>
+      <a href="mailto:info@shulamitgallery.com" target="_blank">info@shulamitgallery.com</a></p>
     </address>
   </footer>
   

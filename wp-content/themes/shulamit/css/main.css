@@ -137,7 +137,6 @@ figure {
   margin: 1em 40px;
 }
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -188,7 +187,6 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -198,7 +196,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -1106,12 +1103,10 @@ th {
   content: "\e260";
 }
 * {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -2628,7 +2623,6 @@ label {
   font-weight: bold;
 }
 input[type="search"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 input[type="radio"],
@@ -6833,7 +6827,6 @@ button.close {
 .rsVideoContainer.rsIOSVideo iframe,
 .rsVideoContainer.rsIOSVideo video,
 .rsVideoContainer.rsIOSVideo embed {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-right: 44px;
 }
@@ -7660,6 +7653,7 @@ body.home {
 p {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 12px;
 }
 .main-header {
   position: relative;
@@ -7675,7 +7669,7 @@ p {
   margin-bottom: 40px;
 }
 #menu-main-menu {
-  padding-top: 40px;
+  padding-top: 25px;
 }
 .main-nav {
   background: rgba(0, 0, 0, 0.8);
@@ -7683,17 +7677,22 @@ p {
   left: 0;
   top: 0;
   bottom: 0;
-  min-width: 320px;
+  width: 256px;
   color: silver;
   z-index: 50000;
   font-family: 'DrukText-Bold';
-  padding: 0 35px;
+  padding: 0 30px;
   -webkit-transform: translateX(-360px);
       -ms-transform: translateX(-360px);
           transform: translateX(-360px);
   -webkit-transition: all ease .3s;
           transition: all ease .3s;
-  overflow-y: scroll;
+}
+@media (max-height: 500px) {
+  .main-nav {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 @media (max-width: 320px) {
   .main-nav {
@@ -7738,6 +7737,12 @@ p {
   left: 35px;
   color: white;
 }
+.main-nav .main-nav-footer a {
+  color: white;
+}
+.main-nav .main-nav-footer a:hover {
+  color: #777;
+}
 @media (max-height: 500px) {
   .main-nav .main-nav-footer {
     position: relative;
@@ -7764,14 +7769,18 @@ p {
   display: block;
 }
 .main-nav .menu-main-menu-container ul li ul li a {
-  color: #989898;
+  color: #a7a7a7;
 }
 .main-nav .menu-main-menu-container ul li a {
-  font-size: 23px;
-  line-height: 33px;
+  font-size: 21px;
+  line-height: 28px;
   color: white;
   text-transform: uppercase;
-  font-family: 'DrukText-Bold';
+  font-family: 'DrukText-Medium';
+  letter-spacing: -0.03em;
+}
+.main-nav .menu-main-menu-container ul li a:hover {
+  color: #a7a7a7;
 }
 .home .hamburger .pattie {
   background: white;
@@ -7812,7 +7821,7 @@ p {
 }
 .hamburger {
   height: 80px;
-  width: 80px;
+  width: 60px;
   display: block;
   cursor: pointer;
   position: fixed;
@@ -7820,7 +7829,7 @@ p {
   left: 0;
 }
 .hamburger .inner {
-  width: 30px;
+  width: 24px;
   height: 24px;
   position: absolute;
   top: 32px;
@@ -7831,7 +7840,7 @@ p {
 .hamburger .pattie {
   height: 2px;
   background: black;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   display: block;
   -webkit-transition: all ease .5s;
           transition: all ease .5s;
@@ -7877,7 +7886,7 @@ p {
   color: white;
 }
 .home .logo span.logo-slug {
-  color: #777;
+  color: #a7a7a7;
   display: block;
 }
 .logo {
@@ -7886,15 +7895,18 @@ p {
   color: black;
   text-transform: capitalize;
   position: absolute;
-  left: 70px;
+  left: 60px;
   /*font-size: 39px;*/
   width: 100%;
   height: 70px;
-  /*line-height: 31px;*/
-  line-height: 22px;
-  line-height: 27px;
+  /*line-height: 31px;
+  line-height: 27px;*/
+  line-height: 23px;
+  /*
   font-size: 30px;
   font-size: 35px;
+*/
+  font-size: 29px;
   top: 26px;
   -webkit-transition: all ease .2s;
           transition: all ease .2s;
@@ -7942,9 +7954,14 @@ p {
   margin-bottom: 12px;
 }
 .social-links .artsty-icon {
-  border: solid 1px white;
-  padding: 5px 10px;
-  font-size: 8px;
+  width: 47px;
+  height: 16px;
+  background: url(img/Artsy.svg) no-repeat 0 0;
+  background-size: 100%;
+  text-indent: -10000px;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 10px;
 }
 .social-links a {
   font-size: 30px;
@@ -8307,5 +8324,19 @@ p {
 }
 .no-results {
   letter-spacing: -0.03em;
+}
+#current-expo-gallery {
+  background: black;
+  width: 100%;
+  min-height: 300px;
+  height: 80vh;
+  top: 0;
+  position: relative;
+  margin-top: -120px;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
 }
 /*# sourceMappingURL=main.css.map */
