@@ -1,9 +1,14 @@
 <?php get_header(); ?>
 
+
+  <?php $loop = new WP_Query( array( 'post_type' => 'current_exhibition' ,  'posts_per_page=1'  ) ); ?>
+  <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
+  
+  
 <section class="slide-wrapper">
   <section id="homepage-gallery" class="royalSlider rsDefault">
   
-    <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
       <?php
       $images = get_field('images');
       $image = $images[0];
@@ -15,15 +20,17 @@
         </div>
       <?php endforeach; ?>
       
-    <?php endwhile; endif;  ?>
+  
   
   </section>
   
   <aside id="slide-credit">
-    <h2>Melanie Daniel:</h2>
-    <h3>Piecemaker</h3>
-    <time datetime="">May 21, 2015 - June 27, 2015</time>
+    <h2><? the_title(); ?>:</h2>
+    <h3><? the_field('sub_title'); ?></h3>
+    <time datetime=""><?php the_field('dates'); ?>5</time>
   </aside>
 </section>
+
+  <?php endwhile;   ?>
 
 <?php get_footer(); ?>
