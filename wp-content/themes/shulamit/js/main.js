@@ -184,103 +184,9 @@ function goInstafeed() {
 }
 
 
-function goInstafeedPage() {
-  if( $('#instagram-page').length){
-  var loadButton = $('#instagram-load-more');
-  console.log("instagram page feed start")
-  var feed = new Instafeed({
-/*
-      get: 'tagged',
-      tagName: 'makeup',
-      clientId: '9465ec57105c4ea08beeb8b9e413bbdc',
-*/
-      get: 'user',
-      userId: 11696583,
-      accessToken: '11696583.850066e.fb4d778871ec4c67bc657374fb6ce721',
 
-      sortBy: 'most-recent',
-      target: 'instagram-page',
-      template: '<div class="col-xs-4 col-sm-3 instagram-item"><a href="{{link}}" target="_blank"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span><img class="img-responsive" src="{{image}}" alt=""><div class="insta-meta"></div></a></div>',
-      resolution: 'low_resolution',
-      limit: 24,
-      after: function() {
-        // disable button if no more results to load
-        if ( !this.hasNext() ) {
-          loadButton.setAttribute('disabled', 'disabled');
-        }
-      }
-  });
-  // bind the load more button
-  $(document).on('click', loadButton, function() {
-    feed.next();
-  });
-  
-  feed.run();
-  } //end if
-}
-
-
-function doTouchCarousel() {
-    console.log("touch carosuel start")
-    $("#owl-demo").touchCarousel({
-        //pagingNav: false,
-        snapToItems: false,
-        itemsPerMove: 4,
-        scrollToLast: false,
-        loopItems: true,
-        scrollbar: false
-    });
-    $("#owl-demo").addClass('loaded')
-}
-
-
-
-
-//add bkg image support
-$.waitForImages.hasImgProperties = ['backgroundImage'];
-function fadeBkgImg(){
-  var imgWrap = $('.bio-img');
-  if(imgWrap .length){
-    imgWrap.waitForImages(function(){
-      console.log("loaded");
-      $(this).css({
-        'opacity':'1'
-      });
-    });
-  }
-}
 
 /*
-function clearEmptySpans() {
-  $('span').each(function() {
-    var $this = $(this);
-    if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
-      $this.remove();
-  });
-}
-*/
-
-/*
-function goOwl(){
-  if ($("#owl-demo").length) {
-    $("#owl-demo").owlCarousel({
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-        items : 8,
-        navigation:true,
-    });
-  }
-}
-*/
-/*
-function resizeHomeSlide() {
-  console.log("resizeHomeSlide")
-  if ($('#homepage-gallery').length) {
-    var theWidth = $('#homepage-gallery').width();
-    var theHeight = theWidth / 3;
-    $('#homepage-gallery').height(theHeight);
-  } 
-}
-*/
 function resizeMainFolioAjax() {
   if ( $('#single-folio').length ) {
     console.log("resizeMainFolioAjax")
@@ -300,16 +206,75 @@ function resizeMainFolioSolo() {
     goRoyalFolio();
   } 
 }
+*/
+
+function resizeExpoSLider(){
+    var expoHeight = $('#expo-gallery').width() / 1.5;
+    var $royalSlider = $('#expo-gallery');
+    $royalSlider.height(expoHeight);
+}
+function expoGallery(){
+  if ($('#expo-gallery').length) {
+    
+    resizeExpoSLider();
+    
+     var $royalSlider = $('#expo-gallery');
+     $royalSlider.royalSlider({
+        addActiveClass: true,
+        imageScaleMode: 'fit',
+        controlNavigation: 'none',
+        slidesSpacing: 0,
+        numImagesToPreload: 3,
+        keyboardNavEnabled: true,
+        fadeinLoadedSlide: true,
+        transitionSpeed: 300,
+        arrowsNavAutoHide: false,
+        deeplinking: {
+          change: true,
+          enabled: true,
+          prefix: 'image-'
+        }
+     });
+     
+     
+   var slider = $royalSlider.data('royalSlider');
+
+    var caption = $('slide-caption:first-of-type').html();
+    console.log(caption)
+    
+    captionHolder = $('#expo-gallery-captions');
+    captionHolder.html(caption);
+
+
+    slider.ev.on('rsAfterSlideChange', function(event) {
+        console.log("rsAfterSlideChange")
+        var caption = $('.rsActiveSlide .slide-caption').html();
+        console.log(caption)
+        captionHolder.html(caption);
+    }); 
+     
+  } //end if
+}
+
+$(document).on('click', '.expo-go-full-screen', function(e){
+ $('#expo-gallery-wrap').toggleClass('fixed');
+  $(window).trigger('resize');
+  window.location.hash="#";
+});
 
 
 
+$(document).on('click', '.artist-thumb-expo', function(e){
+  e.preventDefault();
+  var url = $(this).data('slide');
+  window.location=url;
+})
 
 function goRoyalHomepage() {
   if ($('#homepage-gallery').length) {
   	var $royalSlider = $('#homepage-gallery');
     $royalSlider.royalSlider({
       transitionType: 'fade',
-    	addActiveClass: true,
       imageScaleMode: 'fill',
       //autoScaleSlider: true,
       //slidesOrientation: 'vertical',
@@ -350,8 +315,8 @@ function goRoyalHomepage() {
       $('#slide-credit').attr('class', '');
       $('#slide-credit').addClass(color)
     });
- }//end if
-} //end function
+ } //end if
+}  //end function
 
 
 
@@ -409,6 +374,7 @@ $(document).on('mouseout', '.artist-item',function(e){
   
  
 $(window).on('resize', function(){
+  //resizeExpoSLider();
    //resizeHomeSlide();
    //resizeMainFolioSolo()
    //resizeMainFolioAjax();
@@ -419,6 +385,7 @@ $(window).on('resize', function(){
 function pjaxComplete() {
   NProgress.done();
   goRoyalHomepage();
+  expoGallery();
 }
 pjax.connect({
   'useClass' : 'pjax',

@@ -32,8 +32,7 @@
 
       <section class="row" id="selected-work"> 
         <header class="col-sm-12 artist-header">    
-          <h2 class="heavy"><?php the_title(); ?></h2>
-          <h3 class="bold">Selected Works</h3>
+          <h3 class="bold"><?php the_title(); ?> Selected Works</h3>
         </header>
       </section>
       
@@ -58,8 +57,8 @@
       
       
       <section class="artist-bio">
-         <h3 class="bold">Biopgraphy</h3>
-        <?php echo $post->post_content; ?>
+         <h3 class="bold"><?php the_title(); ?> Biopgraphy</h3>
+        <?php the_content(); ?>
       </section>
     
       <?php

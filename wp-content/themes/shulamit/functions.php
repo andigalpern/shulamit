@@ -70,8 +70,8 @@ function create_post_type() {
   register_post_type( 'current_exhibition',
     array(
       'labels' => array(
-        'name' => __( 'Current Exhibitions' ),
-        'singular_name' => __( 'Current Exhibition' )
+        'name' => __( 'Exhibitions' ),
+        'singular_name' => __( 'Exhibition' )
       ),
       'with_front' => false,
       'taxonomies' => array('category'),  

@@ -4126,6 +4126,82 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/wp-content\/plugins\/acf-repeater\/acf-repeater-update.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/acf-repeater-update.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/plugins\/acf-repeater\/acf-repeater.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/acf-repeater.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/plugins\/acf-repeater\/css\/input.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/css\/input.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/plugins\/acf-repeater\/js\/field-group.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/js\/field-group.js",
+		"outputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/js\/min\/field-group-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/plugins\/acf-repeater\/js\/input.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/js\/input.js",
+		"outputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/js\/min\/input-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/plugins\/acf-repeater\/repeater.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/repeater.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/plugins\/acf-repeater\/views\/field.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/views\/field.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/plugins\/acf-repeater\/views\/options.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/acf-repeater\/views\/options.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-content\/plugins\/advanced-custom-fields\/acf.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -18388,6 +18464,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/shulamit\/css\/img\/fullscreen.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1367,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/fullscreen.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/fullscreen.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/shulamit\/css\/img\/header.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -18450,6 +18537,17 @@
 		"initialSize": 1300,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/prev.png",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/prev.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/shulamit\/css\/img\/rs-default.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3160,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/rs-default.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/shulamit\/css\/img\/rs-default.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

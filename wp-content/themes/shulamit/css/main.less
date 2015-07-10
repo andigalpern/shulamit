@@ -3,7 +3,11 @@
 @import '../js/royalslider/royalslider';
 @import '../js/royalslider/skins/default/rs-default';
 @import 'reset';
-
+.container {
+  @media(max-width: 600px) {
+    margin: 0 15px;
+  }
+}
 a, a:visited, a:active, a:focus {
   color: inherit;
   border: none;
@@ -119,8 +123,9 @@ body.home {
 }
 p {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   margin-bottom: 12px;
+  text-align: justify;
 }
 
 .main-header {
@@ -229,6 +234,9 @@ p {
       display: block;
       ul li a {
         color: #a7a7a7;
+        &:hover {
+          color: white;
+        }
       }
     }
     ul li a {
@@ -291,7 +299,7 @@ p {
     height: 24px;
     position: absolute;
     top: 32px;
-    left: 24px;
+    right: 6px;
     transition: all ease-in-out .3s;
   }
   .pattie {
@@ -357,7 +365,7 @@ p {
   color: black;
   text-transform: capitalize;
   position: absolute;
-  left: 60px;
+  left: 70px;
   /*font-size: 39px;*/
   width: 100%;
   height: 70px;
@@ -521,6 +529,9 @@ p {
 }
 .artist-container {
   margin: 0 29px;
+  @media(max-width: 600px) {
+    margin: 0;
+  }
 }
 .artist-hero.loaded {
   img {
@@ -606,7 +617,7 @@ p {
   display: block;
 }
 .artist-wrapper {
-  max-width: 1000px;
+  max-width: 800px;
   padding-bottom: 120px;
   h3 {
     font-size: 24px;
@@ -807,12 +818,12 @@ p {
   top: 0;
   position: relative;
   margin-top: -120px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
-  @media(max-width:700px) {
+  @media(max-width:800px) {
     min-height: auto;
      height: 40vh;
       background-attachment:scroll;
@@ -822,5 +833,118 @@ p {
   margin-bottom: 100px;
 }
 .container-smaller {
-  max-width: 980px;
+  max-width: 800px;
 }
+
+.expo-header {
+  margin-bottom: 12px;
+  h2 {
+    line-height: 32px;
+    font-size: 44px;
+  } 
+  time {
+    font-size: 24px;
+    letter-spacing: .01em;
+  } 
+}
+.debug {
+border: solid 1px red;
+}
+#expo-gallery {
+  width: 100%;
+  margin:  30px auto 0 auto;
+
+  .slide-caption {
+    display: none;
+  }
+  .rsActiveSlide {
+    .slide-caption {
+      opacity: 1;
+    }
+  }
+}
+#expo-gallery-captions {
+  height: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+  }
+  @media(max-width:800px) {
+    p {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+#expo-gallery-wrap {
+  position: relative;
+  transition: all ease .4s;
+  .rsDefault .rsArrowIcn{
+    margin-top: -20px;
+  }
+  .rsArrowLeft .rsArrowIcn {
+    background: url('img/arrows.png') no-repeat -3px -1px;
+    background-size: 22px 86px;
+    width: 80px;
+    height: 30px;
+  }
+  .rsArrowRight .rsArrowIcn {
+    background: url('img/arrows.png') no-repeat right -32px;
+    background-size: 22px 86px;
+    width: 80px;
+    height: 30px;
+  }
+}
+#expo-gallery-wrap.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background:white;
+  z-index: 99999;
+  #expo-gallery {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    left :20px;
+    bottom: 80px;
+    width: auto;
+    width: auto !important;
+    height: auto !important;
+  }
+  #expo-gallery-captions{
+     left: 20px;
+     right: 20px;
+     bottom: 0;
+     position: fixed;
+  }
+
+}
+.expo-go-full-screen {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: url(img/fullscreen.jpg) no-repeat center center;
+  cursor: pointer;
+  z-index: 999999;
+}
+
+
+// PAGES HEADINGS
+.older-entries-row-heading{
+   font-size: 24px;
+  margin-bottom: 10px; 
+}
+.press-heading {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+  
+  

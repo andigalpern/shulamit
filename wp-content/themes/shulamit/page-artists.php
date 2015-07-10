@@ -41,8 +41,7 @@
   </ul>
   </article>
   
-<!--   <article class="col-sm-5 col-sm-offset-1"> -->
-    <article class="col-sm-7">
+  <article class="col-sm-5 col-sm-offset-1">
     <figure class="swap-image-wrap">
     
     <?php $loop = new WP_Query( 
