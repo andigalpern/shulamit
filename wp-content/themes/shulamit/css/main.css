@@ -8061,6 +8061,14 @@ p {
   line-height: 30px;
   top: 35%;
 }
+@media (max-width: 800px) {
+  .artist-menu {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: center;
+  }
+}
 .artist-menu h1 {
   text-transform: uppercase;
   font-size: 60px;
@@ -8069,6 +8077,13 @@ p {
   float: right;
   line-height: 46px;
   margin-bottom: 4px;
+}
+@media (max-width: 800px) {
+  .artist-menu h1 {
+    text-align: center;
+    float: none;
+    width: auto;
+  }
 }
 .artist-menu ul {
   clear: both;
@@ -8108,6 +8123,11 @@ p {
 .artist-thumbs .col-md-1:hover {
   opacity: 1;
 }
+@media (max-width: 800px) {
+  .artist-thumbs .col-md-1 {
+    width: 25%;
+  }
+}
 .artist-thumb-slide-trigger.active,
 .artist-thumbs .col-md-1.active,
 .artist-thumbs .col-md-1:first-child {
@@ -8118,6 +8138,11 @@ p {
   margin-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (max-width: 800px) {
+  .artist-thumbs.large .col-md-1 {
+    padding: 0 5px 5px 5px;
+  }
 }
 .artist-thumbs.large .col-md-1 img {
   width: 100%;
@@ -8133,6 +8158,11 @@ p {
 }
 .view-all:hover {
   color: black;
+}
+@media (max-width: 800px) {
+  .view-all {
+    display: none;
+  }
 }
 .artist-gallery-wrapper {
   display: none;
@@ -8169,6 +8199,11 @@ p {
 .artist-wrapper {
   max-width: 800px;
   padding-bottom: 120px;
+}
+@media (max-width: 800px) {
+  .artist-wrapper {
+    padding-bottom: 50px;
+  }
 }
 .artist-wrapper h3 {
   font-size: 24px;
@@ -8359,7 +8394,7 @@ p {
   top: 0;
   position: relative;
   margin-top: -120px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -8368,8 +8403,13 @@ p {
 @media (max-width: 800px) {
   #current-expo-gallery {
     min-height: auto;
-    height: 40vh;
+    height: 60vh;
     background-attachment: scroll;
+  }
+}
+@media (max-width: 600px) {
+  #current-expo-gallery {
+    height: 40vh;
   }
 }
 .current-expo-data {
@@ -8416,7 +8456,7 @@ p {
 @media (max-width: 800px) {
   #expo-gallery-captions p {
     font-size: 12px;
-    line-height: 12px;
+    line-height: 20px;
   }
 }
 #expo-gallery-wrap {

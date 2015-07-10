@@ -509,6 +509,12 @@ p {
   right: 30px;
   line-height: 30px;
   top: 35%;
+  @media(max-width: 800px) {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: center;
+  }
   h1 {
     text-transform: uppercase;
     font-size: 60px;
@@ -517,6 +523,11 @@ p {
     float: right;
     line-height: 46px;
     margin-bottom: 4px;
+    @media(max-width: 800px) {
+      text-align: center;
+      float: none;
+      width: auto;
+    }
   }
   ul {
     clear: both;
@@ -556,6 +567,9 @@ p {
   &:hover {
     opacity: 1;
   }
+  @media(max-width: 800px) {
+    width: 25%;
+  }
 }
 .artist-thumb-slide-trigger.active,
 .artist-thumbs .col-md-1.active,
@@ -568,6 +582,9 @@ p {
     margin-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
+    @media(max-width: 800px) {
+      padding: 0 5px 5px 5px;
+    }
     img {
       width: 100%;
     }
@@ -583,6 +600,9 @@ p {
   &:hover {
     color: black;
   }
+  @media(max-width: 800px) {
+      display: none;
+    }
 }
 .artist-gallery-wrapper {
   display: none;
@@ -619,6 +639,9 @@ p {
 .artist-wrapper {
   max-width: 800px;
   padding-bottom: 120px;
+   @media(max-width: 800px) {
+     padding-bottom: 50px;
+    }
   h3 {
     font-size: 24px;
     letter-spacing: -0.04em;
@@ -818,15 +841,18 @@ p {
   top: 0;
   position: relative;
   margin-top: -120px;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
   @media(max-width:800px) {
     min-height: auto;
-     height: 40vh;
-      background-attachment:scroll;
+    height: 60vh;
+    background-attachment:scroll;
+  }
+  @media(max-width:600px) {
+    height: 40vh;
   }
 }
 .current-expo-data {
@@ -876,7 +902,7 @@ border: solid 1px red;
   @media(max-width:800px) {
     p {
       font-size: 12px;
-      line-height: 12px;
+      line-height: 20px;
     }
   }
 }

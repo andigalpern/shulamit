@@ -37,7 +37,7 @@
   
 <section class="row">  
   
-   <article class="post col-sm-4">
+   <article class="post col-xs-6 col-sm-4">
     <figure class="">
       <a href="/current-exhibition/">
         <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
@@ -49,7 +49,7 @@
     </header>
   </article>
   
-   <article class="post col-sm-4">
+   <article class="post  col-xs-6 col-sm-4">
     <figure class="">
       <a href="/current-exhibition/">
         <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
@@ -61,7 +61,7 @@
     </header>
   </article>
   
-   <article class="post col-sm-4">
+   <article class="post  col-xs-6 col-sm-4">
     <figure class="">
       <a href="/current-exhibition/">
         <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
@@ -74,7 +74,7 @@
   </article>
 
 
-   <article class="post col-sm-4">
+   <article class="post col-xs-6 col-sm-4">
     <figure class="">
       <a href="/current-exhibition/">
         <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
@@ -86,7 +86,7 @@
     </header>
   </article>
   
-   <article class="post col-sm-4">
+   <article class="post  col-xs-6 col-sm-4">
     <figure class="">
       <a href="/current-exhibition/">
         <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
@@ -98,7 +98,7 @@
     </header>
   </article>
   
-   <article class="post col-sm-4">
+   <article class="post  col-xs-6 col-sm-4">
     <figure class="">
       <a href="/current-exhibition/">
         <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
@@ -108,7 +108,7 @@
       <span class="bold slug">Past Exhibition</span>
       <h2 class="heavy">Melanie Daniel:</h2>
     </header>
-  </article>  
+  </article>
 
 </section>
 
