@@ -7952,8 +7952,8 @@ p {
   left: 0;
 }
 .logo .logo-slug {
-  display: none;
-  color: #ccc;
+  display: block;
+  color: gray;
 }
 @media (max-width: 320px) {
   .logo {

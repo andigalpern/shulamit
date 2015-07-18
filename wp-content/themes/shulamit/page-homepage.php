@@ -27,9 +27,11 @@
   </section>
   
   <aside id="slide-credit">
-    <h2><? the_title(); ?>:</h2>
-    <h3><? the_field('sub_title'); ?></h3>
-    <time datetime=""><?php the_field('dates'); ?></time>
+    <a href="/current-exhibition/">
+      <h2><? the_title(); ?>:</h2>
+      <h3><? the_field('sub_title'); ?></h3>
+      <time datetime=""><?php the_field('dates'); ?></time>
+    </a>
   </aside>
 </section>
 
