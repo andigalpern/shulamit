@@ -14,10 +14,10 @@
   <menu class="artist-menu">
      <h1 class="heavy"><?php the_title(); ?></h1>
      <ul class="bold">
-       <li><a href="#selected-work">Selected Work</a></li>
-       <li><a href="#">Exhibitions</a></li>
-       <li><a href="#">Biography</a></li>
-       <li><a href="#">Selected Press</a></li>
+       <li><a href="#artist-selected-work">Selected Work</a></li>
+       <li><a href="#artist-exhibitions">Exhibitions</a></li>
+       <li><a href="#artist-bio">Biography</a></li>
+       <li><a href="#artist-press">Selected Press</a></li>
      </ul>
   </menu>
 </section>      
@@ -30,7 +30,7 @@
     </figure>
   </section>
 
-      <section class="row" id="selected-work"> 
+      <section class="row" id="artist-selected-work"> 
         <header class="col-sm-12 artist-header">    
           <h3 class="bold"><?php the_title(); ?> Selected Works</h3>
         </header>
@@ -56,10 +56,36 @@
       </section>
       
       
-      <section class="artist-bio">
-         <h3 class="bold"><?php the_title(); ?> Biopgraphy</h3>
+      <section class="artist-bio" id="artist-bio">
+         <h3 class="bold"><?php the_title(); ?> Biography</h3>
         <?php the_content(); ?>
       </section>
+      
+      <section class="artist-bio artist-exihitions" id="artist-exhibitions">
+         <h3 class="bold"><?php the_title(); ?> Exhibitions</h3>
+         <p>
+           <b class="bold">2013</b> <span class="artist-exihition-location">"Golems Gold", The Shiraz Institute.</span>
+         </p>
+         <p>
+           <b class="bold">2009</b> <span class="artist-exihition-location">"Golems Gold", The Shiraz Institute.</span>
+         </p>
+          <p>
+           <b class="bold">1989</b> <span class="artist-exihition-location">"Golems Gold", The Shiraz Institute.</spa
+         </p>
+      </section>       
+      
+      <section class="artist-bio" id="artist-press">
+         <h3 class="bold"><?php the_title(); ?> Press</h3>
+         <p>
+           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
+         </p>
+         <p>
+           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
+         </p>         
+         <p>
+           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
+         </p>
+      </section>  
     
       <?php
       //$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );

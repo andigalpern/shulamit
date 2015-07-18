@@ -12,7 +12,7 @@
     
     <section class="col-sm-6">
       <header>
-        <span class="bold slug">Current</span>
+        <span class="bold slug">Upcoming</span>
         <h2 class="heavy">Melanie Daniel:</h2>
         <h3 class="heavy">Piecemaker</h3>
         <time>May 22, 2015 - June 27, 2015</time>
@@ -34,7 +34,7 @@
     
     <section class="col-sm-6">
       <header>
-        <span class="bold slug">Current</span>
+        <span class="bold slug">Upcoming</span>
         <h2 class="heavy">Melanie Daniel:</h2>
         <h3 class="heavy">Piecemaker</h3>
         <time>May 22, 2015 - June 27, 2015</time>
@@ -56,7 +56,7 @@
     
     <section class="col-sm-6">
       <header>
-        <span class="bold slug">Current</span>
+        <span class="bold slug">Upcoming</span>
         <h2 class="heavy">Melanie Daniel:</h2>
         <h3 class="heavy">Piecemaker</h3>
         <time>May 22, 2015 - June 27, 2015</time>

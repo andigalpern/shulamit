@@ -7749,7 +7749,7 @@ p {
 .main-nav .main-nav-footer a:hover {
   color: #777;
 }
-@media (max-height: 500px) {
+@media (max-height: 575px) {
   .main-nav .main-nav-footer {
     position: relative;
     padding-top: 20px;
@@ -7830,7 +7830,7 @@ p {
 }
 .hamburger {
   height: 80px;
-  width: 60px;
+  width: 70px;
   display: block;
   cursor: pointer;
   position: fixed;
@@ -7842,7 +7842,7 @@ p {
   height: 24px;
   position: absolute;
   top: 32px;
-  right: 6px;
+  right: 16px;
   -webkit-transition: all ease-in-out 0.3s;
           transition: all ease-in-out 0.3s;
 }
@@ -8266,7 +8266,7 @@ p {
 .search-overlay-wrapper {
   position: fixed;
   top: 0;
-  left: 256px;
+  left: 270px;
   right: 0 ;
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
@@ -8521,5 +8521,25 @@ p {
 .press-heading {
   font-size: 50px;
   margin-bottom: 12px;
+}
+.sub-menu {
+  margin-left: 10px;
+}
+.artist-list-heading.right {
+  padding-top: 20px;
+}
+.artist-bio {
+  margin-bottom: 40px;
+} 
+.artist-exihitions p b.heavy {
+  font-size: 16px;
+  display: inline-block;
+}
+.artist-exihitions p a:hover {
+  color: silver;
+  text-decoration: underline;
+}
+.artist-exihition-location {
+  margin-left: 15px;
 }
 /*# sourceMappingURL=main.css.map */

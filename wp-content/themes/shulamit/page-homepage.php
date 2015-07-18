@@ -11,15 +11,17 @@
 
       <?php
       $images = get_field('images');
-      $image = $images[0];
+      $image1 = $images[0];
+      $image2 = $images[1];
       ?>
       
-      <?php foreach( $images as $image ): ?>
-        <div class="slide" data-color="<?php echo $image['alt']; ?>">
-          <a href="<?php echo $image['sizes']['large']; ?>" class="rsImg"></a>
-        </div>
-      <?php endforeach; ?>
-      
+      <div class="slide" data-color="<?php echo $image['alt']; ?>">
+        <a href="<?php echo $image1['url']; ?>" class="rsImg"></a>
+      </div>
+      <div class="slide" data-color="<?php echo $image['alt']; ?>">
+        <a href="<?php echo $image2['url']; ?>" class="rsImg"></a>
+      </div>
+    
   
   
   </section>
@@ -27,7 +29,7 @@
   <aside id="slide-credit">
     <h2><? the_title(); ?>:</h2>
     <h3><? the_field('sub_title'); ?></h3>
-    <time datetime=""><?php the_field('dates'); ?>5</time>
+    <time datetime=""><?php the_field('dates'); ?></time>
   </aside>
 </section>
 

@@ -16,7 +16,7 @@
         </a>  
       </figure>
       <header>
-        <span class="bold slug">Past Exhibition</span>
+        <span class="bold slug">New York Times</span>
         <h2 class="heavy">Melanie Daniel:</h2>
       </header>
     </article>
@@ -28,7 +28,7 @@
         </a>    
       </figure>
       <header>
-        <span class="bold slug">Past Exhibition</span>
+        <span class="bold slug">New York Times</span>
         <h2 class="heavy">Melanie Daniel:</h2>
       </header>
     </article>
@@ -40,7 +40,7 @@
         </a>
       </figure>
       <header>
-        <span class="bold slug">Past Exhibition</span>
+        <span class="bold slug">New York Times</span>
         <h2 class="heavy">Melanie Daniel:</h2>
       </header>
     </article>
@@ -53,7 +53,7 @@
         </a>  
       </figure>
       <header>
-        <span class="bold slug">Past Exhibition</span>
+        <span class="bold slug">New York Times</span>
         <h2 class="heavy">Melanie Daniel:</h2>
       </header>
     </article>
@@ -65,7 +65,7 @@
         </a>    
       </figure>
       <header>
-        <span class="bold slug">Past Exhibition</span>
+        <span class="bold slug">New York Times</span>
         <h2 class="heavy">Melanie Daniel:</h2>
       </header>
     </article>
@@ -77,7 +77,7 @@
         </a>
       </figure>
       <header>
-        <span class="bold slug">Past Exhibition</span>
+        <span class="bold slug">New York Times</span>
         <h2 class="heavy">Melanie Daniel:</h2>
       </header>
     </article>  
