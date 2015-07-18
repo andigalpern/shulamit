@@ -134,15 +134,24 @@ $('.view-all').on('click', function(){
 
 
 //TOGGLE HAMBUEGRE NAV
-$(document).on('click', '.hamburger', function(){
-  $('.main-nav').toggleClass('shown');
-  $(this).toggleClass('shown');
-  $('.logo').toggleClass('shown');
+$('.hamburger').mouseover( function(){
+  $('.main-nav').addClass('shown');
+  //$(this).toggleClass('shown');
+  $('.logo').addClass('shown');
   if ($('.search-overlay-wrapper').hasClass('shown') ) {
     $('.search-overlay-wrapper').toggleClass('shown');
   }
 });
-
+$(document).on('mouseleave','.main-nav.shown', function(){
+  $('.main-nav').removeClass('shown');
+  //$(this).toggleClass('shown');
+  $('.logo').remove('shown');
+  if ($('.search-overlay-wrapper').hasClass('shown') ) {
+    $('.search-overlay-wrapper').toggleClass('shown');
+  }
+}); 
+  
+  
 // TOGGLE SEARHC
 $(document).on('click', '.search-toggle', function(){
   console.log("clicked")

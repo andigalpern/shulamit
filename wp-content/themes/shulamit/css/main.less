@@ -286,6 +286,15 @@ p {
     }
   }
 }
+.sub-menu {
+  height: 0px;
+  overflow: hidden;
+  transition: all ease .3s;
+   transition-delay: .3s;
+}
+.menu-item-has-children:hover .sub-menu {
+  height: 84px;
+}
 .hamburger {
   height: 80px;
   width: 70px;
@@ -311,6 +320,7 @@ p {
   }
 }
 .hamburger.shown {
+/*
     .inner {
       transform: rotate(90deg);
     }
@@ -323,11 +333,14 @@ p {
     .pattie:last-of-type {
       width: 20px;
     }
-   &:hover {
-    .inner {
-        transform: rotate(-90deg);
-      }
-   }       
+*/
+  /*
+  &:hover {
+  .inner {
+      transform: rotate(-90deg);
+    }
+  }
+  */       
 }
 
 

@@ -7828,6 +7828,17 @@ p {
 .main-nav.shown .main-nav-header .hamburger .inner .pattie:last-of-type {
   width: 15px;
 }
+.sub-menu {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all ease .3s;
+          transition: all ease .3s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+.menu-item-has-children:hover .sub-menu {
+  height: 84px;
+}
 .hamburger {
   height: 80px;
   width: 70px;
@@ -7854,24 +7865,28 @@ p {
   -webkit-transition: all ease .5s;
           transition: all ease .5s;
 }
-.hamburger.shown .inner {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-.hamburger.shown .pattie {
-  background: white;
-}
-.hamburger.shown .pattie:first-of-type {
-  width: 20px;
-}
-.hamburger.shown .pattie:last-of-type {
-  width: 20px;
-}
-.hamburger.shown:hover .inner {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.hamburger.shown {
+  /*
+    .inner {
+      transform: rotate(90deg);
+    }
+    .pattie {
+      background: white;
+    }
+    .pattie:first-of-type {
+      width: 20px;
+    }
+    .pattie:last-of-type {
+      width: 20px;
+    }
+*/
+  /*
+  &:hover {
+  .inner {
+      transform: rotate(-90deg);
+    }
+  }
+  */
 }
 /*
 .main-nav .hamburger {
@@ -8530,7 +8545,7 @@ p {
 }
 .artist-bio {
   margin-bottom: 40px;
-} 
+}
 .artist-exihitions p b.heavy {
   font-size: 16px;
   display: inline-block;
