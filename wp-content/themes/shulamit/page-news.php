@@ -7,7 +7,7 @@
   </header>
     
   
-  <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page=9' , 'cat=5' ) ); ?>
+  <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page'=>'9' , 'category__and'=>'5, 7' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
   
   

@@ -2,7 +2,7 @@
 
 <section class="container">
   
-<?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => '1' , 'cat'=>'9' ) ); ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => '9' , 'cat'=>'9' ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
 
  <section class="row">
@@ -11,7 +11,7 @@
   
       <figure class="col-sm-6">
           <a href="<? the_permalink(); ?>">
-            <?php the_post_thumbnail('medium_cropped', array('class' => 'img-responsive')); ?>
+            <?php the_post_thumbnail('thumb_large', array('class' => 'img-responsive')); ?>
           </a>
       </figure>
       
@@ -41,7 +41,7 @@
       <article class="col-sm-4 post">
         <figure class="">
           <a href="<? the_permalink(); ?>">
-            <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+            <?php the_post_thumbnail('medium_cropped', array('class' => 'img-responsive')); ?>
           </a>
         </figure>
         
