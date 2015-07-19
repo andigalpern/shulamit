@@ -17,6 +17,7 @@
        <li><a href="#artist-selected-work">Selected Work</a></li>
        <li><a href="#artist-exhibitions">Exhibitions</a></li>
        <li><a href="#artist-bio">Biography</a></li>
+       <li><a href="<? the_field('pdf'); ?>" target="_blank">Download CV</a></li>
        <li><a href="#artist-press">Selected Press</a></li>
      </ul>
   </menu>
@@ -65,17 +66,11 @@
 
       
       <section class="artist-bio artist-exihitions" id="artist-exhibitions">
-      
-      <ul>
-      <?php while(has_sub_field('exhibition_list')): ?>
-    <li>sub_field_1 = <?php the_sub_field('year'); ?>, sub_field_2 = <?php the_sub_field('details'); ?>, etc</li>
-      <?php endwhile; ?>
-      </ul>
-      
+    
 
 
         <h3 class="bold"><?php the_title(); ?> Exhibitions</h3>
-        <?php $expos = get_field('exhibition_list');?>
+        <?php $expos = the_field('exhibition_list');?>
          <?php var_dump($expos);?>
         <?php while(has_sub_field('exhibition_list')): ?>
         
@@ -101,12 +96,13 @@
          </p>
       </section>  
     
-      <?php
-      //$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-      //echo '<img src="'.$feat_image.'" class="img-responsive" id="swap-image"/>';
-      ?>
   
+      
+  
+       
   <?php endwhile; endif;  ?>
+  
+
 
   </article>
 <?php get_footer(); ?>
