@@ -19,7 +19,7 @@
              the_post_thumbnail('medium', array('class' => 'img-responsive'));
              }
              else {
-               echo '<img src="http://placehold.it/600x400"/>';
+               echo '<img src="http://placehold.it/600x400" class="img-responsive"/>';
              }
           ?>
         </a> 
