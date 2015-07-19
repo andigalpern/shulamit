@@ -34,7 +34,16 @@ $(document).one('click', '.artist-thumb',function(e){
   // for-in loop
     for (var i in dataSrc) {
     //console.log('<img class="rsImg" href="' + dataSrc[i] + '"/> ');
-      output+="<a class=\"rsImg\" href=\"" + dataSrc[i] + "\" /> ";
+    if(dataSrc[i].image) {
+       console.log("we have image")
+    }
+    if(dataSrc[i].dataTitle) {
+       console.log("we have title")
+    }
+    else {
+       console.log("we have no title")
+    }
+    output+="<div class=\"slide\"><a class=\"rsImg\" href=\"" + dataSrc[i].image + "\" /></div> ";
     }
 
     //add the output to the elem

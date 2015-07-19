@@ -8,22 +8,32 @@
 
 get_header(); ?>
 
-<section class="container">
-<?php if ( have_posts() ) : ?>
-
-    <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-        <h2 class="heavy"><a href="<?php the_permalink(); ?>" class="fancylink"><?php echo $post->post_title; ?></a></h2>
-    
-    
-<?php endwhile; endif; ?>
 
 
-<?php else: ?>   
 
-		<h2 class="text-center no-results bold ">No Results, try another word.</h2>
-
-<?php endif; ?>
-</section>
+<section class="container-fluid artist-container">
+  <article class="col-sm-2">
+  <?php  if ( have_posts() ) : ?>
+    <h3 class="artist-list-heading">Search Result</h3>
+  <?php  endif; ?>
+  <ul class="artist-list">
+   <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <li
+      class="artist-item">
+      
+      
+     <a href="<?php the_permalink(); ?>"><?php echo $post->post_title; ?></a>
+      
+      <?php /* get featured images */ ?>
+      
+    </li>
+    <?php endwhile; ?>
+   <?php else : ?>
+  <h3 class="artist-list-heading">No Search Terms Found</h3> 
+  <?php  endif; ?>
+  </ul>
+  </article>
+  
+  
 
 <?php get_footer(); ?>

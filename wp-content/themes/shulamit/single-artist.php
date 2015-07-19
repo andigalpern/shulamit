@@ -42,13 +42,14 @@
       $images = get_field('images');
       $image = $images[0];
       ?>
-      <section class="artist-thumbs row" data-array='[<?php $image_text = array(); ?><?php foreach( $images as $image ): ?><?php $image_text[] = '"'. $image['sizes']['extra_large'] . '"'; ?><?php endforeach; ?><?php echo implode( $image_text, ","); ?>]'>
+      <section class="artist-thumbs row" data-array='[<?php $image_text = array(); ?><?php foreach( $images as $image ): ?><?php $image_text[] = '{"image" : "'. $image['sizes']['extra_large'] . '"}'; ?><?php endforeach; ?><?php echo implode( $image_text, ","); ?>]'>
         <?php foreach( $images as $image ): ?>
         <figure class="col-md-1 artist-thumb" data-slide="#image-<? echo  $count++ ?>" >
               <img
               src="<?php echo $image['sizes']['thumbnail']; ?>"
               data-large="<?php echo $image['sizes']['thumb_large']; ?>"
               class="img-responsive"/>
+              
         </figure>
         <?php endforeach; ?>
         <div class="clear text-right">

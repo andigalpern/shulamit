@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-
-  <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => '1', 'featured' => 'yes'  ) ); ?>
-  <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
+<?php  if ( have_posts() ) : while ( have_posts() ) : the_post();?>
   
   <?php
   $images = get_field('images');
@@ -60,7 +58,7 @@
       
     </article>
   </section>
-<?php endwhile;  ?>
+<?php endwhile; endif; ?>
 
 
 
