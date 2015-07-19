@@ -14,7 +14,14 @@
    <section class="row post"> 
     <figure class="col-sm-6">
         <a href="<? the_permalink(); ?>">
-          <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
+          <?php
+            if ( has_post_thumbnail() ){
+             the_post_thumbnail('medium', array('class' => 'img-responsive'));
+             }
+             else {
+               echo '<img src="http://placehold.it/600x400"/>';
+             }
+          ?>
         </a> 
     </figure>
       <section class="col-sm-6">
