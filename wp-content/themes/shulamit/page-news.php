@@ -26,7 +26,7 @@
     </figure>
       <section class="col-sm-6">
         <header class="post-header no-date">
-         <span class="bold slug">Past Exhibition</span>
+<!--          <span class="bold slug">Past Exhibition</span> -->
          <h2 class="heavy"><? the_title();?></h2>
         </header>
         <section class="content">
@@ -57,7 +57,7 @@
           
           <section class="">
             <header>
-            <span class="bold slug">Past Exhibition</span>
+<!--             <span class="bold slug">Past Exhibition</span> -->
             <h2 class="heavy"><? the_title(); ?>:</h2>
             <h3 class="heavy"><? the_field('sub_title'); ?></h3>
             <time><?php the_field('dates'); ?></time>
