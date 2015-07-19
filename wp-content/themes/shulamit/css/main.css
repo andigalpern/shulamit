@@ -7656,10 +7656,14 @@ body.home {
   overflow-x: hidden;
 }
 p {
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 24px;
   margin-bottom: 12px;
   text-align: justify;
+}
+p a:hover {
+  text-decoration: underline;
+  color: #666666;
 }
 .main-header {
   position: relative;
@@ -8029,10 +8033,14 @@ p {
   -webkit-transition: color ease .6s;
           transition: color ease .6s;
 }
+#slide-credit a {
+  color: white;
+}
 #slide-credit h2,
 #slide-credit h3 {
   font-size: 80px;
   line-height: 60px;
+  color: white;
 }
 @media (max-width: 600px) {
   #slide-credit h2,
@@ -8044,6 +8052,7 @@ p {
 #slide-credit time {
   text-transform: uppercase;
   font-size: 40px;
+  color: white;
 }
 @media (max-width: 600px) {
   #slide-credit time {
@@ -8388,12 +8397,14 @@ p {
 .post h2,
 .post h3 {
   line-height: 34px;
+  letter-spacing: 0.01em;
 }
 .post h3 {
   margin-bottom: 6px;
 }
 .post .slug {
   font-size: 20px;
+  letter-spacing: -0.02em;
 }
 .post time {
   text-transform: uppercase;

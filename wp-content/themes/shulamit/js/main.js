@@ -346,6 +346,7 @@ function goRoyalHomepage() {
         delay: 3000
         }
     });
+/*
     var slider = $royalSlider.data('royalSlider');
     slider.ev.on('rsAfterSlideChange', function(event) {
       console.log("rsAfterSlideChange")
@@ -361,6 +362,7 @@ function goRoyalHomepage() {
       $('#slide-credit').attr('class', '');
       $('#slide-credit').addClass(color)
     });
+*/
  } //end if
 }  //end function
 
