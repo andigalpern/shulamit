@@ -1,12 +1,15 @@
 <?php get_header(); ?>
 
-  <header class="row press-heading">
+
+
+<section class="container">
+  
+  
+    <header class="row press-heading">
     <div class="col-sm-12">
       <h4 class="heavy">Upcoming Exhibitions</h4>
     </div>
   </header>
-
-<section class="container">
   
 <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => '9' , 'cat'=>'9' ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
