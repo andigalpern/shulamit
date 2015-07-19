@@ -744,13 +744,12 @@ p {
   background: rgba(0,0,0, 0.8);
   color: white;
   font-size: 50px;
-  z-index: 55000;
   visibility: hidden;
   opacity: 0;
   transition: all ease-in-out .3s;
   transform: translateX(40px);
 //   border-left: solid 1px #161616;
-  z-index: 999999;
+  z-index: 9999999;
   @media(max-width: 600px) {
     top: 0;
     max-width: 100%;
@@ -797,6 +796,9 @@ p {
   .search-form{
     transform: translateX(0px);
   }
+}
+.search-overlay-wrapper.expand {
+  left: 0px;
 }
 .search-toggle.nav {
   width: 50px;

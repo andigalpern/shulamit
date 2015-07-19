@@ -165,23 +165,20 @@ $(document).on(theEvent , '.hamburger',function(){
     $('.search-overlay-wrapper').toggleClass('shown');
   }
 });
-/*
-$(document).on('mouseleave, click', '.main-nav.shown', function(){
-  alert("leave");
-  if ($('.main-nav'),hasClass('shown')) {
+$(document).on('mouseleave', '.main-nav.shown', function(){
+  if ($('.main-nav').hasClass('shown')) {
     $('.main-nav').removeClass('shown');
   }
   if ($('.hamburger').hasClass('shown')) {
     $('.hamburger').removeClass('shown');
   }
-  if ($('.hamburger').hasClass('shown')) {
+  if ($('.logo').hasClass('shown')) {
     $('.logo').removeClass('shown');
   }
   if ($('.search-overlay-wrapper').hasClass('shown') ) {
-    $('.search-overlay-wrapper').toggleClass('shown');
+    $('.search-overlay-wrapper').addClass('expand');
   }
 }); 
-*/
 
 
 var timeoutId;
@@ -202,6 +199,7 @@ $('.hamburger').mouseleave(function() {
 $(document).on('click', '.search-toggle', function(){
   console.log("clicked")
   $('.search-overlay-wrapper').toggleClass('shown');
+  $('.search-overlay-wrapper').toggleClass('expand');
   $('input[type="search"]').focus();
 });
 

@@ -8297,7 +8297,6 @@ p a:hover {
   background: rgba(0, 0, 0, 0.8);
   color: white;
   font-size: 50px;
-  z-index: 55000;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all ease-in-out 0.3s;
@@ -8305,7 +8304,7 @@ p a:hover {
   -webkit-transform: translateX(40px);
       -ms-transform: translateX(40px);
           transform: translateX(40px);
-  z-index: 999999;
+  z-index: 9999999;
 }
 @media (max-width: 600px) {
   .search-overlay-wrapper {
@@ -8362,6 +8361,9 @@ p a:hover {
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
           transform: translateX(0px);
+}
+.search-overlay-wrapper.expand {
+  left: 0px;
 }
 .search-toggle.nav {
   width: 50px;
