@@ -1,3 +1,7 @@
+$(document).on('click', '.menu-item-has-children',function(e){
+   e.preventDefault();
+});
+
 // We call this "one" time to unbind after one click, to allow us to bind a new event handler
 // based on the new class we add here 'artist-thumb-slide-trigger'
 $(document).one('click', '.artist-thumb',function(e){
@@ -134,7 +138,7 @@ $('.view-all').on('click', function(){
 
 
 //TOGGLE HAMBUEGRE NAV
-$('.hamburger').mouseover( function(){
+$(document).on('hover, click' , '.hamburger',function(){
   $('.main-nav').addClass('shown');
   $(this).addClass('shown');
   $('.logo').addClass('shown');
@@ -142,10 +146,16 @@ $('.hamburger').mouseover( function(){
     $('.search-overlay-wrapper').toggleClass('shown');
   }
 });
-$(document).on('mouseleave','.main-nav.shown', function(){
-  $('.main-nav').removeClass('shown');
-  $('.hamburger').removeClass('shown');
-  $('.logo').removeClass('shown');
+$(document).on('hover, click', '.main-nav.shown', function(){
+  if ($('.main-nav'),hasClass('shown')) {
+    $('.main-nav').removeClass('shown');
+  }
+  if ($('.hamburger').hasClass('shown')) {
+    $('.hamburger').removeClass('shown');
+  }
+  if ($('.hamburger').hasClass('shown')) {
+    $('.logo').removeClass('shown');
+  }
   if ($('.search-overlay-wrapper').hasClass('shown') ) {
     $('.search-overlay-wrapper').toggleClass('shown');
   }

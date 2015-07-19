@@ -1,116 +1,70 @@
 <?php get_header(); ?>
 
-<?php get_header(); ?>
-
 <section class="container">
-  <article class="row post">
+  
+<?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => '1' , 'cat'=>'8'  ) ); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
+
+ <section class="row">
     
-    <figure class="col-sm-6">
-      <a href="/current-exhibition/">
-        <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-      </a>
-    </figure>
-    
-    <section class="col-sm-6">
-      <header>
-        <span class="bold slug">Past Exhibition</span>
-        <h2 class="heavy">Melanie Daniel:</h2>
-        <h3 class="heavy">Piecemaker</h3>
-        <time>May 22, 2015 - June 27, 2015</time>
-      </header>
+    <article class="row post featured col-sm-12">
+  
+      <figure class="col-sm-6">
+          <a href="<? the_permalink(); ?>">
+            <?php the_post_thumbnail('medium_cropped', array('class' => 'img-responsive')); ?>
+          </a>
+      </figure>
       
-      <section class="content">
-        <p>
-        Fingerstache keytar cray tousled, crucifix freegan organic meggings migas sartorial synth Shoreditch cliche cred. Bespoke swag readymade chia scenester umami gluten-free. Sustainable Carles readymade Wes Anderson, kale chips Thundercats retro Truffaut craft beer Neutra. Truffaut YOLO disrupt skateboard chia. You probably haven't heard of them Williamsburg mlkshk Banksy, blog pug disrupt. Jean shorts banjo Pinterest, try-hard fanny pack typewriter Helvetica. Vice wolf locavore, YOLO fap keffiyeh distillery actually cold-pressed gluten-free sartorial vegan single-origin coffee.
-        </p>
+      <section class="col-sm-6">
+        <header>
+          <span class="bold slug">Past Exhibition</span>
+          <h2 class="heavy"><? the_title(); ?>:</h2>
+          <h3 class="heavy"><? the_field('sub_title'); ?></h3>
+          <time><?php the_field('dates'); ?></time>
+        </header>
+        
+        <section class="content">
+            <?php the_excerpt(); ?>
+        </section>
       </section>
-    </section>
-
-  </article>
+     
+    </article>
+    
+ </section><!-- end row -->
+ 
+<?php endwhile; ?>
+<?php wp_reset_query();?> 
   
-  
-<section class="row older-entries-row-heading">
-  <div class="col-sm-12">
-    <h4 class="bold">Older Entires</h4>
-  </div>
-</section>
-  
-<section class="row">  
-  
-   <article class="post col-xs-6 col-sm-4">
-    <figure class="">
-      <a href="/current-exhibition/">
-        <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-      </a>  
-    </figure>
-    <header>
-      <span class="bold slug">Past Exhibition</span>
-      <h2 class="heavy">Melanie Daniel:</h2>
-    </header>
-  </article>
-  
-   <article class="post  col-xs-6 col-sm-4">
-    <figure class="">
-      <a href="/current-exhibition/">
-        <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-      </a>    
-    </figure>
-    <header>
-      <span class="bold slug">Past Exhibition</span>
-      <h2 class="heavy">Melanie Daniel:</h2>
-    </header>
-  </article>
-  
-   <article class="post  col-xs-6 col-sm-4">
-    <figure class="">
-      <a href="/current-exhibition/">
-        <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-      </a>
-    </figure>
-    <header>
-      <span class="bold slug">Past Exhibition</span>
-      <h2 class="heavy">Melanie Daniel:</h2>
-    </header>
-  </article>
-
-
-   <article class="post col-xs-6 col-sm-4">
-    <figure class="">
-      <a href="/current-exhibition/">
-        <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-      </a>  
-    </figure>
-    <header>
-      <span class="bold slug">Past Exhibition</span>
-      <h2 class="heavy">Melanie Daniel:</h2>
-    </header>
-  </article>
-  
-   <article class="post  col-xs-6 col-sm-4">
-    <figure class="">
-      <a href="/current-exhibition/">
-        <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-      </a>    
-    </figure>
-    <header>
-      <span class="bold slug">Past Exhibition</span>
-      <h2 class="heavy">Melanie Daniel:</h2>
-    </header>
-  </article>
-  
-   <article class="post  col-xs-6 col-sm-4">
-    <figure class="">
-      <a href="/current-exhibition/">
-        <img src="http://djdummybucket.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/06/amir001.jpg" class="img-responsive">
-      </a>
-    </figure>
-    <header>
-      <span class="bold slug">Past Exhibition</span>
-      <h2 class="heavy">Melanie Daniel:</h2>
-    </header>
-  </article>
-
-</section>
-
+ <section class="row">
+    <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => 16,   'offset' => 1 , 'cat'=>'8'  ) ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>  
+      <article class="col-sm-4 post">
+        <figure class="">
+          <a href="<? the_permalink(); ?>">
+            <?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+          </a>
+        </figure>
+        
+        <section class="">
+          <header>
+          <span class="bold slug">Past Exhibition</span>
+          <h2 class="heavy"><? the_title(); ?>:</h2>
+          <h3 class="heavy"><? the_field('sub_title'); ?></h3>
+          <time><?php the_field('dates'); ?></time>
+          </header>
+          
+          <section class="content">
+            <?php the_content();?>
+          </section>
+        </section>
+      </article>
+    <?php endwhile;?> 
+    <?php wp_reset_query();?> 
+    
+    
+ </section><!-- end row -->
+ 
+ 
+</section><!-- end container -->
 
 <?php get_footer(); ?>

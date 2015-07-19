@@ -6,20 +6,32 @@
     </div>
   </header>
     
-  <section class="row">  
-  <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page=16' , 'cat=5' ) ); ?>
+  
+  <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page=9' , 'cat=5' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-    <article class="post col-sm-4">
-      <figure class="">
+  
+  
+   <section class="row post"> 
+    <figure class="col-sm-6">
         <a href="<? the_permalink(); ?>">
-          <?php the_post_thumbnail('thumb_large', array('class' => 'img-responsive')); ?>
+          <?php the_post_thumbnail('medium', array('class' => 'img-responsive')); ?>
         </a> 
-      </figure>
-      <header>
-        <span class="bold slug">Past Exhibition</span>
-        <h2 class="heavy"><? the_title();?></h2>
-      </header>
-    </article>
-    <?php endwhile; wp_reset_query(); ?>
+    </figure>
+      <section class="col-sm-6">
+        <header>
+         <span class="bold slug">Past Exhibition</span>
+         <h2 class="heavy"><? the_title();?></h2>
+        </header>
+        <section class="content">
+        <? the_excerpt();?>
+        </section>
+    </section>
   </section>
+
+<?php endwhile; wp_reset_query(); ?>
+  
+ 
 <?php get_footer(); ?>
+
+
+
