@@ -1,4 +1,4 @@
-$(document).on('click', '.menu-item-has-children',function(e){
+$(document).on('click', '.menu-item-has-children>a',function(e){
    e.preventDefault();
 });
 
@@ -93,6 +93,7 @@ $('.swap-image-wrap, .lazyload').waitForImages(function() {
 
 
 
+/*
 $('#menu-main-menu a').on('click', function(e){
   e.preventDefault();
   var url = $(this).attr('href');
@@ -104,6 +105,7 @@ $('#menu-main-menu a').on('click', function(e){
     window.location=url;
   })  
 });
+*/
 
 
 //add scrolle nav
@@ -138,7 +140,15 @@ $('.view-all').on('click', function(){
 
 
 //TOGGLE HAMBUEGRE NAV
-$(document).on('hover, click' , '.hamburger',function(){
+var theEvent;
+if ($(window).width() <= 800) {
+  var theEvent = 'toushstart'
+}
+else {
+  var theEvent = 'mouseenter'
+}
+
+$(document).on(theEvent , '.hamburger',function(){
   $('.main-nav').addClass('shown');
   $(this).addClass('shown');
   $('.logo').addClass('shown');
@@ -146,7 +156,9 @@ $(document).on('hover, click' , '.hamburger',function(){
     $('.search-overlay-wrapper').toggleClass('shown');
   }
 });
-$(document).on('hover, click', '.main-nav.shown', function(){
+/*
+$(document).on('mouseleave, click', '.main-nav.shown', function(){
+  alert("leave");
   if ($('.main-nav'),hasClass('shown')) {
     $('.main-nav').removeClass('shown');
   }
@@ -160,6 +172,21 @@ $(document).on('hover, click', '.main-nav.shown', function(){
     $('.search-overlay-wrapper').toggleClass('shown');
   }
 }); 
+*/
+
+
+var timeoutId;
+$('.hamburger').mouseleave(function() {
+  timeoutId = 1000;
+    if (!timeoutId) {
+        timeoutId = window.setTimeout(function() {
+            timeoutId = null;
+            $('.main-nav').addClass('shown');
+       }, 1500);
+    }
+});
+    
+    
   
   
 // TOGGLE SEARHC
