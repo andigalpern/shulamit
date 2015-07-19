@@ -25,7 +25,7 @@
         </a> 
     </figure>
       <section class="col-sm-6">
-        <header>
+        <header class="post-header no-date">
          <span class="bold slug">Past Exhibition</span>
          <h2 class="heavy"><? the_title();?></h2>
         </header>

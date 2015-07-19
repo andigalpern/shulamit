@@ -8415,6 +8415,9 @@ p a:hover {
   display: block;
   margin-bottom: 12px;
 }
+.post .no-date {
+  margin-bottom: 6px;
+}
 .no-results {
   letter-spacing: -0.03em;
 }
