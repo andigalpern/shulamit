@@ -12,7 +12,7 @@
       data-title="<?php echo $post->post_title; ?>">
       
       
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       
       <?php /* get featured images */ ?>
       
@@ -32,7 +32,7 @@
       data-title="<?php echo $post->post_title; ?>">
       
       
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       
       <?php /* get featured images */ ?>
       

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-  <?php $loop = new WP_Query( array( 'post_type' => 'current_exhibition' ,  'posts_per_page=1'  ) ); ?>
+  <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page=1', 'featured' => 'yes' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
   
   
@@ -15,10 +15,10 @@
       $image2 = $images[1];
       ?>
       
-      <div class="slide" data-color="<?php echo $image['alt']; ?>">
+      <div class="slide" data-color="<?php echo $image1['alt']; ?>">
         <a href="<?php echo $image1['url']; ?>" class="rsImg"></a>
       </div>
-      <div class="slide" data-color="<?php echo $image['alt']; ?>">
+      <div class="slide" data-color="<?php echo $image2['alt']; ?>">
         <a href="<?php echo $image2['url']; ?>" class="rsImg"></a>
       </div>
     
@@ -27,7 +27,7 @@
   </section>
   
   <aside id="slide-credit">
-    <a href="/current-exhibition/">
+    <a href="<? the_permalink()?>">
       <h2><? the_title(); ?>:</h2>
       <h3><? the_field('sub_title'); ?></h3>
       <time datetime=""><?php the_field('dates'); ?></time>

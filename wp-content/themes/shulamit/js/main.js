@@ -136,7 +136,7 @@ $('.view-all').on('click', function(){
 //TOGGLE HAMBUEGRE NAV
 $('.hamburger').mouseover( function(){
   $('.main-nav').addClass('shown');
-  //$(this).toggleClass('shown');
+  $(this).addClass('shown');
   $('.logo').addClass('shown');
   if ($('.search-overlay-wrapper').hasClass('shown') ) {
     $('.search-overlay-wrapper').toggleClass('shown');
@@ -144,8 +144,8 @@ $('.hamburger').mouseover( function(){
 });
 $(document).on('mouseleave','.main-nav.shown', function(){
   $('.main-nav').removeClass('shown');
-  //$(this).toggleClass('shown');
-  $('.logo').remove('shown');
+  $('.hamburger').removeClass('shown');
+  $('.logo').removeClass('shown');
   if ($('.search-overlay-wrapper').hasClass('shown') ) {
     $('.search-overlay-wrapper').toggleClass('shown');
   }

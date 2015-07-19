@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-  <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => '1' , 'featured' => 'yes'  ) ); ?>
+  <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => '1'  ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
   
   <?php

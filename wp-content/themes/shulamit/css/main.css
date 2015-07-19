@@ -7791,6 +7791,7 @@ p {
 .main-nav .menu-main-menu-container ul li a:hover {
   color: #a7a7a7;
 }
+.hamburger.shown .pattie,
 .home .hamburger .pattie {
   background: white;
 }
@@ -8229,19 +8230,22 @@ p {
   font-family: 'DrukText-Bold';
   text-transform: uppercase;
   letter-spacing: -0.01em;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 .artist-list {
   margin-bottom: 40px;
   font-family: 'DrukText-Medium';
+  -webkit-font-smoothing: antialiased;
+}
+.artist-list li {
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  line-height: 24px;
 }
 .artist-list li h2 {
   font-size: 24px;
   letter-spacing: -0.04em;
-}
-.artist-list li a {
-  line-height: normal;
 }
 .artist-list li a:hover {
   color: silver;

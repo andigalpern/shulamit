@@ -61,23 +61,37 @@
         <?php the_content(); ?>
       </section>
       
-      <section class="artist-bio artist-exihitions" id="artist-exhibitions">
-         <h3 class="bold"><?php the_title(); ?> Exhibitions</h3>
-         <p>
-           <b class="bold">2013</b> <span class="artist-exihition-location">"Golems Gold", The Shiraz Institute.</span>
-         </p>
-         <p>
-           <b class="bold">2009</b> <span class="artist-exihition-location">"Golems Gold", The Shiraz Institute.</span>
-         </p>
-          <p>
-           <b class="bold">1989</b> <span class="artist-exihition-location">"Golems Gold", The Shiraz Institute.</spa
-         </p>
-      </section>       
       
-      <section class="artist-bio" id="artist-press">
+
+      
+      <section class="artist-bio artist-exihitions" id="artist-exhibitions">
+      
+      <ul>
+      <?php while(has_sub_field('exhibition_list')): ?>
+    <li>sub_field_1 = <?php the_sub_field('year'); ?>, sub_field_2 = <?php the_sub_field('details'); ?>, etc</li>
+      <?php endwhile; ?>
+      </ul>
+      
+
+
+        <h3 class="bold"><?php the_title(); ?> Exhibitions</h3>
+        <?php $expos = get_field('exhibition_list');?>
+         <?php var_dump($expos);?>
+        <?php while(has_sub_field('exhibition_list')): ?>
+        
+          <p>
+          <b class="bold"><?php the_sub_field('year'); ?></b>
+          <span class="artist-exihition-location"><?php the_sub_field('details'); ?></span>
+          </p>
+        
+        <?php endwhile;?> 
+      </section>  
+     
+      
+      <section class="artist-bio" id="artist-press" >
          <h3 class="bold"><?php the_title(); ?> Press</h3>
          <p>
-           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
+           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", "Golems Gold", The Shiraz Institute.The Shiraz Institute.</a></span>
          </p>
          <p>
            <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>

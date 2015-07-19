@@ -3,6 +3,7 @@
 
 function baw_theme_setup() {
   add_image_size( 'thumb_large', 300, 300, true ); // (cropped)
+  add_image_size( 'medium_cropped', 600, 400, true ); //soft proportional
   add_image_size( 'extra_large', 1800, 1200 ); //soft proportional
 }
 
@@ -67,7 +68,7 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ,'category')
     )
   );
-  register_post_type( 'current_exhibition',
+  register_post_type( 'exhibition',
     array(
       'labels' => array(
         'name' => __( 'Exhibitions' ),
@@ -81,47 +82,20 @@ function create_post_type() {
       'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ,'category')
     )
   );  
-/*
-  register_post_type( 'artists',
+   register_post_type( 'artfairs',
     array(
       'labels' => array(
-        'name' => __( 'Artists' ),
-        'singular_name' => __( 'artists' )
+        'name' => __( 'Artfairs' ),
+        'singular_name' => __( 'Artfair' )
       ),
+      'with_front' => false,
       'taxonomies' => array('category'),  
       'public' => true,
       'has_archive' => true,
-      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' )
+      'show_in_nav_menus' => true,
+      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' ,'category')
     )
-  );
-
-   register_post_type( 'homeslider',
-    array(
-      'labels' => array(
-        'name' => __( 'Home Slider' ),
-        'singular_name' => __( 'Home Slide' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' )
-    )
-  );
-*/  
-
-
-/*
-   register_post_type( 'homeslider',
-    array(
-      'labels' => array(
-        'name' => __( 'Home Slider' ),
-        'singular_name' => __( 'Home Slide' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'supports' => array( 'title', 'editor', 'comments', 'excerpt', 'custom-fields', 'thumbnail' )
-    );
-*/
-    
+  );  
   flush_rewrite_rules( false );
 }
 
@@ -150,13 +124,13 @@ add_action( 'init', 'create_post_type' );
 //add_filter('the_content', 'filter_ptags_on_images');
 
 //add featured image support to custom post types, posts and pages
-add_theme_support( 'post-thumbnails', array( 'post','artist', 'page') );
+add_theme_support( 'post-thumbnails', array( 'post','artist', 'artfairs', 'exhibition', 'page') );
 add_action( 'after_setup_theme', 'baw_theme_setup' );
 
 //register_taxonomy_for_object_type( 'category', 'artist' );
-/*
-unregister_post_type('portfolios');
-*/
+
+//unregister_post_type('current_exhibition');
+
 #unregister_post_type('shulamit_artists');
 #unregister_post_type('artists');
 ?>
