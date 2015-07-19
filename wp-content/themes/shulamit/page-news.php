@@ -38,7 +38,7 @@
 <?php endwhile; wp_reset_query(); ?>
 
 
-   <section class="row">
+   <section class="row archive">
       <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page'=>'9' , 'category__and'=>'5, 7', 'offset'=>'9' ) ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>  
         <article class="col-sm-4 post">

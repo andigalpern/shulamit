@@ -8418,6 +8418,12 @@ p a:hover {
 .post .no-date {
   margin-bottom: 6px;
 }
+.archive .post h2 {
+  max-height: 40px;
+  border: solid;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .no-results {
   letter-spacing: -0.03em;
 }
