@@ -12,7 +12,11 @@
     <article class="post col-sm-4">
       <figure class="">
         <a href="<? the_field('press_url'); ?>">
-          <?php the_post_thumbnail('thumb_large', array('class' => 'img-responsive')); ?>
+           <? if(the_post_thumbnail());?>
+           <?php the_post_thumbnail('thumb_large', array('class' => 'img-responsive')); ?>
+           <? else; ?>
+           <pre>No image avilable</pre>
+           <? endif; ?>
         </a> 
       </figure>
       <header>
