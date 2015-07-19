@@ -44,7 +44,14 @@
         <article class="col-sm-4 post">
           <figure class="">
             <a href="<? the_permalink(); ?>">
-              <?php the_post_thumbnail('medium_cropped', array('class' => 'img-responsive')); ?>
+          <?php
+            if ( has_post_thumbnail() ){
+             the_post_thumbnail('medium_cropped', array('class' => 'img-responsive'));
+             }
+             else {
+               echo '<img src="http://placehold.it/600x400" class="img-responsive"/>';
+             }
+          ?>
             </a>
           </figure>
           
