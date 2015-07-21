@@ -24,11 +24,15 @@
   <article class="col-sm-2">
   <h3 class="artist-list-heading right">Selling Works By</h3>
   <ul class="artist-list">
-  <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page'=>'100' , 'cat'=>'4' ) ); ?>
-  <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+    <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page'=>'100' , 'cat'=>'4' ) ); ?>
+    <?php
+    while ( $loop->have_posts() ) : $loop->the_post();
+    $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ));
+    ?>
     <li
       class="artist-item"
-      data-swap="<?php echo $feat_image; ?>"
+      data-swap="<?php echo $image; ?>"
       data-title="<?php echo $post->post_title; ?>">
       
       
@@ -41,7 +45,7 @@
   </ul>
   </article>
   
-  <article class="col-sm-5 col-sm-offset-1">
+  <article class="col-sm-8 swap-image-outer-wrap">
     <figure class="swap-image-wrap">
     
     <?php $loop = new WP_Query( 
