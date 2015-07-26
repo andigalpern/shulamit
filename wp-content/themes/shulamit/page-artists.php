@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="container-fluid artist-container">
-  <article class="col-sm-2">
+  <article class="col-sm-3">
   <h3 class="artist-list-heading">Artists</h3>
   <ul class="artist-list">
   <?php $loop = new WP_Query( array( 'post_type' => 'artist','category__not_in'=>'4' ) ); ?>
@@ -21,7 +21,7 @@
   </ul>
   </article>
   
-  <article class="col-sm-2">
+  <article class="col-sm-3">
   <h3 class="artist-list-heading right">Selling Works By</h3>
   <ul class="artist-list">
     <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page'=>'100' , 'cat'=>'4' ) ); ?>
@@ -45,7 +45,7 @@
   </ul>
   </article>
   
-  <article class="col-sm-8 swap-image-outer-wrap">
+  <article class="col-sm-6 swap-image-outer-wrap">
     <figure class="swap-image-wrap">
     
     <?php $loop = new WP_Query( 
@@ -68,7 +68,9 @@
   
 </section>
 
-
+<section class="ajax-content-wrapper">
+  
+</section>
 
 
 <?php get_footer(); ?>

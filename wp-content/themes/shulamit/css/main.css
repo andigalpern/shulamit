@@ -7676,7 +7676,7 @@ p a:hover {
   height: 80px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom:25px;
 }
 #menu-main-menu {
   padding-top: 25px;
@@ -8059,12 +8059,7 @@ p a:hover {
   color: black;
 }
 /* ARTIST PAGE */
-.artist-hero-wrap {
-  margin-bottom: 80px;
-  position: relative;
-  height: 78vh;
-  margin-top: -46px;
-}
+
 .artist-hero {
 /*   max-width: 60%; */
   margin: 0 auto;
@@ -8098,6 +8093,7 @@ p a:hover {
   font-size: 60px;
   direction: rtl;
   width: 50px;
+  width: 130px;
   float: right;
   line-height: 46px;
   margin-bottom: 4px;
@@ -8210,6 +8206,7 @@ p a:hover {
   background: url(img/arrows.png) no-repeat;
   /*     border: solid 1px red; */
   background-size: 30%;
+  opacity: 0 !important;
 }
 #artist-gallery.rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
   background-position: 0 0;
@@ -8532,12 +8529,14 @@ p a:hover {
 }
 #expo-gallery-wrap .rsDefault .rsArrowIcn {
   margin-top: -20px;
+   opacity: 0 !important;
 }
 #expo-gallery-wrap .rsArrowLeft .rsArrowIcn {
   background: url('img/arrows.png') no-repeat -3px -1px;
   background-size: 22px 86px;
   width: 80px;
   height: 30px;
+ 
 }
 #expo-gallery-wrap .rsArrowRight .rsArrowIcn {
   background: url('img/arrows.png') no-repeat right -32px;
@@ -8605,5 +8604,35 @@ p a:hover {
 .artist-exihition-location {
   margin-left: 15px;
 }
+.ajax-content-wrapper {
+  
+}
 
+.artist-hero-wrap {
+  margin-bottom: 40px;
+  position: relative;
+/*   height: 78vh; */
+/*   margin-top: -46px; */
+  border: dashed 3px silver;
+}
+#single-artist-slider {
+  border: solid 1px red;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+@media(max-width:800px) {
+  #single-artist-slider { width: 100%; }
+}
+/*
+.ajax-wrapper {
+  border: solid 10px red;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+*/
 /*# sourceMappingURL=main.css.map */

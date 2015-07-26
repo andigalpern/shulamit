@@ -4,36 +4,42 @@ $(document).on('click', '.menu-item-has-children>a',function(e){
 
 // We call this "one" time to unbind after one click, to allow us to bind a new event handler
 // based on the new class we add here 'artist-thumb-slide-trigger'
-$(document).one('click', '.artist-thumb',function(e){
-  e.preventDefault();
+$(document).on('click', '.artist-thumb a',function(e){
+  //e.preventDefault();
   
-  $('.artist-thumb').removeClass('active');
+  $('.artist-thumb a').removeClass('active');
   $(this).addClass('active');
-  $('.artist-thumbs').addClass('gallery-open');
+  $('html, body').animate({ scrollTop: 0 } , 200);
+  //$('.artist-thumbs').addClass('gallery-open');
 
+/*
   $('.artist-thumbs').toggleClass('large');
   $('.artist-thumb').each(function(){
     $(this).addClass('artist-thumb-slide-trigger').removeClass('artist-thumb');
   })
-  var slideIndex = $(this).data('slide');
-  console.log(slideIndex);
-  var dataSrc = $(this).parent().data('array');
+*/
+  //var slideIndex = $(this).data('slide');
+  //console.log(slideIndex);
+  //var dataSrc = $(this).parent().data('array');
+  //window.location.hash=slideIndex; 
   
-  
+/*
   if( $(".rsOverflow").length ){
     var slider = $(".royalSlider").data('royalSlider');
     slider.destroy();
   }
-  $("body").addClass('overflowhidden');
-  $(".artist-gallery-wrapper").addClass('loaded');
+*/
+  //$("body").addClass('overflowhidden');
+  //$(".artist-gallery-wrapper").addClass('loaded');
   
   
   //console.log(dataSrc);
-  var output="";
+  //var output="";
 
   // for-in loop
-    for (var i in dataSrc) {
+    //for (var i in dataSrc) {
     //console.log('<img class="rsImg" href="' + dataSrc[i] + '"/> ');
+/*
     if(dataSrc[i].image) {
        console.log("we have image")
     }
@@ -45,11 +51,13 @@ $(document).one('click', '.artist-thumb',function(e){
     }
     output+="<a class=\"rsImg\" href=\"" + dataSrc[i].image + "\" />";
     }
+*/
 
     //add the output to the elem
-    document.getElementById("artist-gallery").innerHTML=output;
+    //document.getElementById("artist-gallery").innerHTML=output;
     
     //$("#artist-gallery").imagesLoaded(function(){ 
+/*
       $("#artist-gallery").royalSlider({
         addActiveClass: true,
         controlNavigation: 'none',
@@ -75,10 +83,50 @@ $(document).one('click', '.artist-thumb',function(e){
           delay: 3000
         }
       });
+*/
     //}); 
-    window.location.hash=slideIndex; 
+    
     //window.location='#artist-gallery';
 });
+
+function resizeArtistSlider(){
+  var slider = $('#single-artist-slider');
+  var newHeight = $(window).height() - 160;
+  $('#single-artist-slider').height(newHeight);
+}
+function artistSlider(){
+  
+  if($('#single-artist-slider').length){
+    resizeArtistSlider();
+    $('#single-artist-slider').royalSlider({
+      addActiveClass: true,
+      controlNavigation: 'none',
+      imageScalePadding: 0,
+      slidesSpacing: 0,
+      numImagesToPreload: 2,
+      arrowsNavHideOnTouch: true,
+      arrowsNavAutoHide: false,
+      keyboardNavEnabled: true,
+      fadeinLoadedSlide: true,
+      globalCaption: false,
+      globalCaptionInside: false,
+      transitionSpeed: 300,
+      deeplinking: {
+        change: true,
+        enabled: true,
+        prefix: 'image-'
+      }
+/*
+      autoPlay: {
+        // autoplay options go gere
+        pauseOnHover: false,
+        enabled: true,
+        delay: 3000
+      }
+*/
+    });
+  }
+}
 
 $(document).on('click', '.artist-thumb-slide-trigger',function(e){
 e.preventDefault();
@@ -450,6 +498,7 @@ $(window).on('resize', function(){
    //resizeHomeSlide();
    //resizeMainFolioSolo()
    //resizeMainFolioAjax();
+   resizeArtistSlider();
 });
 
 // PJAX COMPLETE
@@ -458,6 +507,7 @@ function pjaxComplete() {
   NProgress.done();
   goRoyalHomepage();
   expoGallery();
+  artistSlider(); 
 }
 pjax.connect({
   'useClass' : 'pjax',
