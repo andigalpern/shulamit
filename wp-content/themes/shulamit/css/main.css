@@ -1606,6 +1606,7 @@ pre code {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 925px;
 }
 @media (min-width: 768px) {
   .container {
@@ -8143,7 +8144,7 @@ p a:hover {
   cursor: pointer;
   -webkit-transition: opacity ease .4s;
   transition: opacity ease .4s;
-  width: 25%;
+  width: 20%;
   padding-bottom: 10px;
 /*   opacity: .5; */
   transition: opacity ease .3s;
@@ -8576,6 +8577,7 @@ p a:hover {
   position: relative;
   -webkit-transition: all ease .4s;
           transition: all ease .4s;
+      margin: 0 5px;        
 }
 #expo-gallery-wrap .rsDefault .rsArrowIcn {
   margin-top: -20px;

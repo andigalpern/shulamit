@@ -12,7 +12,7 @@
   
   
    <section class="row post"> 
-    <figure class="col-sm-6 news-image">
+    <figure class="col-sm-5">
         <a href="<? the_field('press_url'); ?>" target="_blank">
           <?php
               if ( has_post_thumbnail() ){
@@ -25,7 +25,7 @@
           ?>
         </a> 
     </figure>
-      <section class="col-sm-6">
+      <section class="col-sm-7">
         <header class="post-header no-date">
 <!--          <span class="bold slug">Past Exhibition</span> -->
          <h2 class="heavy"><? the_title();?></h2>

@@ -91,7 +91,7 @@ $(document).on('click', '.artist-thumb a',function(e){
 
 function resizeArtistSlider(){
   var slider = $('#single-artist-slider');
-  var newHeight = $(window).height() - 220;
+  var newHeight = $(window).height() - 360;
   $('#single-artist-slider').height(newHeight);
 }
 function artistSlider(){
@@ -543,7 +543,7 @@ $(window).on('resize', function(){
    //resizeMainFolioSolo()
    //resizeMainFolioAjax();
    resizeArtistSlider();
-   reszieArtistThumbs();
+   //reszieArtistThumbs();
 });
 
 // PJAX COMPLETE
@@ -553,7 +553,7 @@ function pjaxComplete() {
   goRoyalHomepage();
   expoGallery();
   artistSlider(); 
-  reszieArtistThumbs();
+  //reszieArtistThumbs();
 }
 pjax.connect({
   'useClass' : 'pjax',

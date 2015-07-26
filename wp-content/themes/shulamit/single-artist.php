@@ -60,7 +60,7 @@ foreach( $images as $image ):
         <div class="table">
           <div class="table-cell">
           <img
-          src="<?php echo $image['sizes']['medium']; ?>"
+          src="<?php echo $image['sizes']['thumbnail']; ?>"
           class="img-responsive"/>
           </div>
         </div>

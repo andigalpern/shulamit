@@ -10,24 +10,13 @@
   ?>
 
 
+<!--
   <section id="current-expo-gallery" style="background-image: url(<?php echo $image['url']; ?>)">
     <img src="<?php echo $image['sizes']['medium']; ?>" class="img-responsive hidden"/>
   </section>
-  
-  
-  <section class="container container-smaller current-expo-data">
-    <article class="expo-article">
-      <header class="expo-header">
-        <h2 class="heavy"><? the_title(); ?>:<? the_field('sub_title'); ?></h2>
-        <time class="heavy"><?php the_field('dates'); ?></time>
-      </header>
-
-      <section class="expo-body">
-        <?php the_content(); ?>
-      </section>
-     
-     
-     <section id="expo-gallery-wrap">
+-->
+<article class="container">
+       <section id="expo-gallery-wrap">
         <figure class="current-expo-gallery-extra royalSlider rsDefault" id="expo-gallery">
         <?php foreach( $images as $image ): ?>
           <div class="slide" data-color="<?php echo $image['alt']; ?>">
@@ -55,7 +44,21 @@
           class="img-responsive"/>
         </figure>
       <?php endforeach; ?>
-      </section>  
+      </section> 
+  
+  <section class="container current-expo-data">
+    <article class="expo-article">
+      <header class="expo-header">
+        <h2 class="heavy"><? the_title(); ?>:<? the_field('sub_title'); ?></h2>
+        <time class="heavy"><?php the_field('dates'); ?></time>
+      </header>
+
+      <section class="expo-body">
+        <?php the_content(); ?>
+      </section>
+     
+     
+ 
       
       
     </article>

@@ -1,5 +1,46 @@
 <?php get_header(); ?>
 
+
+
+<script>
+
+/*
+Preload images script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+var myimages=new Array()
+function preloadimages(){
+for (i=0;i<preloadimages.arguments.length;i++){
+myimages[i]=new Image()
+myimages[i].src=preloadimages.arguments[i]
+}
+}
+
+
+//Enter path of images to be preloaded inside parenthesis. Extend list as desired.
+preloadimages(
+<?php $loop = new WP_Query( array( 'post_type' => 'artist' ) ); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+<?php
+$images = get_field('images');
+$image = $images[0];
+?>
+<?php $image_text = array(); ?>
+<?php foreach( $images as $image ): ?>
+<?php $image_text[] = '"'. $image['sizes']['hover_thumb'] . '"'; ?>
+<?php endforeach; ?>
+<?php echo implode( $image_text, ","); ?>
+<?php endwhile;  ?>
+)
+
+</script>
+
+
+
+
+
 <section class="container-fluid artist-container">
   <article class="col-sm-3 artist-list-wrap">
   <h3 class="artist-list-heading">Artists</h3>
