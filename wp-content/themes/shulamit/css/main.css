@@ -8273,6 +8273,12 @@ p a:hover {
   font-size: 16px;
   margin-bottom: 10px;
 }
+.artist-list-wrap {
+   width: 20%;
+}
+@media(max-width: 800px) {
+  .artist-list-wrap { width: 50%;}
+}
 .artist-list {
   margin-bottom: 40px;
   font-family: 'DrukText-Medium';
@@ -8293,10 +8299,12 @@ p a:hover {
 .swap-image-outer-wrap{
   height: 66vh;
   position: relative;
-  border: solid 1px red;
   max-height: 400px;
+  width: 59%;
 }
-
+@media(max-width: 800px) {
+  .swap-image-outer-wrap { width: 100%;}
+}
 .swap-image-wrap {
 
   
@@ -8633,10 +8641,10 @@ p a:hover {
   margin-left: 10px;
 }
 .artist-bio {
-  width: 70%;
+/*   width: 70%; */
   max-width: 800px;
   margin: 0 auto 40px auto;
-  padding: 80px;
+  padding: 80px 0;
 }
 .artist-section {
   position: relative;

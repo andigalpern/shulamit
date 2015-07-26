@@ -39,38 +39,6 @@
 
 <?php endwhile; wp_reset_query(); ?>
 
-<? /*
-   <section class="row archive">
-      <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page'=>'9' , 'category__and'=>'5, 7', 'offset'=>'9' ) ); ?>
-      <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>  
-        <article class="col-sm-4 post">
-          <figure class="">
-            <a href="<? the_permalink(); ?>">
-            <?php
-                if ( has_post_thumbnail() ){
-                  the_post_thumbnail('medium', array('class' => 'img-responsive'));
-                }
-                else{
-                  $theUrl = get_field('image_link');
-                  echo  '<img src="'.$theUrl.'" class="img-responsive"/>';
-                }
-            ?>
-            </a>
-          </figure>
-          
-          <section class="">
-            <header>
-<!--             <span class="bold slug">Past Exhibition</span> -->
-            <h2 class="heavy"><? the_title(); ?>:</h2>
-            <h3 class="heavy"><? the_field('sub_title'); ?></h3>
-            <time><?php the_field('dates'); ?></time>
-            </header>
-          </section>
-        </article>
-      <?php endwhile;?> 
-      <?php wp_reset_query();?> 
-      
-      */ ?>
       
  </section><!-- end row -->
  

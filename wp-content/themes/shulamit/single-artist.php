@@ -83,7 +83,7 @@ foreach( $images as $image ):
      <ul class="bold">
 <!--        <li><a href="#artist-selected-work">Selected Work</a></li> -->
 <!--        <li><a href="#artist-exhibitions">Exhibitions</a></li> -->
-       <li><a href="#artist-bio" class="ajax-trigger">Bio</a></li>
+       <li><a href="#artist-bio" class="ajax-trigger">Biography</a></li>
        <li><a href="<? the_field('pdf'); ?>" target="_blank">CV</a></li>
        <li><a href="#artist-press" class="ajax-trigger">Press</a></li>
      </ul>
