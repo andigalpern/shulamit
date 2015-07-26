@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+
+
+  
  
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php 
@@ -7,7 +10,7 @@ $count = 1;
 $images = get_field('images');
 $image = $images[0];
 ?>
-
+<article class="artist-hero-container artist-section" id="selected-works">
 <section class="artist-hero-wrap">
 <section class="rsSlider rsDerault artist-rsSlider" id="single-artist-slider">
 <?php
@@ -29,27 +32,17 @@ foreach( $images as $image ):
 </aside>
 
 <!--   <figure class="artist-hero lazyload artist-wrapper"></figure> -->
-  <menu class="artist-menu">
-     <h1 class="heavy"><?php the_title(); ?></h1>
-     <ul class="bold">
-<!--        <li><a href="#artist-selected-work">Selected Work</a></li> -->
-<!--        <li><a href="#artist-exhibitions">Exhibitions</a></li> -->
-       <li><a href="#artist-bio" class="ajax-trigger">Bio</a></li>
-       <li><a href="<? the_field('pdf'); ?>" target="_blank">CV</a></li>
-       <li><a href="#artist-press" class="ajax-trigger">Press</a></li>
-     </ul>
-  </menu>
-</section>      
+
+</section>  
 
 
- <article class="container artist-wrapper">
+
   
-<!--
-  <section class="artist-gallery-wrapper row">
-    <figure class="artist-gallery royalSlider rsDefault" id="artist-gallery">
-    </figure>
-  </section>
--->
+      
+ <section class="container artist-wrapper">
+ 
+ 
+
 
 <!--
       <section class="row" id="artist-selected-work"> 
@@ -68,9 +61,13 @@ foreach( $images as $image ):
       <?php foreach( $images as $image ): ?>
         <a href="#image-<? echo  $count++ ?>">
         <figure class="col-md-1 artist-thumb">
+        <div class="table">
+          <div class="table-cell">
           <img
           src="<?php echo $image['sizes']['medium']; ?>"
           class="img-responsive"/>
+          </div>
+        </div>
         </figure>
         </a>
       <?php endforeach; ?>
@@ -80,44 +77,64 @@ foreach( $images as $image ):
         </div>
        */ ?>
       </section>
-      
-      
-      <section class="artist-bio ajax-wrapper" id="artist-bio">
-         <h3 class="bold"><?php the_title(); ?> Biography</h3>
-        <?php the_content(); ?>
+ </section>
+</article>
+ 
+ 
+ 
+   <menu class="artist-menu">
+     <h1 class="heavy"><a href="#selected-works"><?php the_title(); ?></a></h1>
+     <ul class="bold">
+<!--        <li><a href="#artist-selected-work">Selected Work</a></li> -->
+<!--        <li><a href="#artist-exhibitions">Exhibitions</a></li> -->
+       <li><a href="#artist-bio" class="ajax-trigger">Bio</a></li>
+       <li><a href="<? the_field('pdf'); ?>" target="_blank">CV</a></li>
+       <li><a href="#artist-press" class="ajax-trigger">Press</a></li>
+     </ul>
+  </menu>
+  
+  
+     
+      <section class="artist-section hidden" id="artist-bio">
+        <section class="artist-bio ajax-wrapper" >
+           <h3 class="bold"><?php the_title(); ?> Biography</h3>
+          <?php the_content(); ?>
+        </section>
       </section>
       
       
 
-      
-      <section class="artist-bio artist-exihitions ajax-wrapper" id="artist-exhibitions">
-
+      <section class="artist-section hidden" id="artist-exhibitions">
+        <section class="artist-bio artist-exihitions ajax-wrapper" >
+        
         <h3 class="bold"><?php the_title(); ?> Exhibitions</h3>
         <?php $expos = the_field('exhibition_list');?>
-         <?php var_dump($expos);?>
+        <?php var_dump($expos);?>
         <?php while(has_sub_field('exhibition_list')): ?>
         
-          <p>
-          <b class="bold"><?php the_sub_field('year'); ?></b>
-          <span class="artist-exihition-location"><?php the_sub_field('details'); ?></span>
-          </p>
+        <p>
+        <b class="bold"><?php the_sub_field('year'); ?></b>
+        <span class="artist-exihition-location"><?php the_sub_field('details'); ?></span>
+        </p>
         
         <?php endwhile;?> 
-      </section>  
-     
+        </section>  
+      </section>
       
-      <section class="artist-bio ajax-wrapper" id="artist-press" >
-         <h3 class="bold"><?php the_title(); ?> Press</h3>
-         <p>
-           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", "Golems Gold", The Shiraz Institute.The Shiraz Institute.</a></span>
-         </p>
-         <p>
-           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
-         </p>         
-         <p>
-           <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
-         </p>
-      </section>  
+      <section class="artist-section hidden" id="artist-press">
+        <section class="artist-bio ajax-wrapper" i>
+           <h3 class="bold"><?php the_title(); ?> Press</h3>
+           <p>
+             <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", "Golems Gold", The Shiraz Institute.The Shiraz Institute.</a></span>
+           </p>
+           <p>
+             <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
+           </p>         
+           <p>
+             <b class="bold">2013</b> <span class="artist-exihition-location"><a href="">"Golems Gold", The Shiraz Institute.</a></span>
+           </p>
+        </section> 
+      </section> 
     
   
       

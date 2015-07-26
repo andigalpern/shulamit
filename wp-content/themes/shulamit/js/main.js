@@ -175,9 +175,12 @@ $('#menu-main-menu a').on('click', function(e){
 });
 */
 function reszieArtistThumbs(){
+  var width = Math.round($('.artist-thumbs').width() / 4 - 20);
+  console.log( width ); 
   $('.artist-thumb').each(function(){
-    var thewidth =  $(this).width();
-    $(this).height(thewidth)
+    //var thewidth =  $(this).width();
+    $(this).height(width);
+    console.log($(this).height());
   }); 
 }
 
@@ -456,9 +459,32 @@ function goRoyalHomepage() {
 }  //end function
 
 
-
-
+$('.artist-menu a').on('click', function(e){
+    var target = $(this).attr('href');
+    var theId = target.substr(1);
+    var elem = $('.artist-section').attr('id');
+    var targetElem = elem == theId;
+    
+  $('.artist-section').addClass('hidden');
+  
+  $('.artist-section').each(function(){
+    if(  $(this).attr('id') == theId){
+      $(this).addClass('shown').removeClass('hidden');
+      }
+    }); 
+   $('html,body').animate({
+    scrollTop: '0'
+  }, 100);  
+  //window.scrollTo(0, 0)
+});
+$(window).on('hashchange',function(){
+  console.log("chnaged")
+});  
+  
+  
+  
 //https://css-tricks.com/snippets/jquery/smooth-scrolling/
+/*
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -471,6 +497,7 @@ function goRoyalHomepage() {
       }
     }
   });
+*/
 
 
 
