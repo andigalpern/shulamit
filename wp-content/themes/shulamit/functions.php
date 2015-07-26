@@ -3,8 +3,9 @@
 
 function baw_theme_setup() {
   add_image_size( 'thumb_large', 600, 400, true ); // (cropped)
-  add_image_size( 'medium_cropped', 400, 267, true ); //soft proportional
+  add_image_size( 'medium_cropped', 400, 267, true ); //cropped
   add_image_size( 'extra_large', 1800, 1200 ); //soft proportional
+  add_image_size( 'hover_thumb', 1800, 400 ); //soft proportional
 }
 
 // only search thru posts, not page or media. 

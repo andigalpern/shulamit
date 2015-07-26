@@ -5,10 +5,14 @@
   <h3 class="artist-list-heading">Artists</h3>
   <ul class="artist-list">
   <?php $loop = new WP_Query( array( 'post_type' => 'artist','category__not_in'=>'4' ) ); ?>
-  <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+  <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'hover_thumb');
+    $url = $thumb[0];
+    
+  ?>
     <li
       class="artist-item"
-      data-swap="<?php echo $feat_image; ?>"
+      data-swap="<?php echo $url; ?>"
       data-title="<?php echo $post->post_title; ?>">
       
       
@@ -57,8 +61,13 @@
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>  
     <a href="<?php the_permalink(); ?>" id="swap-image-link">
     <?php
-    $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-    echo '<img src="'.$feat_image.'" class="img-responsive" id="swap-image"/>';
+      //$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+    
+      $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium');
+      $url = $thumb[0];
+
+
+    echo '<img src="'. $url.'" class="img-responsive" id="swap-image"/>';
     ?>
     <figcaption id="swap-title"><?php echo $post->post_title; ?></figcaption>
     </a>

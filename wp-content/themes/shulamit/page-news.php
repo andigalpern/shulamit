@@ -7,20 +7,21 @@
   </header>
     
   
-  <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page'=>'9' , 'category__and'=>'5, 7' ) ); ?>
+  <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page'=>'100' , 'category__and'=>'5, 7' ) ); ?>
   <?php while ( $loop->have_posts() ) : $loop->the_post(); $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
   
   
    <section class="row post"> 
-    <figure class="col-sm-6">
-        <a href="<? the_permalink(); ?>">
+    <figure class="col-sm-6 news-image">
+        <a href="<? the_field('press_url'); ?>" target="_blank">
           <?php
-            if ( has_post_thumbnail() ){
-             the_post_thumbnail('medium', array('class' => 'img-responsive'));
-             }
-             else {
-               echo '<img src="http://placehold.it/600x400" class="img-responsive"/>';
-             }
+              if ( has_post_thumbnail() ){
+                the_post_thumbnail('medium', array('class' => 'img-responsive'));
+              }
+              else{
+                $theUrl = get_field('image_link');
+                echo  '<img src="'.$theUrl.'" class="img-responsive"/>';
+              }
           ?>
         </a> 
     </figure>
@@ -31,27 +32,29 @@
         </header>
         <section class="content">
         <? the_excerpt();?>
+        <a href="<? the_field('press_url'); ?>" target="_blank" class="read-more">Read The Article</a>
         </section>
     </section>
   </section>
 
 <?php endwhile; wp_reset_query(); ?>
 
-
+<? /*
    <section class="row archive">
       <?php $loop = new WP_Query( array( 'post_type' => 'post' ,  'posts_per_page'=>'9' , 'category__and'=>'5, 7', 'offset'=>'9' ) ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>  
         <article class="col-sm-4 post">
           <figure class="">
             <a href="<? the_permalink(); ?>">
-          <?php
-            if ( has_post_thumbnail() ){
-             the_post_thumbnail('medium_cropped', array('class' => 'img-responsive'));
-             }
-             else {
-               echo '<img src="http://placehold.it/600x400" class="img-responsive"/>';
-             }
-          ?>
+            <?php
+                if ( has_post_thumbnail() ){
+                  the_post_thumbnail('medium', array('class' => 'img-responsive'));
+                }
+                else{
+                  $theUrl = get_field('image_link');
+                  echo  '<img src="'.$theUrl.'" class="img-responsive"/>';
+                }
+            ?>
             </a>
           </figure>
           
@@ -66,6 +69,8 @@
         </article>
       <?php endwhile;?> 
       <?php wp_reset_query();?> 
+      
+      */ ?>
       
  </section><!-- end row -->
  

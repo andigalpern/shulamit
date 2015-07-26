@@ -5,7 +5,7 @@
   <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
   
   <?php
-  $images = the_field('images');
+  $images = get_field('images');
   $image = $images[0];
   ?>
 
