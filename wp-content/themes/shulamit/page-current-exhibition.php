@@ -5,7 +5,7 @@
   <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>
   
   <?php
-  $images = get_field('images');
+  $images = the_field('images');
   $image = $images[0];
   ?>
 
@@ -41,7 +41,7 @@
         <?php endforeach; ?>
         </figure>
         <aside  id="expo-gallery-captions">
-          <p><?php echo $image['caption']; ?></p>
+          <p><?php echo $image['caption'];  ?></p>
         </aside>
      </section>
       

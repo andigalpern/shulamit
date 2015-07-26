@@ -20,7 +20,7 @@
   
       <figure class="col-sm-6">
           <a href="<? the_permalink(); ?>">
-            <?php the_post_thumbnail('thumb_large', array('class' => 'img-responsive')); ?>
+            <?php the_post_thumbnail('extra_large', array('class' => 'img-responsive')); ?>
           </a>
       </figure>
       

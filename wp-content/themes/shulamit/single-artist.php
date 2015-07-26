@@ -1,16 +1,16 @@
 <?php get_header(); ?>
 
  
-<?php $count = 1; ?>
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-<section class="artist-hero-wrap">
-  
-  
-<section class="rsSlider rsDerault artist-rsSlider" id="single-artist-slider">
-<?php
+<?php 
+$count = 1; 
 $images = get_field('images');
 $image = $images[0];
+?>
+
+<section class="artist-hero-wrap">
+<section class="rsSlider rsDerault artist-rsSlider" id="single-artist-slider">
+<?php
 foreach( $images as $image ):
 ?>
   <div class="slide" data-color="<?php echo $image['alt']; ?>">
@@ -18,11 +18,15 @@ foreach( $images as $image ):
         <a href="<?php echo $image['sizes']['large']; ?>" class="rsImg"></a>
      </div>
     <div class="slide-caption">
-      <p><?php echo $image['caption']; ?></p>
+      <p><?php echo $image['caption']; echo $image['thumbnail'];?></p>
     </div>
   </div>
 <?php endforeach; ?> 
 </section>
+
+<aside  id="expo-gallery-captions">
+<p><?php echo $image['caption'];?></p>
+</aside>
 
 <!--   <figure class="artist-hero lazyload artist-wrapper"></figure> -->
   <menu class="artist-menu">
@@ -40,37 +44,41 @@ foreach( $images as $image ):
 
  <article class="container artist-wrapper">
   
+<!--
   <section class="artist-gallery-wrapper row">
     <figure class="artist-gallery royalSlider rsDefault" id="artist-gallery">
     </figure>
   </section>
+-->
 
+<!--
       <section class="row" id="artist-selected-work"> 
         <header class="col-sm-12 artist-header">    
           <h3 class="bold"><?php the_title(); ?> Selected Works</h3>
         </header>
       </section>
+-->
       
       <?php
       //#GET THE IMAGES FIELD OBJECT
       $images = get_field('images');
       $image = $images[0];
       ?>
-      <section class="artist-thumbs row" data-array='[<?php $image_text = array(); ?><?php foreach( $images as $image ): ?><?php $image_text[] = '{"image" : "'. $image['sizes']['extra_large'] . '"}'; ?><?php endforeach; ?><?php echo implode( $image_text, ","); ?>]'>
-        <?php foreach( $images as $image ): ?>
+      <section class="artist-thumbs row">
+      <?php foreach( $images as $image ): ?>
         <a href="#image-<? echo  $count++ ?>">
         <figure class="col-md-1 artist-thumb">
-              <img
-              src="<?php echo $image['sizes']['thumbnail']; ?>"
-              data-large="<?php echo $image['sizes']['thumb_large']; ?>"
-              class="img-responsive"/>
-              
+          <img
+          src="<?php echo $image['sizes']['medium']; ?>"
+          class="img-responsive"/>
         </figure>
         </a>
-        <?php endforeach; ?>
+      <?php endforeach; ?>
+       <? /*
         <div class="clear text-right">
-          <span class="bold view-all">[+] View All</span>
+        <span class="bold view-all">[+] View All</span>
         </div>
+       */ ?>
       </section>
       
       
@@ -83,8 +91,6 @@ foreach( $images as $image ):
 
       
       <section class="artist-bio artist-exihitions ajax-wrapper" id="artist-exhibitions">
-    
-
 
         <h3 class="bold"><?php the_title(); ?> Exhibitions</h3>
         <?php $expos = the_field('exhibition_list');?>

@@ -91,57 +91,68 @@ $(document).on('click', '.artist-thumb a',function(e){
 
 function resizeArtistSlider(){
   var slider = $('#single-artist-slider');
-  var newHeight = $(window).height() - 160;
+  var newHeight = $(window).height() - 220;
   $('#single-artist-slider').height(newHeight);
 }
 function artistSlider(){
-  
-  if($('#single-artist-slider').length){
-    resizeArtistSlider();
-    $('#single-artist-slider').royalSlider({
-      addActiveClass: true,
-      controlNavigation: 'none',
-      imageScalePadding: 0,
-      slidesSpacing: 0,
-      numImagesToPreload: 2,
-      arrowsNavHideOnTouch: true,
-      arrowsNavAutoHide: false,
-      keyboardNavEnabled: true,
-      fadeinLoadedSlide: true,
-      globalCaption: false,
-      globalCaptionInside: false,
-      transitionSpeed: 300,
-      deeplinking: {
-        change: true,
-        enabled: true,
-        prefix: 'image-'
-      }
-/*
-      autoPlay: {
-        // autoplay options go gere
-        pauseOnHover: false,
-        enabled: true,
-        delay: 3000
-      }
-*/
+    if($('#single-artist-slider').length){
+      resizeArtistSlider();
+      $('#single-artist-slider').royalSlider({
+        addActiveClass: true,
+        controlNavigation: 'none',
+        imageScalePadding: 0,
+        slidesSpacing: 0,
+        numImagesToPreload: 2,
+        arrowsNavHideOnTouch: true,
+        arrowsNavAutoHide: false,
+        keyboardNavEnabled: true,
+        fadeinLoadedSlide: true,
+        globalCaption: false,
+        globalCaptionInside: false,
+        transitionSpeed: 300,
+        deeplinking: {
+          change: true,
+          enabled: true,
+          prefix: 'image-'
+        }
     });
+    
+    var slider = $('#single-artist-slider').data('royalSlider');
+
+    var caption = $('slide-caption:first-of-type').html();
+    console.log(caption)
+    
+    captionHolder = $('#expo-gallery-captions');
+    captionHolder.html(caption);
+
+
+    slider.ev.on('rsAfterSlideChange', function(event) {
+        console.log("rsAfterSlideChange")
+        var caption = $('.rsActiveSlide .slide-caption').html();
+        console.log(caption)
+        captionHolder.html(caption);
+    }); 
+
+
+
   }
 }
 
+/*
 $(document).on('click', '.artist-thumb-slide-trigger',function(e){
-e.preventDefault();
+  e.preventDefault();
 
-  
   $('.artist-thumb,.artist-thumb-slide-trigger').removeClass('active');
   $(this).addClass('active');
    
   if( $('.artist-thumb-slide-trigger').parent().hasClass('large') ){
     $('.artist-thumb-slide-trigger').parent().removeClass('large');
   }
-var slideIndex = $(this).data('slide');
-console.log(slideIndex);
-window.location.hash=slideIndex; 
+  var slideIndex = $(this).data('slide');
+  console.log(slideIndex);
+  window.location.hash=slideIndex; 
 });
+*/
 
 //fadeIn Artist Index firts imnage
 $('.swap-image-wrap, .lazyload').waitForImages(function() {
@@ -163,6 +174,12 @@ $('#menu-main-menu a').on('click', function(e){
   })  
 });
 */
+function reszieArtistThumbs(){
+  $('.artist-thumb').each(function(){
+    var thewidth =  $(this).width();
+    $(this).height(thewidth)
+  }); 
+}
 
 
 //add scrolle nav
@@ -499,6 +516,7 @@ $(window).on('resize', function(){
    //resizeMainFolioSolo()
    //resizeMainFolioAjax();
    resizeArtistSlider();
+   reszieArtistThumbs();
 });
 
 // PJAX COMPLETE
@@ -508,6 +526,7 @@ function pjaxComplete() {
   goRoyalHomepage();
   expoGallery();
   artistSlider(); 
+  reszieArtistThumbs();
 }
 pjax.connect({
   'useClass' : 'pjax',

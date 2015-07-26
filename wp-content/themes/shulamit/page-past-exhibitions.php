@@ -9,29 +9,40 @@
   </header>
   
   
-   <section class="row">
-      <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => 16 , 'cat'=>'8'  ) ); ?>
-      <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>  
-        <article class="col-sm-4 post">
-          <figure class="">
-            <a href="<? the_permalink(); ?>">
-              <?php the_post_thumbnail('medium_cropped', array('class' => 'img-responsive')); ?>
-            </a>
-          </figure>
-          
-          <section class="">
-            <header>
-            <span class="bold slug">Past Exhibition</span>
-            <h2 class="heavy"><? the_title(); ?>:</h2>
-            <h3 class="heavy"><? the_field('sub_title'); ?></h3>
-            <time><?php the_field('dates'); ?></time>
-            </header>
-          </section>
-        </article>
-      <?php endwhile;?> 
-      <?php wp_reset_query();?> 
+
+<?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => 16 , 'cat'=>'8'  ) ); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>  
+
+
       
- </section><!-- end row -->
+  <section class="row post"> 
+    <figure class="col-sm-6">
+        <a href="<? the_permalink(); ?>">
+          <?php
+            if ( has_post_thumbnail() ){
+              the_post_thumbnail('medium_cropped', array('class' => 'img-responsive')); 
+             }
+             else {
+               echo '<img src="http://placehold.it/600x400" class="img-responsive"/>';
+             }
+          ?>
+        </a> 
+    </figure>
+      <section class="col-sm-6">
+        <header class="post-header no-date">
+          <span class="bold slug">Past Exhibition</span>
+         <h2 class="heavy"><? the_title();?></h2>
+         <h3 class="heavy"><? the_field('sub_title'); ?></h3>
+        </header>
+        <section class="content">
+        <? the_excerpt();?>
+        </section>
+    </secti
+    
+    
+      
+<?php endwhile;?> 
+<?php wp_reset_query();?> 
  
  
 </section><!-- end container -->
