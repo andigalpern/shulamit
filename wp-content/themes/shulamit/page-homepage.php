@@ -15,14 +15,20 @@
       $image2 = $images[1];
       ?>
       
+      <? /*
       <div class="slide" data-color="<?php echo $image1['alt']; ?>">
         <a href="<?php echo $image1['url']; ?>" class="rsImg"></a>
       </div>
       <div class="slide" data-color="<?php echo $image2['alt']; ?>">
         <a href="<?php echo $image2['url']; ?>" class="rsImg"></a>
       </div>
+      */ ?>
     
-  
+      <?php foreach( $images as $image ): ?>
+      <div class="slide">
+        <a href="<?php echo $image['url']; ?>" class="rsImg"></a>
+      </div>
+      <?php endforeach; ?> 
   
   </section>
   
