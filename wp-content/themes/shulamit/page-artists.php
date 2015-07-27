@@ -1,14 +1,9 @@
 <?php get_header(); ?>
 
 
-
+<? /*
 <script>
 
-/*
-Preload images script
-By JavaScript Kit (http://javascriptkit.com)
-Over 400+ free scripts here!
-*/
 
 var myimages=new Array()
 function preloadimages(){
@@ -36,7 +31,7 @@ $image = $images[0];
 )
 
 </script>
-
+*/ ?>
 
 
 
