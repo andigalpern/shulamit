@@ -8153,6 +8153,9 @@ p strong em {
 .artist-container {
   margin: 0 29px;
 }
+.artist-container.artist-overview-container {
+  margin: 0 42px;
+}
 @media (max-width: 600px) {
   .artist-container {
     margin: 0;

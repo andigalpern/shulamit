@@ -36,7 +36,7 @@ $image = $images[0];
 
 
 
-<section class="container-fluid artist-container">
+<section class="container-fluid artist-container artist-overview-container">
   <article class="col-sm-3 artist-list-wrap">
   <h3 class="artist-list-heading">Artists</h3>
   <ul class="artist-list">
