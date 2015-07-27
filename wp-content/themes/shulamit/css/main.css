@@ -8368,6 +8368,9 @@ p strong em {
   
 }
 /* ABOUT PAGE */
+.about-img {
+  margin-bottom: 100px;
+}
 .about-description {
   max-width: 380px;
   margin-top: 25vh;
