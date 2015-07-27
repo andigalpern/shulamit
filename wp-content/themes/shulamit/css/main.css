@@ -20,6 +20,24 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'ACaslonPro-Bold';
+  src: url('fonts/ACaslonPro-Bold.eot?#iefix') format('embedded-opentype'),  url('fonts/ACaslonPro-Bold.otf')  format('opentype'),
+	     url('fonts/ACaslonPro-Bold.woff') format('woff'), url('fonts/ACaslonPro-Bold.ttf')  format('truetype'), url('fonts/ACaslonPro-Bold.svg#ACaslonPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ACaslonPro-BoldItalic';
+  src: url('fonts/ACaslonPro-BoldItalic.eot?#iefix') format('embedded-opentype'),  url('fonts/ACaslonPro-BoldItalic.otf')  format('opentype'),
+	     url('fonts/ACaslonPro-BoldItalic.woff') format('woff'), url('fonts/ACaslonPro-BoldItalic.ttf')  format('truetype'), url('fonts/ACaslonPro-BoldItalic.svg#ACaslonPro-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 @font-face {
   font-family: 'Druk-Heavy';
   src: url('fonts/Druk-Heavy.eot?#iefix') format('embedded-opentype'), url('fonts/Druk-Heavy.otf') format('opentype'), url('fonts/Druk-Heavy.woff') format('woff'), url('fonts/Druk-Heavy.ttf') format('truetype'), url('fonts/Druk-Heavy.svg#Druk-Heavy') format('svg');
@@ -7666,6 +7684,16 @@ p a:hover {
   text-decoration: underline;
   color: #666666;
 }
+p em {
+  font-family: 'Conv_ACaslonPro-Italic';
+}
+p strong {
+  font-family: 'ACaslonPro-Bold';
+}
+p em strong,
+p strong em {
+ font-family: 'ACaslonPro-BoldItalic';
+} 
 .main-header {
   position: relative;
   top: 0;
