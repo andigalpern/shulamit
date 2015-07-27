@@ -8312,6 +8312,9 @@ p strong em {
 @media(max-width: 800px) {
   .artist-list-wrap { width: 50%;}
 }
+@media(max-width: 600px) {
+  .artist-list-wrap { width: 100%;}
+}
 .artist-list {
   margin-bottom: 40px;
   font-family: 'DrukText-Medium';
@@ -8637,7 +8640,7 @@ p strong em {
 #expo-gallery-wrap.fixed {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -5px;
   left: 0;
   bottom: 0;
   background: white;
