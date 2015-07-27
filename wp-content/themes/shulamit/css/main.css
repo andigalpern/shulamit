@@ -8111,6 +8111,7 @@ p a:hover {
     text-align: center;
     float: none;
     width: auto;
+    margin-bottom: 10px;
   }
 }
 .artist-menu ul {
@@ -8557,7 +8558,7 @@ p a:hover {
   opacity: 1;
 }
 #expo-gallery-captions {
-  height: 30px;
+  height: 50px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -8565,7 +8566,8 @@ p a:hover {
   padding: 0;
   margin: 0;
   text-align: center;
-  line-height: 30px;
+  line-height: 50px;
+  font-size: 13px;
 }
 @media (max-width: 800px) {
   #expo-gallery-captions p {
@@ -8643,11 +8645,17 @@ p a:hover {
   margin-left: 10px;
 }
 .artist-bio {
-/*   width: 70%; */
   max-width: 800px;
   margin: 0 auto 40px auto;
   padding: 80px 0;
 }
+@media(max-width: 800px) {
+ .artist-bio {
+    padding: 30px;
+  } 
+}
+
+
 .artist-section {
   position: relative;
   width: 100%;

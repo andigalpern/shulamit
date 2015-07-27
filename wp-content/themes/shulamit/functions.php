@@ -11,7 +11,7 @@ function baw_theme_setup() {
 // only search thru posts, not page or media. 
 function SearchFilter($query) {
 if ($query->is_search) {
-  $query->set('post_type', array('post', 'artist'));
+  $query->set('post_type', array('post', 'artist', 'exhibition', 'artfairs'));
 }
 return $query;
 }
