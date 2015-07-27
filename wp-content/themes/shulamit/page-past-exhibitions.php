@@ -17,7 +17,7 @@
       <a href="<? the_permalink(); ?>">
         <?php
             if ( has_post_thumbnail() ){
-              the_post_thumbnail('medium_cropped', array('class' => 'img-responsive')); 
+              the_post_thumbnail('thumb_large', array('class' => 'img-responsive')); 
             }
             else {
               echo '<img src="http://placehold.it/600x400?text=Unavailable" class="img-responsive"/>';
