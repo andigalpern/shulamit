@@ -76,7 +76,7 @@ $image = $images[0];
     ?>
     <li
       class="artist-item"
-      data-swap="<?php echo $image; ?>"
+      data-swap="<?php echo $url; ?>"
       data-title="<?php echo $post->post_title; ?>">
       
       
