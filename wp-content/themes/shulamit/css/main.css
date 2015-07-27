@@ -8160,6 +8160,9 @@ p strong em {
   .artist-container {
     margin: 0;
   }
+  .artist-container.artist-overview-container {
+    margin: 0 30px;
+  }
 }
 .artist-hero.loaded img {
   opacity: 1;
@@ -8600,6 +8603,11 @@ p strong em {
   text-align: center;
   max-width: 880px;
   padding-top: 15px;
+}
+@media (max-width: 600px) {
+  #expo-gallery-captions {
+    padding: 0 30px;
+  }
 }
 #expo-gallery-captions p {
   padding: 0;
