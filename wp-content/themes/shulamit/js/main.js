@@ -132,9 +132,6 @@ function artistSlider(){
         console.log(caption)
         captionHolder.html(caption);
     }); 
-
-
-
   }
 }
 
@@ -459,7 +456,7 @@ function goRoyalHomepage() {
 }  //end function
 
 
-$('.artist-menu a').on('click', function(e){
+$('.artist-menu a').not('#cv').on('click', function(e){
     var target = $(this).attr('href');
     var theId = target.substr(1);
     var elem = $('.artist-section').attr('id');
