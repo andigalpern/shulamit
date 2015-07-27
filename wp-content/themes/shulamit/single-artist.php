@@ -85,7 +85,7 @@ foreach( $images as $image ):
 <!--        <li><a href="#artist-exhibitions">Exhibitions</a></li> -->
        <li><a href="#artist-bio" class="ajax-trigger">Biography</a></li>
        <li><a href="<? the_field('pdf'); ?>" target="_blank" id="cv">CV</a></li>
-       <li><a href="#artist-press" class="ajax-trigger">Press</a></li>
+<!--        <li><a href="#artist-press" class="ajax-trigger">Press</a></li> -->
      </ul>
   </menu>
   
