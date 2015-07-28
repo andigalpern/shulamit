@@ -4,7 +4,7 @@
 <?php 
 $count = 1; 
 $images = get_field('images');
-$image = $images[0];
+$image_1 = $images[0];
 ?>
 <article class="artist-hero-container artist-section" id="selected-works">
 <section class="artist-hero-wrap">
@@ -24,7 +24,7 @@ foreach( $images as $image ):
 </section>
 
 <aside  id="expo-gallery-captions">
-<p><?php echo $image['caption'];?></p>
+<p><?php echo $image_1['caption'];?></p>
 </aside>
 
 <!--   <figure class="artist-hero lazyload artist-wrapper"></figure> -->
