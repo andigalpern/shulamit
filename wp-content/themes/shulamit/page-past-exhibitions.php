@@ -28,8 +28,8 @@
     <section class="col-sm-6">
       <header class="post-header no-date">
         <span class="bold slug">Past Exhibition</span>
-       <h2 class="heavy"><? the_title();?></h2>
-       <h3 class="heavy"><? the_field('sub_title'); ?></h3>
+       <h2 class="heavy"><a href="<? the_permalink(); ?>"><? the_title();?></a></h2>
+       <h3 class="heavy"><a href="<? the_permalink(); ?>"><? the_field('sub_title'); ?></a></h3>
       </header>
       <section class="content">
       <? the_excerpt();?>

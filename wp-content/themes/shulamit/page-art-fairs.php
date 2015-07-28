@@ -20,7 +20,7 @@
     </figure>
        <section class="col-sm-6">
         <span class="bold slug"><? the_field('sub_title'); ?></span>
-        <h2 class="heavy"><? the_title(); ?></h2>
+        <h2 class="heavy"><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h2>
         <? the_excerpt(); ?>
       </section>
    </section>  
