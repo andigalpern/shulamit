@@ -528,11 +528,16 @@ $(document).on('mouseover', '.artist-item',function(e){
 
  });
 $(document).on('mouseout', '.artist-item',function(e){
-   var target = $('#swap-image');
-   target.css("opacity", "0");
-   $('#swap-title').css("opacity", "0");
- }); 
+  var target = $('#swap-image');
+  target.css("opacity", "0");
+  $('#swap-title').css("opacity", "0");
+}); 
   
+$('.home-slide').on('mouseup', function(){
+  var url = $(this).data('url');
+  window.location=url
+});
+ 
  
 $(window).on('resize', function(){
   //resizeExpoSLider();

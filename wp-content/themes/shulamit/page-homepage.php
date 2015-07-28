@@ -25,7 +25,7 @@
       */ ?>
     
       <?php foreach( $images as $image ): ?>
-      <div class="slide">
+      <div class="slide home-slide" data-url="<? the_permalink()?>">
         <a href="<?php echo $image['url']; ?>" class="rsImg"></a>
       </div>
       <?php endforeach; ?> 
