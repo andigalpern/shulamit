@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'Druk-Heavy';
-  src: url('fonts/Druk-Heavy.eot?#iefix') format('embedded-opentype'), url('fonts/Druk-Heavy.otf') format('opentype'), url('fonts/Druk-Heavy.woff') format('woff'), url('fonts/Druk-Heavy.ttf') format('truetype'), url('fonts/Druk-Heavy.svg#Druk-Heavy') format('svg');
+  src: url('fonts/Druk-Heavy-Web.eot?#iefix') format('embedded-opentype'), url('fonts/Druk-Heavy-Web.otf') format('opentype'), url('fonts/Druk-Heavy-Web.woff') format('woff'), url('fonts/Druk-Heavy-Web.ttf') format('truetype'), url('fonts/Druk-Heavy-Web.svg#Druk-Heavy') format('svg');
   font-weight: normal;
   font-style: normal;
 }
