@@ -7684,15 +7684,20 @@ p a:hover {
   text-decoration: underline;
   color: #666666;
 }
+em, i,
 p em {
   font-family: 'Conv_ACaslonPro-Italic';
+  font-style: normal;
 }
+b, p b,
 p strong {
   font-family: 'ACaslonPro-Bold';
+  font-weight: normal;
 }
 p em strong,
 p strong em {
  font-family: 'ACaslonPro-BoldItalic';
+ font-style: normal;
 } 
 .main-header {
   position: relative;
