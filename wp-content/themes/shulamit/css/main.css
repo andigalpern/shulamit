@@ -8748,7 +8748,8 @@ p strong em {
   .artist-hero-wrap { margin-bottom: 0; }
 }
 .bold.back-to-artists{
-  font-size: 20px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
   color: #a7a7a7;
   left: 71px;
   position: fixed;
@@ -8756,7 +8757,6 @@ p strong em {
   transition: all ease .4s;
   -webkit-transition: all ease .4s;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.04em;
 }
 .bold.back-to-artists:hover {
   color: black;
