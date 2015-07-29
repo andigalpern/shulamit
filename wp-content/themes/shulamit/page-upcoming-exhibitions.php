@@ -45,7 +45,7 @@
 <?php wp_reset_query();?> 
   
  <section class="row">
-    <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => 16,   'offset' => '1', 'cat'=>'9'  ) ); ?>
+    <?php $loop = new WP_Query( array( 'post_type' => 'exhibition' ,  'posts_per_page' => 16,   'offset' => '9', 'cat'=>'9'  ) ); ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post() ; ?>  
       <article class="col-sm-4 post">
         <figure class="">

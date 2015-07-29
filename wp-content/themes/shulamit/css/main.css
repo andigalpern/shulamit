@@ -8578,6 +8578,10 @@ p strong em {
   line-height: 32px;
   font-size: 44px;
 }
+@media (max-width: 600px) {
+.expo-header h2 { line-height: 36px;}
+}
+
 .expo-header time {
   font-size: 24px;
   letter-spacing: .01em;
