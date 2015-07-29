@@ -8752,7 +8752,7 @@ p strong em {
   letter-spacing: -0.02em;
   color: #a7a7a7;
   left: 71px;
-  position: fixed;
+  position: absolute;
   z-index: 49000;
   transition: all ease .4s;
   -webkit-transition: all ease .4s;
@@ -8766,7 +8766,9 @@ p strong em {
 .bold.back-to-artists:hover {
   color: black;
 }
+/*
 .scrolled .bold.back-to-artists {
   top: 29px;
   
 }
+*/
