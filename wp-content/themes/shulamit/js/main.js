@@ -155,7 +155,9 @@ $(document).on('click', '.artist-thumb-slide-trigger',function(e){
 $('.swap-image-wrap, .lazyload').waitForImages(function() {
   $('#swap-image, .lazyload').addClass('loaded');
 });
-
+$('#current-expo-gallery').waitForImages(function() {
+  $(this).addClass('loaded');
+});  
 
 
 /*
@@ -456,6 +458,7 @@ function goRoyalHomepage() {
 }  //end function
 
 
+/*
 $('.artist-menu a').not('#cv').on('click', function(e){
     var target = $(this).attr('href');
     var theId = target.substr(1);
@@ -472,16 +475,17 @@ $('.artist-menu a').not('#cv').on('click', function(e){
    $('html,body').animate({
     scrollTop: '0'
   }, 100);  
-  //window.scrollTo(0, 0)
 });
+*/
+/*
 $(window).on('hashchange',function(){
   console.log("chnaged")
 });  
+*/
   
   
   
 //https://css-tricks.com/snippets/jquery/smooth-scrolling/
-/*
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -494,7 +498,6 @@ $(window).on('hashchange',function(){
       }
     }
   });
-*/
 
 
 

@@ -91,7 +91,7 @@ foreach( $images as $image ):
   
   
      
-      <section class="artist-section hidden" id="artist-bio">
+      <section class="artist-section" id="artist-bio">
         <section class="artist-bio ajax-wrapper" >
            <h3 class="bold"><?php the_title(); ?> Biography</h3>
           <?php the_content(); ?>
