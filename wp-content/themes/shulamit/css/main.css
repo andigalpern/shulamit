@@ -8758,6 +8758,11 @@ p strong em {
   -webkit-transition: all ease .4s;
   -webkit-font-smoothing: antialiased;
 }
+@media(max-width:60px) {
+  .bold.back-to-artists{
+    display: none
+  }
+}
 .bold.back-to-artists:hover {
   color: black;
 }
