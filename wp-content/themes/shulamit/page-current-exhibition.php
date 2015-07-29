@@ -26,7 +26,9 @@
         <?php the_content(); ?>
       </section>
      
-     
+     <?
+      $image_1 = $images[0];   
+    ?>
      <section id="expo-gallery-wrap">
         <figure class="current-expo-gallery-extra royalSlider rsDefault" id="expo-gallery">
         <?php foreach( $images as $image ): ?>
@@ -41,7 +43,7 @@
         <?php endforeach; ?>
         </figure>
         <aside  id="expo-gallery-captions">
-          <p><?php echo $image['caption'];  ?></p>
+          <p><?php echo $image_1['caption'];  ?></p>
         </aside>
      </section>
       

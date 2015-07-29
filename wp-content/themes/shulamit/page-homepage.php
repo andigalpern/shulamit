@@ -10,7 +10,7 @@
   
 
       <?php
-      $images = get_field('images');
+      $images = get_field('home_images');
       $image1 = $images[0];
       $image2 = $images[1];
       $image3 = $images[2];
