@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<a href="/artists" class="bold back-to-artists">Back To Artists</a>
+
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php 
 $count = 1; 

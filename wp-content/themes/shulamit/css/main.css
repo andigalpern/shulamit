@@ -8733,14 +8733,12 @@ p strong em {
 .ajax-content-wrapper {
   
 }
-
 .artist-hero-wrap {
   margin-bottom: 40px;
   position: relative;
   min-height: 200px;
 }
 #single-artist-slider {
-/*   border: solid 1px red; */
   width: 70%;
   margin: 0 auto;
   position: relative;
@@ -8749,15 +8747,21 @@ p strong em {
   #single-artist-slider { width: 90%;  margin-bottom: 40px; }
   .artist-hero-wrap { margin-bottom: 0; }
 }
-/*
-.ajax-wrapper {
-  border: solid 10px red;
+.bold.back-to-artists{
+  font-size: 20px;
+  color: #a7a7a7;
+  left: 71px;
   position: fixed;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
+  z-index: 49000;
+  transition: all ease .4s;
+  -webkit-transition: all ease .4s;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.04em;
 }
-*/
-/*# sourceMappingURL=main.css.map */
+.bold.back-to-artists:hover {
+  color: black;
+}
+.scrolled .bold.back-to-artists {
+  top: 29px;
+  
+}
