@@ -8130,7 +8130,7 @@ p strong em {
   font-size: 60px;
   direction: rtl;
   width: 50px;
-  width: 130px;
+  width: 141px;
   float: right;
   line-height: 46px;
   margin-bottom: 4px;
@@ -8285,7 +8285,7 @@ p strong em {
   display: block;
 }
 .artist-wrapper {
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 .artist-hero img {
   height: 100%;
