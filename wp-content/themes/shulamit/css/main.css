@@ -8758,7 +8758,7 @@ p strong em {
   -webkit-transition: all ease .4s;
   -webkit-font-smoothing: antialiased;
 }
-@media(max-width:60px) {
+@media(max-width:600px) {
   .bold.back-to-artists{
     display: none
   }
