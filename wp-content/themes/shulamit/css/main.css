@@ -8065,7 +8065,7 @@ p strong em {
 #slide-credit h2,
 #slide-credit h3 {
   font-size: 80px;
-  line-height: 60px;
+  line-height: 65px;
   color: white;
 }
 @media (max-width: 600px) {
@@ -8693,6 +8693,10 @@ p strong em {
   max-width: 905px;
   margin: 0 auto 40px auto;
   padding: 80px 0;
+}
+.artist-bio h3 {
+    letter-spacing: -0.04em;
+    font-size: 35px;
 }
 @media(max-width: 800px) {
  .artist-bio {

@@ -13,22 +13,35 @@
       $images = get_field('images');
       $image1 = $images[0];
       $image2 = $images[1];
+      $image3 = $images[2];
+      $image4 = $images[3];
+      $image5 = $images[4];
       ?>
       
-      <? /*
+     
       <div class="slide" data-color="<?php echo $image1['alt']; ?>">
         <a href="<?php echo $image1['url']; ?>" class="rsImg"></a>
       </div>
       <div class="slide" data-color="<?php echo $image2['alt']; ?>">
         <a href="<?php echo $image2['url']; ?>" class="rsImg"></a>
       </div>
-      */ ?>
-    
+      <div class="slide" data-color="<?php echo $image2['alt']; ?>">
+        <a href="<?php echo $image3['url']; ?>" class="rsImg"></a>
+      </div>
+      <div class="slide" data-color="<?php echo $image2['alt']; ?>">
+        <a href="<?php echo $image4['url']; ?>" class="rsImg"></a>
+      </div>
+      <div class="slide" data-color="<?php echo $image2['alt']; ?>">
+        <a href="<?php echo $image5['url']; ?>" class="rsImg"></a>
+      </div>                  
+
+     <? /*
       <?php foreach( $images as $image ): ?>
       <div class="slide home-slide" data-url="<? the_permalink()?>">
         <a href="<?php echo $image['url']; ?>" class="rsImg"></a>
       </div>
       <?php endforeach; ?> 
+      */ ?>
   
   </section>
   

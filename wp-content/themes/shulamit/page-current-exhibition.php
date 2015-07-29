@@ -18,7 +18,7 @@
   <section class="container container-smaller current-expo-data">
     <article class="expo-article">
       <header class="expo-header">
-        <h2 class="heavy"><? the_title(); ?>:<? the_field('sub_title'); ?></h2>
+        <h2 class="heavy"><? the_title(); ?>: &nbsp;<? the_field('sub_title'); ?></h2>
         <time class="heavy"><?php the_field('dates'); ?></time>
       </header>
 
