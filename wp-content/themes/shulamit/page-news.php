@@ -28,7 +28,7 @@
       <section class="col-sm-7">
         <header class="post-header no-date">
 <!--          <span class="bold slug">Past Exhibition</span> -->
-         <h2 class="heavy"><? the_title();?></h2>
+         <h2 class="heavy"> <a href="<? the_field('press_url'); ?>" target="_blank"><? the_title();?></a></h2>
         </header>
         <section class="content">
         <? the_excerpt();?>
