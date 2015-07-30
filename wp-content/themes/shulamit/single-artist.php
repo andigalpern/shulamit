@@ -5,6 +5,7 @@
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php 
 $count = 1; 
+$count_1 = 1; 
 $images = get_field('images');
 $image_1 = $images[0];
 ?>
@@ -14,18 +15,18 @@ $image_1 = $images[0];
 <?php
 foreach( $images as $image ):
 ?>
-  <div class="slide" data-color="<?php echo $image['alt']; ?>">
+  <div class="slide" data-color="<?php echo $image['alt']; ?>" data-id="<? echo $count_1++; ?>">
      <div class="slide-image">
         <a href="<?php echo $image['sizes']['large']; ?>" class="rsImg"></a>
      </div>
-    <div class="slide-caption">
+    <div class="slide-caption slide-caption-<? echo $count_1++; ?>" >
       <p><?php echo $image['caption']; echo $image['thumbnail'];?></p>
     </div>
   </div>
 <?php endforeach; ?> 
 </section>
 
-<aside  id="expo-gallery-captions">
+<aside id="expo-gallery-captions">
 <p><?php echo $image_1['caption'];?></p>
 </aside>
 
@@ -52,12 +53,13 @@ foreach( $images as $image ):
       
       <?php
       //#GET THE IMAGES FIELD OBJECT
+      $count_1 = 1;
       $images = get_field('images');
       $image = $images[0];
       ?>
       <section class="artist-thumbs row">
       <?php foreach( $images as $image ): ?>
-        <a href="#image-<? echo  $count++ ?>">
+        <a href="#image-<? echo  $count++ ?>" data-id="<? echo $count_1++; ?>">
         <figure class="col-md-1 artist-thumb">
         <div class="table">
           <div class="table-cell">

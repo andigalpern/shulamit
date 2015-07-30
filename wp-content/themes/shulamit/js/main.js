@@ -97,7 +97,8 @@ function resizeArtistSlider(){
 function artistSlider(){
     if($('#single-artist-slider').length){
       resizeArtistSlider();
-      $('#single-artist-slider').royalSlider({
+      var theSlider = $('#single-artist-slider');
+      theSlider.royalSlider({
         addActiveClass: true,
         controlNavigation: 'none',
         imageScalePadding: 0,
@@ -117,20 +118,20 @@ function artistSlider(){
         }
     });
     
-    var slider = $('#single-artist-slider').data('royalSlider');
+    var slider = theSlider.data('royalSlider');
 
-    var caption = $('slide-caption:first-of-type').html();
-    console.log(caption)
     
-    captionHolder = $('#expo-gallery-captions');
-    captionHolder.html(caption);
-
-
     slider.ev.on('rsAfterSlideChange', function(event) {
-        console.log("rsAfterSlideChange")
-        var caption = $('.rsActiveSlide .slide-caption').html();
-        console.log(caption)
-        captionHolder.html(caption);
+        setTimeout(swap, 500);
+        function swap(){
+                
+          console.log("rsAfterSlideChange");
+          console.log(caption);
+          var caption = $('.rsActiveSlide .slide-caption').html();
+          console.log(caption)
+          //var caption = captionHolder.html();
+          $('#expo-gallery-captions').html(caption);
+        }
     }); 
   }
 }
@@ -376,18 +377,17 @@ function expoGallery(){
      
    var slider = $royalSlider.data('royalSlider');
 
-    var caption = $('slide-caption:first-of-type').html();
-    console.log(caption)
-    
-    captionHolder = $('#expo-gallery-captions');
-    captionHolder.html(caption);
-
-
     slider.ev.on('rsAfterSlideChange', function(event) {
-        console.log("rsAfterSlideChange")
-        var caption = $('.rsActiveSlide .slide-caption').html();
-        console.log(caption)
-        captionHolder.html(caption);
+        setTimeout(swap, 500);
+        function swap(){
+                
+          console.log("rsAfterSlideChange");
+          console.log(caption);
+          var caption = $('.rsActiveSlide .slide-caption').html();
+          console.log(caption)
+          //var caption = captionHolder.html();
+          $('#expo-gallery-captions').html(caption);
+        }
     }); 
      
   } //end if
