@@ -18,7 +18,7 @@
       $image5 = $images[4];
       ?>
       
-     
+      <? /*     
       <div class="slide" data-color="<?php echo $image1['alt']; ?>">
         <a href="<?php echo $image1['url']; ?>" class="rsImg"></a>
       </div>
@@ -34,14 +34,14 @@
       <div class="slide" data-color="<?php echo $image2['alt']; ?>">
         <a href="<?php echo $image5['url']; ?>" class="rsImg"></a>
       </div>                  
-
-     <? /*
+      */ ?>
+    
       <?php foreach( $images as $image ): ?>
       <div class="slide home-slide" data-url="<? the_permalink()?>">
         <a href="<?php echo $image['url']; ?>" class="rsImg"></a>
       </div>
       <?php endforeach; ?> 
-      */ ?>
+     
   
   </section>
   
