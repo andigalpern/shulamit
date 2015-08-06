@@ -8767,9 +8767,6 @@ p strong em {
 .bold.back-to-artists:hover {
   color: black;
 }
-/*
-.scrolled .bold.back-to-artists {
-  top: 29px;
-  
+.menu-hours {
+  line-height: 16px;
 }
-*/
