@@ -64,7 +64,7 @@ $image = $images[0];
   </article>
   
   <article class="col-sm-3 artist-list-wrap">
-  <h3 class="artist-list-heading right">Selling Works By</h3>
+  <h3 class="artist-list-heading right">Works Available By</h3>
   <ul class="artist-list">
     <?php $loop = new WP_Query( array( 'post_type' => 'artist' ,  'posts_per_page'=>'100' , 'cat'=>'4' ) ); ?>
     <?php

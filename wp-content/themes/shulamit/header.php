@@ -78,15 +78,14 @@ wp_title( '', true, 'right' );
     </menu>
     <address>
       <p><a href="https://www.google.com/maps/place/17+N+Venice+Blvd,+Venice,+CA+90291/@33.9845967,-118.4710927,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2babbcf9d3253:0xee9f87c131a4f212" target="_blank">17 North Venice Blvd<br>
-      Venice California, 90291<br>
+      Los Angeles, California 90291<br>
       310.281.0961</a><br>
-      <a href="mailto:info@shulamitgallery.com" target="_blank">info@shulamitgallery.com</a><br></p>
+      <a href="mailto:info@shulamitnazarian.com" target="_blank">info@shulamitnazarian.com</a><br></p>
     </address>
     <p class="menu-hours">
     <small>   
-    Summer Hours<br>
-    Monday-Friday 10am-6pm<br>
-    Thursday 10am-8pm<br>
+    Hours<br>
+    Tuesday - Saturday 10am - 6pm<br>
     </small>
     </p>
   </footer>
